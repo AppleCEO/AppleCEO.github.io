@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://appleceo.github.io/"/>
-  <updated>2021-07-13T13:25:23.540Z</updated>
+  <updated>2021-07-13T13:58:37.750Z</updated>
   <id>https://appleceo.github.io/</id>
   
   <author>
@@ -21,19 +21,16 @@
     <link href="https://appleceo.github.io/2021/07/13/2021SecondquarterReview/"/>
     <id>https://appleceo.github.io/2021/07/13/2021SecondquarterReview/</id>
     <published>2021-07-13T06:15:20.000Z</published>
-    <updated>2021-07-13T13:25:23.540Z</updated>
+    <updated>2021-07-13T13:58:37.750Z</updated>
     
-    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>올해 두번째 분기의 회고를 작성하고자 합니다.</p><p>저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.</p><p>이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="세차왕-앱-카카오페이-네이버페이-구성"><a href="#세차왕-앱-카카오페이-네이버페이-구성" class="headerlink" title="세차왕 앱 카카오페이, 네이버페이 구성"></a>세차왕 앱 카카오페이, 네이버페이 구성</h3><p>kcp, 페이코 결제 뿐이 없었다.</p><p>카카오페이와 네이버페이를 구성했고 꽤 많은 고객 분들이 사용하고 계신다.</p><h3 id="요청사항-구성-변경"><a href="#요청사항-구성-변경" class="headerlink" title="요청사항 구성 변경"></a>요청사항 구성 변경</h3><p>고객 분의 요청사항이 간단히 두개였는데 조금 더 세부화해서 테이블을 따로 만들어 구성하였다.</p><p>생각보다 많은 분들이 요청사항은 옵션인데도 구체적으로 요청을 해주시면서 더 맞는 서비스를 받을 수 있으셨다.</p><h3 id="결제-버튼-이동"><a href="#결제-버튼-이동" class="headerlink" title="결제 버튼 이동"></a>결제 버튼 이동</h3><p>KCP, 페이코, 카카오페이, 네이버페이 결제 버튼의 위치를 오른쪽 아래로 통일하였다.</p><p>기존의 코드가 많이 사용되면서 버튼의 색상과 위치가 제멋대로였는데 통일하고 위치를 오른쪽 아래로 이동해서 손으로 누르기 편하게 변경하였다.</p><h3 id="개발-서버-이전"><a href="#개발-서버-이전" class="headerlink" title="개발 서버 이전"></a>개발 서버 이전</h3><p>기존 회사에 노트북에 간단히 개발 서버가 구성되어있었다.</p><p>회사 건물에 네트워크를 점검하거나 문제가 생기면 개발 서버에 접속이 불가한 상황도 발생하였다.</p><p>노트북이다보니 건드리거나 베터리가 꺼지면 안되었다.</p><p>EC2에 인스턴스를 만들어 php, apache 를 설치하였고 php slim 도 구성하여 개발 서버를 이전하였다.</p><p>노트북을 사용할 수 있어서 좋고 안정적으로 개발 서버를 운영할 수 있게 되었다.</p><p><a href="https://velog.io/@sechawang/AWS-ec2%EC%97%90-apache-php-%EC%84%A4%EC%B9%98%ED%95%B4%EC%84%9C-%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%B6%95-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">AWS ec2에 apache, php 설치해서 웹서버 구축 방법을 회사 기술블로그 작성한 글</a></p><p><a href="https://velog.io/@sechawang/php-slim-%EC%85%8B%ED%8C%85-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">기존에 php slim 으로 구성된 api 새로운 서버에 셋팅 방법을 회사 기술블로그 작성한 글</a></p><h2 id="푸시-개발"><a href="#푸시-개발" class="headerlink" title="푸시 개발"></a>푸시 개발</h2><p>예약 확정, 세차 시작, 세차 완료 등의 시점에 앱 푸시를 보내서 고객 분들이 세차가 언제 시작되고 마치는지 알 수 있게 되었다.</p><p>배달의 민족에서 배달이 도착했을 때 푸시가 오는 것처럼 고객 분들이 “내 차가 세차되고 있구나”, “내 차의 세차가 완료되서 차를 사용할 수 있겠구나” 라고 생각하실 것을 생각하니 뿌듯하다.</p><p>노드와 php 에 공식 문서를 참고해서 구성을 하였다.</p><p><a href="https://velog.io/@sechawang/node-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-fcm-token%EC%9C%BC%EB%A1%9C-%ED%91%B8%EC%8B%9C-%EC%A0%84%EC%86%A1-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">node 서버에서 fcm token으로 푸시 전송 방법을 회사 기술블로그 작성한 글</a></p><h2 id="서버-및-테이블-정리"><a href="#서버-및-테이블-정리" class="headerlink" title="서버 및 테이블 정리"></a>서버 및 테이블 정리</h2><p>AWS 에 안쓰이는 EC2 인스턴스들이 쓰이는 것들과 섞여있었다.</p><p>10개 이상이 되었는데 사용하는 것들만 추리고 설명을 달았다.</p><p>6개의 인스턴스만 남기고 지웠다.</p><p>이 6개도 통합하고 이전되면 더 줄일 수 있을 것이다.</p><p>테이블도 안쓰이는 것이 1/3 이상이었다.</p><p>어떤 용도로 쓰이고 코드에서 어떻게 쓰이는지 파악하고 정리하였다.</p><p>다음 분기 중에 안쓰이는 테이블들을 백업하고 지울 것이다.</p><p>ERD도 그려서 테이블의 역할이 명확하게 정리하고 개발팀에 공유가 되도록 할 것이다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 하나의 큰 기능 추가보다는 여러 부분에서 개선하고 발전시킬 수 있었던 분기였습니다.</p><p>다음 분기는 이렇게 파악한 내용들을 정리하고 내실을 다지는 분기로 삼고 싶습니다.</p><p>같이 일하던 개발자 분이 퇴사를 하여서 신입 개발자 분과 둘이서 앞으로 서비스를 유지보수해야 할 것 같습니다.</p><p>서비스를 많이 파악하고 계셨던 분이라 퇴사하는 시점에 많이 물어보고 서버와 테이블에 대해서 인수인계를 받았습니다.</p><p>앞으로 이것들을 정리하고 안정적으로 발전되도록 해야할 책임감이 많이 느껴집니다.</p><p>노드를 많이 공부해야 할 것 같고 백엔드 노드, iOS 로 세차왕 고객앱을 만드는 것이 다음 분기에 큰 프로젝트입니다.</p><p>신입 분도 많이 챙겨서 함께 성장하고 회사에 기여할 수 있도록 만들고 싶습니다.</p>]]></content>
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.<br>올해 두번째 분기의 회고를 작성하고자 합니다.<br>저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.<br>이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="세차왕-앱-카카오페이-네이버페이-구성"><a href="#세차왕-앱-카카오페이-네이버페이-구성" class="headerlink" title="세차왕 앱 카카오페이, 네이버페이 구성"></a>세차왕 앱 카카오페이, 네이버페이 구성</h3><p>결제 타입이 kcp, 페이코뿐이 없었다.<br>카카오페이와 네이버페이를 구성했고 꽤 많은 고객 분들이 사용하고 계신다.</p><h3 id="요청사항-구성-변경"><a href="#요청사항-구성-변경" class="headerlink" title="요청사항 구성 변경"></a>요청사항 구성 변경</h3><p>고객 분의 요청사항이 간단히 두개였는데 조금 더 세부화해서 테이블을 따로 만들어 구성하였다.<br>생각보다 많은 분들이 요청사항은 옵션인데도 구체적으로 요청을 해주시면서 더 맞는 서비스를 받을 수 있으셨다.</p><h3 id="결제-버튼-이동"><a href="#결제-버튼-이동" class="headerlink" title="결제 버튼 이동"></a>결제 버튼 이동</h3><p>KCP, 페이코, 카카오페이, 네이버페이 결제 버튼의 위치를 오른쪽 아래로 통일하였다.<br>기존의 코드가 많이 사용되면서 버튼의 색상과 위치가 제멋대로였는데 통일하고 위치를 오른쪽 아래로 이동해서 손으로 누르기 편하게 변경하였다.</p><h3 id="개발-서버-이전"><a href="#개발-서버-이전" class="headerlink" title="개발 서버 이전"></a>개발 서버 이전</h3><p>기존 회사에 노트북에 간단히 개발 서버가 구성되어있었다.<br>회사 건물에 네트워크를 점검하거나 문제가 생기면 개발 서버에 접속이 불가한 상황도 발생하였다.<br>노트북이다보니 건드리거나 베터리가 꺼지면 안되었다.<br>EC2에 인스턴스를 만들어 php, apache 를 설치하였고 php slim 도 구성하여 개발 서버를 이전하였다.<br>노트북을 사용할 수 있어서 좋고 안정적으로 개발 서버를 운영할 수 있게 되었다.</p><p><a href="https://velog.io/@sechawang/AWS-ec2%EC%97%90-apache-php-%EC%84%A4%EC%B9%98%ED%95%B4%EC%84%9C-%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%B6%95-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">AWS ec2에 apache, php 설치해서 웹서버 구축 방법을 회사 기술블로그 작성한 글</a><br><a href="https://velog.io/@sechawang/php-slim-%EC%85%8B%ED%8C%85-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">기존에 php slim 으로 구성된 api 새로운 서버에 셋팅 방법을 회사 기술블로그 작성한 글</a></p><h2 id="푸시-개발"><a href="#푸시-개발" class="headerlink" title="푸시 개발"></a>푸시 개발</h2><p>예약 확정, 세차 시작, 세차 완료 등의 시점에 앱 푸시를 보내서 고객 분들이 세차가 언제 시작되고 마치는지 알 수 있게 되었다.<br>배달의 민족에서 배달이 도착했을 때 푸시가 오는 것처럼 고객 분들이 “내 차가 세차되고 있구나”, “내 차의 세차가 완료되서 차를 사용할 수 있겠구나” 라고 생각하실 것을 생각하니 뿌듯하다.<br>노드와 php 에 공식 문서를 참고해서 구성을 하였다.</p><p><a href="https://velog.io/@sechawang/node-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-fcm-token%EC%9C%BC%EB%A1%9C-%ED%91%B8%EC%8B%9C-%EC%A0%84%EC%86%A1-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">node 서버에서 fcm token으로 푸시 전송 방법을 회사 기술블로그 작성한 글</a></p><h2 id="서버-및-테이블-정리"><a href="#서버-및-테이블-정리" class="headerlink" title="서버 및 테이블 정리"></a>서버 및 테이블 정리</h2><p>AWS 에 안쓰이는 EC2 인스턴스들이 쓰이는 것들과 섞여있었다.<br>10개 이상이 되었는데 사용하는 것들만 추리고 설명을 달았다.<br>6개의 인스턴스만 남기고 지웠다.<br>이 6개도 통합하고 이전되면 더 줄일 수 있을 것이다.<br>테이블도 안쓰이는 것이 1/3 이상이었다.<br>어떤 용도로 쓰이고 코드에서 어떻게 쓰이는지 파악하고 정리하였다.<br>다음 분기 중에 안쓰이는 테이블들을 백업하고 지울 것이다.<br>ERD도 그려서 테이블의 역할이 명확하게 정리하고 개발팀에 공유가 되도록 할 것이다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 하나의 큰 기능 추가보다는 여러 부분에서 개선하고 발전시킬 수 있었던 분기였습니다.<br>다음 분기는 이렇게 파악한 내용들을 정리하고 내실을 다지는 분기로 삼고 싶습니다.<br>같이 일하던 개발자 분이 퇴사를 하여서 신입 개발자 분과 둘이서 앞으로 서비스를 유지보수해야 할 것 같습니다.<br>서비스를 많이 파악하고 계셨던 분이라 퇴사하는 시점에 많이 물어보고 서버와 테이블에 대해서 인수인계를 받았습니다.<br>앞으로 이것들을 정리하고 안정적으로 발전되도록 해야할 책임감이 많이 느껴집니다.<br>노드를 많이 공부해야 할 것 같고 백엔드 노드, iOS 로 세차왕 고객앱을 만드는 것이 다음 분기에 큰 프로젝트입니다.<br>신입 분도 많이 챙겨서 함께 성장하고 회사에 기여할 수 있도록 만들고 싶습니다.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
-&lt;p&gt;올해 두번째 분기의 회고를 작성하고자 합니다.&lt;/p&gt;
-&lt;p&gt;저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.&lt;/p&gt;
-&lt;p&gt;이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.&lt;/p&gt;
-&lt;h
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;br&gt;올해 두번째 분기의 회고를 작성하고자 합니다.&lt;br&gt;저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.&lt;br&gt;이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a
       
     
     </summary>
@@ -50,18 +47,15 @@
     <link href="https://appleceo.github.io/2021/03/22/2021FirstquarterReview/"/>
     <id>https://appleceo.github.io/2021/03/22/2021FirstquarterReview/</id>
     <published>2021-03-22T05:41:20.000Z</published>
-    <updated>2021-07-13T13:26:23.918Z</updated>
+    <updated>2021-07-13T13:59:22.404Z</updated>
     
-    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오랜만에 깃허브 블로그에 글을 작성합니다.</p><p>티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,</p><p>그리고 appleceo라는 서브도메인을 사용하기 위해 이 블로그에 다시 글을 작성하고자 합니다.</p><p>올해 3개월동안 있었던 일들을 회고합니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DB-이전"><a href="#DB-이전" class="headerlink" title="DB 이전"></a>DB 이전</h3><p>기존에 ec2에 mysql이 설치되어 있었다. </p><p>ec2 인스턴스에 문제가 생기거나 mysql 자체에 문제가 생기면 DB가 다운되고 다시 시작이 되지 않아 장시간 장애가 발생한 적도 있었다.</p><p>DB 이중화에 대해 알아보던 중 친구가 AWS Aurora 에 대해서 말해주었다.</p><p>알아보니 RDS 를 활용해서 이중화를 하는 것이 가장 간단하고 확실한 것 같았다.</p><p>공식문서와 블로그 글들을 보며 AWS RDS 로 이중화를 구성하였다.</p><p><a href="https://www.slideshare.net/joonjhokil/ss-239387807" rel="external nofollow noopener noreferrer" target="_blank">AWS Aurora 로 이중화를 하자고 사내에 제안할 때의 발표자료</a></p><h3 id="장고-서버-구축"><a href="#장고-서버-구축" class="headerlink" title="장고 서버 구축"></a>장고 서버 구축</h3><p>회사에 장고로 만든 페이지들을 AWS에 올리지 못하고 있었다.</p><p>주니어 급이 개발을 하여서 서버 환경 구축에 미숙했기 때문이다.</p><p>python django gunicorn nginx 을 이용해서 서버를 구축했고 주니어 분이 개발해놓은 코드들을 올려서 안정적으로 서버에서 돌아가도록 구축하였다.</p><p>참고한 자료들 :<br><a href="http://dev.epiloum.net/1440" rel="external nofollow noopener noreferrer" target="_blank">http://dev.epiloum.net/1440</a><br><a href="https://conory.com/blog/42847" rel="external nofollow noopener noreferrer" target="_blank">https://conory.com/blog/42847</a><br><a href="https://seowoosung.github.io/architecture/2020/05/11/nginx.html" rel="external nofollow noopener noreferrer" target="_blank">https://seowoosung.github.io/architecture/2020/05/11/nginx.html</a></p><h3 id="쿠폰-기능-고도화"><a href="#쿠폰-기능-고도화" class="headerlink" title="쿠폰 기능 고도화"></a>쿠폰 기능 고도화</h3><p>기존에 쿠폰 기능이 있긴 하였으나 제한 조건을 걸지도 못하였다.</p><p>금액, 지역, 상품 제한을 걸 수 있도록 추가하여 쿠폰 기능을 고도화하였다.</p><h3 id="세차왕-iOS-앱-개선"><a href="#세차왕-iOS-앱-개선" class="headerlink" title="세차왕 iOS 앱 개선"></a>세차왕 iOS 앱 개선</h3><ul><li>온보딩 페이지 추가</li><li>주문 화면에 카카오지도가 조그맣게 보이던 것을 구글 지도로 꽉 채워서 보이도록 수정</li><li>주문에 대한 리뷰 등록 시 앱 리뷰도 쓰도록 유도하는 기능 추가</li><li>외부 페이지는 팝업으로 띄우도록 수정</li></ul><h3 id="어드민-고도화"><a href="#어드민-고도화" class="headerlink" title="어드민 고도화"></a>어드민 고도화</h3><ul><li>차량 검색 기능 추가</li><li>회원 검색 기능 추가</li></ul><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 회사에 적응도 많이된 시점이라 많은 일을 한 것 같습니다.</p><p>추가로 대학교 동기를 회사에 추천해서 입사시키게 되었습니다.</p><p>많은 일을 같이할 수 있을 것 같아서 기대됩니다.</p><p>개발팀장으로서 좋은 개발 문화를 가꿔나갈 수 있도록 기여하고 싶습니다.</p>]]></content>
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.<br>오랜만에 깃허브 블로그에 글을 작성합니다.<br>티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,<br>그리고 appleceo라는 서브도메인을 사용하기 위해 이 블로그에 다시 글을 작성하고자 합니다.<br>올해 3개월동안 있었던 일들을 회고합니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DB-이전"><a href="#DB-이전" class="headerlink" title="DB 이전"></a>DB 이전</h3><p>기존에 ec2에 mysql이 설치되어 있었다.<br>ec2 인스턴스에 문제가 생기거나 mysql 자체에 문제가 생기면 DB가 다운되고 다시 시작이 되지 않아 장시간 장애가 발생한 적도 있었다.<br>DB 이중화에 대해 알아보던 중 친구가 AWS Aurora 에 대해서 말해주었다.<br>알아보니 RDS 를 활용해서 이중화를 하는 것이 가장 간단하고 확실한 것 같았다.<br>공식문서와 블로그 글들을 보며 AWS RDS 로 이중화를 구성하였다.</p><p><a href="https://www.slideshare.net/joonjhokil/ss-239387807" rel="external nofollow noopener noreferrer" target="_blank">AWS Aurora 로 이중화를 하자고 사내에 제안할 때의 발표자료</a></p><h3 id="장고-서버-구축"><a href="#장고-서버-구축" class="headerlink" title="장고 서버 구축"></a>장고 서버 구축</h3><p>회사에 장고로 만든 페이지들을 AWS에 올리지 못하고 있었다.<br>주니어 급이 개발을 하여서 서버 환경 구축에 미숙했기 때문이다.<br>python django gunicorn nginx 을 이용해서 서버를 구축했고 주니어 분이 개발해놓은 코드들을 올려서 안정적으로 서버에서 돌아가도록 구축하였다.</p><p>참고한 자료들 :<br><a href="http://dev.epiloum.net/1440" rel="external nofollow noopener noreferrer" target="_blank">http://dev.epiloum.net/1440</a><br><a href="https://conory.com/blog/42847" rel="external nofollow noopener noreferrer" target="_blank">https://conory.com/blog/42847</a><br><a href="https://seowoosung.github.io/architecture/2020/05/11/nginx.html" rel="external nofollow noopener noreferrer" target="_blank">https://seowoosung.github.io/architecture/2020/05/11/nginx.html</a></p><h3 id="쿠폰-기능-고도화"><a href="#쿠폰-기능-고도화" class="headerlink" title="쿠폰 기능 고도화"></a>쿠폰 기능 고도화</h3><p>기존에 쿠폰 기능이 있긴 하였으나 제한 조건을 걸지도 못하였다.<br>금액, 지역, 상품 제한을 걸 수 있도록 추가하여 쿠폰 기능을 고도화하였다.</p><h3 id="세차왕-iOS-앱-개선"><a href="#세차왕-iOS-앱-개선" class="headerlink" title="세차왕 iOS 앱 개선"></a>세차왕 iOS 앱 개선</h3><ul><li>온보딩 페이지 추가</li><li>주문 화면에 카카오지도가 조그맣게 보이던 것을 구글 지도로 꽉 채워서 보이도록 수정</li><li>주문에 대한 리뷰 등록 시 앱 리뷰도 쓰도록 유도하는 기능 추가</li><li>외부 페이지는 팝업으로 띄우도록 수정</li></ul><h3 id="어드민-고도화"><a href="#어드민-고도화" class="headerlink" title="어드민 고도화"></a>어드민 고도화</h3><ul><li>차량 검색 기능 추가</li><li>회원 검색 기능 추가</li></ul><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 회사에 적응도 많이된 시점이라 많은 일을 한 것 같습니다.<br>추가로 대학교 동기를 회사에 추천해서 입사시키게 되었습니다.<br>많은 일을 같이할 수 있을 것 같아서 기대됩니다.<br>개발팀장으로서 좋은 개발 문화를 가꿔나갈 수 있도록 기여하고 싶습니다.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
-&lt;p&gt;오랜만에 깃허브 블로그에 글을 작성합니다.&lt;/p&gt;
-&lt;p&gt;티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,&lt;/p&gt;
-&lt;p&gt;그리고 appleceo라는 서브도메
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;br&gt;오랜만에 깃허브 블로그에 글을 작성합니다.&lt;br&gt;티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,&lt;br&gt;그리고 appleceo라는 서브도메인을 사용하기 위해 이
       
     
     </summary>
@@ -211,9 +205,9 @@
       <category term="iOS" scheme="https://appleceo.github.io/categories/iOS/"/>
     
     
-      <category term="UIView" scheme="https://appleceo.github.io/tags/UIView/"/>
-    
       <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
+    
+      <category term="UIView" scheme="https://appleceo.github.io/tags/UIView/"/>
     
       <category term="cornerRadius" scheme="https://appleceo.github.io/tags/cornerRadius/"/>
     
@@ -384,8 +378,6 @@
       <category term="Xcode" scheme="https://appleceo.github.io/categories/Xcode/"/>
     
     
-      <category term="테두리" scheme="https://appleceo.github.io/tags/%ED%85%8C%EB%91%90%EB%A6%AC/"/>
-    
       <category term="Xcode" scheme="https://appleceo.github.io/tags/Xcode/"/>
     
       <category term="Storyboard" scheme="https://appleceo.github.io/tags/Storyboard/"/>
@@ -395,6 +387,8 @@
       <category term="rectangles" scheme="https://appleceo.github.io/tags/rectangles/"/>
     
       <category term="스토리보드" scheme="https://appleceo.github.io/tags/%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B3%B4%EB%93%9C/"/>
+    
+      <category term="테두리" scheme="https://appleceo.github.io/tags/%ED%85%8C%EB%91%90%EB%A6%AC/"/>
     
       <category term="설정" scheme="https://appleceo.github.io/tags/%EC%84%A4%EC%A0%95/"/>
     

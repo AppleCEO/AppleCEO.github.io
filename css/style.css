@@ -13,7 +13,7 @@
 .serif,
 body,
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  D2Coding: , 'D2 coding', monospace;
 }
 .sans-serif,
 h1,
@@ -29,7 +29,7 @@ h6,
 .btn,
 .pager li > a,
 .pager li > span {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  D2Coding: , 'D2 coding', monospace;
 }
 body {
   font-size: 20px;
@@ -512,7 +512,7 @@ figure.highlight {
 }
 figure.highlight figcaption {
   color: #999;
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: D2Coding, 'D2 coding', monospace;
   margin-bottom: 5px;
   text-shadow: 0 0 1px #fff;
 }
