@@ -212,11 +212,23 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>안녕하세요. 도미닉입니다.<br>오랜만에 깃허브 블로그에 글을 작성합니다.<br>티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,<br>그리고 appleceo라는 서브도메인을 사용하기 위해 이 블로그에 다시 글을 작성하고자 합니다.<br>올해 3개월동안 있었던 일들을 회고합니다.</p>
-<h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DB-이전"><a href="#DB-이전" class="headerlink" title="DB 이전"></a>DB 이전</h3><p>기존에 ec2에 mysql이 설치되어 있었다.<br>ec2 인스턴스에 문제가 생기거나 mysql 자체에 문제가 생기면 DB가 다운되고 다시 시작이 되지 않아 장시간 장애가 발생한 적도 있었다.<br>DB 이중화에 대해 알아보던 중 친구가 AWS Aurora 에 대해서 말해주었다.<br>알아보니 RDS 를 활용해서 이중화를 하는 것이 가장 간단하고 확실한 것 같았다.<br>공식문서와 블로그 글들을 보며 AWS RDS 로 이중화를 구성하였다.<br><a href="https://www.slideshare.net/joonjhokil/ss-239387807" rel="external nofollow noopener noreferrer" target="_blank">https://www.slideshare.net/joonjhokil/ss-239387807</a></p>
-<h3 id="장고-서버-구축"><a href="#장고-서버-구축" class="headerlink" title="장고 서버 구축"></a>장고 서버 구축</h3><p>회사에 장고로 만든 페이지들을 AWS에 올리지 못하고 있었다.<br>주니어 급이 개발을 하여서 서버 환경 구축에 미숙했기 때문이다.<br>python django gunicorn nginx 을 이용해서 서버를 구축했고 주니어 분이 개발해놓은 코드들을 올려서 안정적으로 서버에서 돌아가도록 구축하였다.</p>
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오랜만에 깃허브 블로그에 글을 작성합니다.</p>
+<p>티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,</p>
+<p>그리고 appleceo라는 서브도메인을 사용하기 위해 이 블로그에 다시 글을 작성하고자 합니다.</p>
+<p>올해 3개월동안 있었던 일들을 회고합니다.</p>
+<h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DB-이전"><a href="#DB-이전" class="headerlink" title="DB 이전"></a>DB 이전</h3><p>기존에 ec2에 mysql이 설치되어 있었다. </p>
+<p>ec2 인스턴스에 문제가 생기거나 mysql 자체에 문제가 생기면 DB가 다운되고 다시 시작이 되지 않아 장시간 장애가 발생한 적도 있었다.</p>
+<p>DB 이중화에 대해 알아보던 중 친구가 AWS Aurora 에 대해서 말해주었다.</p>
+<p>알아보니 RDS 를 활용해서 이중화를 하는 것이 가장 간단하고 확실한 것 같았다.</p>
+<p>공식문서와 블로그 글들을 보며 AWS RDS 로 이중화를 구성하였다.</p>
+<p><a href="https://www.slideshare.net/joonjhokil/ss-239387807" rel="external nofollow noopener noreferrer" target="_blank">AWS Aurora 로 이중화를 하자고 사내에 제안할 때의 발표자료</a></p>
+<h3 id="장고-서버-구축"><a href="#장고-서버-구축" class="headerlink" title="장고 서버 구축"></a>장고 서버 구축</h3><p>회사에 장고로 만든 페이지들을 AWS에 올리지 못하고 있었다.</p>
+<p>주니어 급이 개발을 하여서 서버 환경 구축에 미숙했기 때문이다.</p>
+<p>python django gunicorn nginx 을 이용해서 서버를 구축했고 주니어 분이 개발해놓은 코드들을 올려서 안정적으로 서버에서 돌아가도록 구축하였다.</p>
 <p>참고한 자료들 :<br><a href="http://dev.epiloum.net/1440" rel="external nofollow noopener noreferrer" target="_blank">http://dev.epiloum.net/1440</a><br><a href="https://conory.com/blog/42847" rel="external nofollow noopener noreferrer" target="_blank">https://conory.com/blog/42847</a><br><a href="https://seowoosung.github.io/architecture/2020/05/11/nginx.html" rel="external nofollow noopener noreferrer" target="_blank">https://seowoosung.github.io/architecture/2020/05/11/nginx.html</a></p>
-<h3 id="쿠폰-기능-고도화"><a href="#쿠폰-기능-고도화" class="headerlink" title="쿠폰 기능 고도화"></a>쿠폰 기능 고도화</h3><p>기존에 쿠폰 기능이 있긴 하였으나 제한 조건을 걸지도 못하였다.<br>금액, 지역, 상품 제한을 걸 수 있도록 추가하여 쿠폰 기능을 고도화하였다.</p>
+<h3 id="쿠폰-기능-고도화"><a href="#쿠폰-기능-고도화" class="headerlink" title="쿠폰 기능 고도화"></a>쿠폰 기능 고도화</h3><p>기존에 쿠폰 기능이 있긴 하였으나 제한 조건을 걸지도 못하였다.</p>
+<p>금액, 지역, 상품 제한을 걸 수 있도록 추가하여 쿠폰 기능을 고도화하였다.</p>
 <h3 id="세차왕-iOS-앱-개선"><a href="#세차왕-iOS-앱-개선" class="headerlink" title="세차왕 iOS 앱 개선"></a>세차왕 iOS 앱 개선</h3><ul>
 <li>온보딩 페이지 추가</li>
 <li>주문 화면에 카카오지도가 조그맣게 보이던 것을 구글 지도로 꽉 채워서 보이도록 수정</li>
@@ -227,7 +239,10 @@
 <li>차량 검색 기능 추가</li>
 <li>회원 검색 기능 추가</li>
 </ul>
-<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 회사에 적응도 많이된 시점이라 많은 일을 한 것 같습니다.<br>추가로 대학교 동기를 회사에 추천해서 입사시키게 되었습니다.<br>많은 일을 같이할 수 있을 것 같아서 기대됩니다.<br>개발팀장으로서 좋은 개발 문화를 가꿔나갈 수 있도록 기여하고 싶습니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 회사에 적응도 많이된 시점이라 많은 일을 한 것 같습니다.</p>
+<p>추가로 대학교 동기를 회사에 추천해서 입사시키게 되었습니다.</p>
+<p>많은 일을 같이할 수 있을 것 같아서 기대됩니다.</p>
+<p>개발팀장으로서 좋은 개발 문화를 가꿔나갈 수 있도록 기여하고 싶습니다.</p>
 
 
                 
