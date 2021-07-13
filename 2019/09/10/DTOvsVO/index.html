@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DTO 와 VO">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>DTO 와 VO - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>DTO 와 VO</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-09-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Swift/">#Swift</a> <a href="/tags/스위프트/">#스위프트</a> <a href="/tags/클래스/">#클래스</a> <a href="/tags/구조체/">#구조체</a> <a href="/tags/DTO/">#DTO</a> <a href="/tags/VO/">#VO</a> <a href="/tags/객체/">#객체</a> <a href="/tags/example/">#example</a> <a href="/tags/예제/">#예제</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Terminology/">Terminology</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 DTO 와 VO 에 대해서 알아보겠습니다.</p>
+<p>이 두가지를 헷갈려하는 분들이 많으신데요.</p>
+<p>DTO 와 VO 가 무엇이고 어떻게 다른지 알아보겠습니다.</p>
+<h1 id="DTO-란-무엇인가"><a href="#DTO-란-무엇인가" class="headerlink" title="DTO 란 무엇인가?"></a>DTO 란 무엇인가?</h1><p>DTO 는 Data Transfer Object 의 약자입니다.</p>
+<p>번역하면 데이터 전송 객체입니다.</p>
+<p>데이터를 전송할 때 사용하는 객체라고 이해할 수 있겠습니다.</p>
+<p>데이터의 getter 와 setter 만 있는 객체를 DTO 라고 합니다.</p>
+<p>getter 와 setter 에 대해서 모르신다면 아래 포스팅을 확인해주시기 바랍니다.</p>
+<p><a href="http://kiljh.me/2019/09/11/GetterAndSetter/" rel="external nofollow noopener noreferrer" target="_blank">http://kiljh.me/2019/09/11/GetterAndSetter/</a></p>
+<h3 id="DTO-의-구현-방법은-무엇인가"><a href="#DTO-의-구현-방법은-무엇인가" class="headerlink" title="DTO 의 구현 방법은 무엇인가?"></a>DTO 의 구현 방법은 무엇인가?</h3><script src="//gist.github.com/ce700bd17aae8d2c2eee4e0c5657361c.js"></script>
+
+<p>위에 소스는 메소드로 구현한 DTO 의 예제입니다.</p>
+<p>Greeting 객체와 같이 각 프로퍼티에 해당하는 getter, setter 만을 갖고 있는 것이 DTO 입니다.</p>
+<script src="//gist.github.com/91b57ed99850b359cadcc4fd6423a6ae.js"></script>
+
+<p>스위프트에서는 위와 같이 연산 프로퍼티를 활용해서 DTO 를 구현할 수도 있습니다.</p>
+<p>연산 프로퍼티에 대해서 궁금하시다면 아래 링크를 확인해주세요.</p>
+<p><a href="http://kiljh.me/2019/09/09/ComputedProperty/" rel="external nofollow noopener noreferrer" target="_blank">http://kiljh.me/2019/09/09/ComputedProperty/</a></p>
+<h1 id="VO-란-무엇인가"><a href="#VO-란-무엇인가" class="headerlink" title="VO 란 무엇인가?"></a>VO 란 무엇인가?</h1><p>VO 는 Value Obejct 의 약자입니다.</p>
+<p>번역하면 값 객체입니다.</p>
+<p>값을 저장하는 객체라고 이해할 수 있겠습니다.</p>
+<p>getter 만 있는 불변 객체를 VO 라고 합니다.</p>
+<h3 id="VO-의-예제는-무엇인가"><a href="#VO-의-예제는-무엇인가" class="headerlink" title="VO 의 예제는 무엇인가?"></a>VO 의 예제는 무엇인가?</h3><script src="//gist.github.com/2321fbec08d529741d29b557d18d01a3.js"></script>
+
+<p>UIColor 클래스는 VO 입니다.</p>
+<p>UIColor 를 사용할 때 각 색의 값을 설정하지 않아도 .blue 와 같이 가져와서 사용할 수 있습니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>DTO 와 VO 는 명확한 차이를 갖고 있었습니다.</p>
+<p>혼동해서 사용하지 않도록 조심하시길 바랍니다.</p>
+<p>읽어주셔서 감사합니다.</p>
+<p>참고 : <a href="https://mommoo.tistory.com/61" rel="external nofollow noopener noreferrer" target="_blank">https://mommoo.tistory.com/61</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

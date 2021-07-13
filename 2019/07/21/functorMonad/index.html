@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Functor and Monad">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Functor and Monad - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Functor and Monad</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-07-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/펑터/">#펑터</a> <a href="/tags/Functor/">#Functor</a> <a href="/tags/Monad/">#Monad</a> <a href="/tags/모나드/">#모나드</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Terminology/">Terminology</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 Functor 와 Monad 에 대해서 알아보겠습니다.</p>
+<h1 id="Functor-란"><a href="#Functor-란" class="headerlink" title="Functor 란?"></a>Functor 란?</h1><p>Functor 는 일반적으로 Map 이라는 함수를 실행해서 같은 타입의 결고값을 얻는 것을 의미합니다. </p>
+<p>예를 들어 [1,2,3,4,5] 라는 배열의 Map 함수를 실행해서 [2,4,6,8,10] 이 반환된다면 이러한 배열 타입은 Functor 입니다.</p>
+<p>그렇다면 [1,2,3,4,5] 이 Map 이라는 함수에 넣어서 [true,true,false,false,false] 가 리턴된다면 이 배열의 타입은 Functor 일까요?</p>
+<p>Functor 가 맞습니다.</p>
+<p>위에서 적었던 대로 Map 이라는 함수를 실행해서 같은 타입인 배열이 리턴되었기 때문입니다.</p>
+<p>Functor 는 값을 빼낼 수 없습니다.</p>
+<p>값을 꺼내는 것은 순수한 펑터의 개념을 벗어나는 일입니다. </p>
+<p>펑터를 이용하는 유일한 방법은 타입 안전성을 유지하면서 값을 변형해 나가는 것 뿐입니다.</p>
+<h1 id="Monad-란"><a href="#Monad-란" class="headerlink" title="Monad 란?"></a>Monad 란?</h1><p>Monad 는 Functor 에 포함됩니다.</p>
+<p>모나드에서는 특별히 flatmap 이라는 함수가 구현되어야합니다.</p>
+<p>모나드는 Map 이라는 함수에 넣어서 정의역과 같은 숫자의 치역이 리턴되기만 했던 Functor 와 달리<br>같은 숫자의 치역이고 정의역과 동일한 타입이 리턴되어야만합니다.</p>
+<p>예를 들어 [1,2,3,4,5] 라는 배열을 flatmap 이라는 함수에 넣어서 [2,4,6,8,10] 가 반환됩니다.</p>
+<p>이것은 모나드입니다.</p>
+<p>하지만 [1,2,3,4,5] 이 [true,true,false,false,false] 라는 다른 타입이 리턴되면 이것은 펑터이지만 모나드가 아닙니다.</p>
+<h1 id="스위프트에서-Functor-와-Monad-는"><a href="#스위프트에서-Functor-와-Monad-는" class="headerlink" title="스위프트에서 Functor 와 Monad 는?"></a>스위프트에서 Functor 와 Monad 는?</h1><h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><script src="//gist.github.com/afcc7b9bc066781490c528981041c887.js"></script>
+
+<p>위에 소스의 set 상수는 Set 타입입니다.</p>
+<p>이러한 Set 타입도 Map 이 존재합니다.</p>
+<p>Map 을 돌리면 {1,2,3,4,5} 집합 타입은 [2,4,6,8,10] Int 배열로 리턴됩니다.</p>
+<p>이렇게 되면 같은 타입으로 리턴되지 않으므로 Set 타입은 Functor 이지만 Monad 는 아닙니다.</p>
+<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3><script src="//gist.github.com/738831921ca771d5d54bf19cd52e8882.js"></script>
+
+<p>Dictionary 에도 Map 함수가 존재합니다.</p>
+<p>하지만 리턴 값을 Dictionary 로 하지는 못합니다.</p>
+<p>배열 타입으로 리턴이 가능하며 이런식으로 다른 타입으로 리턴되는 것은 Functor 입니다.</p>
+<h1 id="스위프트에서-Monad-type-은"><a href="#스위프트에서-Monad-type-은" class="headerlink" title="스위프트에서 Monad type 은?"></a>스위프트에서 Monad type 은?</h1><h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><script src="//gist.github.com/978fa367bf77cfd3108b8185913321de.js"></script>
+
+<p>위에 소스에서 보시면 array 는 [1,2,3,4,5] 입니다.</p>
+<p>map 에 의해서 [2,4,6,8,10] 으로 바뀔 수 있으므로 Functor 입니다.</p>
+<p>map 에 의해서 다시 [1,2,3,4,5] 으로 돌아올 수 있으므로 Monad 입니다. </p>
+<h3 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h3><script src="//gist.github.com/523bad86d44175bab9bd8d913883284f.js"></script>
+
+<p>위에 소스에서 보시면 optional 변수는 옵셔널 Int 형입니다.</p>
+<p>optional 에도 Map 은 존재합니다.</p>
+<p>Map 을 통해 optional Int 형태의 2 로 바뀌었다가 다시 Optional Int 형의 1 로 돌아옵니다.</p>
+<p>다시 돌아오므로 Monad 입니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>오늘은 Functor 와 Monad 에 대해서 알아봤습니다.</p>
+<p>이러한 예제를 보셔서 이해하는데 도움이 됬으면 좋겠습니다.</p>
+<p>읽어주셔서 감사합니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

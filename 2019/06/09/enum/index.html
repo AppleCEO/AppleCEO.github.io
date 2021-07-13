@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="열거형">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>열거형 - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>열거형</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-06-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Swift/">#Swift</a> <a href="/tags/Enum/">#Enum</a> <a href="/tags/Enumeration/">#Enumeration</a> <a href="/tags/열거형/">#열거형</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Swift/">Swift</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 스위프트의 열거형에 대해서 알아보겠습니다.</p>
+<h1 id="열거형-이란"><a href="#열거형-이란" class="headerlink" title="열거형 이란?"></a>열거형 이란?</h1><p>열거는 무슨 뜻일까요?</p>
+<p>국어사전에 검색해보았습니다.</p>
+<p>“여러 가지 예나 사실을 낱낱이 죽 늘어놓음.” 이라고 나옵니다.</p>
+<p>그렇다면 열거형은 “여러 가지 예나 사실을 낱낱이 죽 늘어놓음” + “형태” 라고 이해할 수 있겠습니다.</p>
+<h1 id="스위프트에서-열거형-이란"><a href="#스위프트에서-열거형-이란" class="headerlink" title="스위프트에서 열거형 이란?"></a>스위프트에서 열거형 이란?</h1><p>스위프트에서 열거형은 Enumeration 이라고 합니다.</p>
+<p>줄여서 Enum 이라고도 합니다.</p>
+<p>열거형은 같은 성질을 가지는 여러 것들을 늘어놓는데 사용할 수 있습니다.</p>
+<p>예를 들어 무게라는 성질을 가지는 것에는 어떤 것이 있을까요?</p>
+<p>g, kg, oz, lb 등이 있습니다.</p>
+<p>이러한 한가지 성질을 가지는 것들을 묶어서 사용하는데 용이한 타입이 열거형입니다.</p>
+<h1 id="열거형을-선언하는-방법은"><a href="#열거형을-선언하는-방법은" class="headerlink" title="열거형을 선언하는 방법은?"></a>열거형을 선언하는 방법은?</h1><p>스위프트에서 열거형은 아래처럼 선언할 수 있습니다.</p>
+<script src="//gist.github.com/f61ea098b7b63a62b310b61ddc91d3ca.js"></script>
+
+<p>예를 들어 나침반의 점은 아래 4가지 케이스로 선언할 수 있습니다.</p>
+<script src="//gist.github.com/19ff40a02557056809884d0c76c19da2.js"></script>
+
+<p>아래처럼 여러 케이스들을 한 줄로 표현할 수도 있습니다.</p>
+<script src="//gist.github.com/e1f0f77751c709e54b545d8934f07dce.js"></script>
+
+
+<h1 id="열거형의-활용-방안은"><a href="#열거형의-활용-방안은" class="headerlink" title="열거형의 활용 방안은?"></a>열거형의 활용 방안은?</h1><h3 id="열거형은-Switch-문과-결합해서-사용할-수-있습니다"><a href="#열거형은-Switch-문과-결합해서-사용할-수-있습니다" class="headerlink" title="열거형은 Switch 문과 결합해서 사용할 수 있습니다."></a>열거형은 Switch 문과 결합해서 사용할 수 있습니다.</h3><p>열거형의 특징은 어떤 것이 있을까요?</p>
+<p>위에서 언급했다시피 한가지 특징을 가지는 여러 것들을 묶어서 사용합니다.</p>
+<p>한가지 특징을 여러 케이스로 나누는 특징이 있습니다.</p>
+<p>이런 식으로 여러 케이스로 나누어 처리하는 방식은 익숙하지 않으신가요?</p>
+<p>그렇습니다. Switch 문과 Enum 은 밀접한 관계가 있습니다.</p>
+<p>아래에서 directionToHead 는 .south 케이스를 따르기 때문에 Watch out for penguins 이 출력됩니다.</p>
+<script src="//gist.github.com/caa1c4b265419d5ced57cc9970798500.js"></script>
+
+<p>아래의 예제는 Planet 에서 earth 일 때만 처리를 해주고 있습니다.</p>
+<p>이에서 볼 수 있듯이 enum 의 케이스 별로 꼭 switch 문에 case 를 선언해 줄 필요는 없습니다.</p>
+<script src="//gist.github.com/89800ef1de83d08b61c7ef8dcf5ec022.js"></script>
+
+
+<h3 id="여러-케이스에-대해-반복작업을-할-때도-좋습니다"><a href="#여러-케이스에-대해-반복작업을-할-때도-좋습니다" class="headerlink" title="여러 케이스에 대해 반복작업을 할 때도 좋습니다."></a>여러 케이스에 대해 반복작업을 할 때도 좋습니다.</h3><p>한가지 특징에 대해 여러가지 케이스를 가지는 반복 작업을 할 때에도 열거형을 활용할 수 있습니다.</p>
+<p>아래와 같이 CaseIterable 프로토콜을 채택하면 allCases 를 사용할 수 있습니다.</p>
+<script src="//gist.github.com/63419dc108ea88b38d7b17668ed4834c.js"></script>
+
+<p>위에 소스에서 case 는 3가지 이므로 numberOfChoices 상수에는 3 이 들어갑니다.</p>
+<p>for 문에서도 allCases 를 사용하면 모든 case 에 대해 반복할 수 있습니다.</p>
+<script src="//gist.github.com/375c1d828e32fbfe0d6a175d96aab3b9.js"></script>
+
+<p>beverage 에 Beverage 의 케이스인 coffee, tea, juice 가 차례로 들어가면서 반복됩니다.</p>
+<h3 id="타입으로-만들-수-도-있습니다"><a href="#타입으로-만들-수-도-있습니다" class="headerlink" title="타입으로 만들 수 도 있습니다."></a>타입으로 만들 수 도 있습니다.</h3><p>예를 들어 Json 의 타입은 아래처럼 선언할 수 있습니다.</p>
+<script src="//gist.github.com/9152e894e1374b9b2e9c874160e3544c.js"></script>
+
+<p>여기에서 (Int) 라고 적혀있는 부분은 연관값(Associated Value) 이라고 하며 해당 케이스를 따르면 Int 형을 저장할 수 있다는 뜻입니다.</p>
+<p>괄호 안의 값을 저장하는 case 들을 만들 수 있는 것입니다.</p>
+<p>아래의 예제에서 JsonType 을 따르는 여러 변수를 만들어봤습니다.</p>
+<script src="//gist.github.com/cb40a068a15513f8d37f8ef401f1c062.js"></script>
+
+<p>이러한 JsonType 은 어떤 타입만 사용할지 정할 수 있습니다.</p>
+<p>예를 들어 JsonType 의 enum 변수에는 [Int:String] 과 같은 딕셔너리를 저장할 수 없습니다.</p>
+<p>위에서 선언한 Int, String, Bool, [String: JsonType], JsonType 배열만 저장하고 사용할 수 있습니다.</p>
+<p>공식 문서에 있는 Barcode 도 비슷한 예제입니다.</p>
+<p>Barcode 라는 타입을 만들었다고 할 수 있습니다.</p>
+<script src="//gist.github.com/a33b184d0b6c8d7d1039fd82dc5d901f.js"></script>
+
+<p>Barcode 에는 upc 케이스를 따를 경우 Int 4개가 들어가거나 qrCode 케이스의 문자열만 저장할 수 있습니다.</p>
+<script src="//gist.github.com/c9b80cd167657e921d5d5dbe936faf3f.js"></script>
+
+
+<h3 id="동일한-유형의-기본값을-저장할-수-있습니다"><a href="#동일한-유형의-기본값을-저장할-수-있습니다" class="headerlink" title="동일한 유형의 기본값을 저장할 수 있습니다."></a>동일한 유형의 기본값을 저장할 수 있습니다.</h3><p>한가지 타입의 데이터들을 모아서 저장하고 싶은 경우에도 열거형은 좋은 대안이 될 수 있습니다.</p>
+<p>특수문자들을 모아서 저장한 예제입니다.</p>
+<script src="//gist.github.com/5cf2cfbf52cc048298115a00bb617943.js"></script>
+
+<p>이제 “[“ 라고 비교하는 것보다 체계적으로 특수문자들을 관리할 수 있습니다.</p>
+<script src="//gist.github.com/34f1536761b893079669c75cc10e7633.js"></script>
+
+<p>rawValue 의 몇가지 특징을 더 설명해드리겠습니다.</p>
+<p>Int 타입을 rawValue 로 가지도록 아래와 같이 선언하고 case 에 값을 할당하지 않는다면 각 케이스에 0부터 차례대로 rawValue 값이 할당됩니다.</p>
+<script src="//gist.github.com/625485f7f44cb4101dc5b162969a4951.js"></script>
+
+<p>만약에 첫 case 에 1을 할당한다면 그 뒤에 case 들은 다음 숫자인 2부터 채워집니다.</p>
+<script src="//gist.github.com/6c4ce759a3bd46f7d7e359c38807ced1.js"></script>
+
+<p>String 을 rawValue 로 가지도록 선언해놓고 case 에 값을 할당하지 않는다면 case 의 이름이 자동으로 할당됩니다. </p>
+<p>예를 들어 north case 의 rawValue 는 “north” 입니다.</p>
+<script src="//gist.github.com/17ea268b3d65e3d63c163073149431de.js"></script>
+
+
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이상으로 열거형 Enum 에 대한 설명을 마치도록 하겠습니다.</p>
+<p>열거형은 Swift 에서 구조체와 함께 활용을 권장하는 것으로 알고 있습니다. </p>
+<p>이러한 특징들을 잘 활용하셔서 Enum 을 사용하는데 조금이라도 도움이 되었으면 좋겠습니다.</p>
+<p>틀린 점이나 궁금하신 점은 댓글로 남겨주시면 답변 드리도록 하겠습니다.</p>
+<p>긴 글 읽어주셔서 감사합니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

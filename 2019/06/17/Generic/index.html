@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Generic and Custom Operators">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Generic and Custom Operators - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Generic and Custom Operators</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Generic/">#Generic</a> <a href="/tags/Custom-Operators/">#Custom Operators</a> <a href="/tags/Operator/">#Operator</a> <a href="/tags/제네릭/">#제네릭</a> <a href="/tags/사용자-정의-연산자/">#사용자 정의 연산자</a> <a href="/tags/연산자/">#연산자</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Swift/">Swift</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 Generic 과 Custom Operators 에 대해서 알아보겠습니다.</p>
+<p>먼저 Custom Operators 에 대해서 알아보겠습니다.</p>
+<h1 id="Custom-Operators-란"><a href="#Custom-Operators-란" class="headerlink" title="Custom Operators 란?"></a>Custom Operators 란?</h1><p>한글로 번역하면 <strong>사용자 정의 연산자</strong>입니다.</p>
+<p>한글로 번역해도 도통 무슨 말인지 알아듣기 힘듭니다.</p>
+<p>Custom 이라는 단어는 익숙하실 겁니다.</p>
+<p>원하는 대로 바꿀 수 있는 것을 커스텀(Custom) 이라고 합니다.</p>
+<p>그렇다면 Operator 를 마음대로 바꿀 수 있다고 이해할 수 있습니다.</p>
+<h1 id="Operator-란"><a href="#Operator-란" class="headerlink" title="Operator 란?"></a>Operator 란?</h1><p>한글로 번역하면 <strong>연산자</strong>입니다.</p>
+<p>흔히 사용하는 더하기, 빼기, 나누기, 곱하기를 사칙연산이라고 하죠.</p>
+<p>이러한 연산의 종류를 알려주는 것이 <strong>연산자</strong>입니다.</p>
+<p>그렇다면 연산자에는 어떤 종류가 있을까요?</p>
+<ul>
+<li><p>infix (중위 연산자): 더하기 연산자 처럼, 두 값 사이에서 사용됩니다(예, 1 + 1).</p>
+</li>
+<li><p>prefix (전위 연산자) : 음수 연산자 처럼, 값의 앞에 추가됩니다(예, -3).</p>
+</li>
+<li><p>postfix (후위 연산자): 강제 언래핑(force-unwrap) 연산자처럼, 값 뒤에 추가 됩니다(예, mayBeNil!).</p>
+</li>
+<li><p>ternary (삼항 연산자): 3개의 값 사이에 삽입된 두개의 기호입니다. Swift에서, 사용자정의 삼항 연산자는 지원되지 않고 내장된 삼항 연산자는 하나있으며, 애플 문서(Apple’s documentation)에서 읽을수 있습니다.</p>
+</li>
+</ul>
+<h1 id="Custom-Operator-은-어디에-쓰일까"><a href="#Custom-Operator-은-어디에-쓰일까" class="headerlink" title="Custom Operator 은 어디에 쓰일까?"></a>Custom Operator 은 어디에 쓰일까?</h1><p>보통 직접 만든 타입에서 연산을 할 때 사용한다고 합니다.</p>
+<p>일반적으로 쓰이는 연산자들을 <strong>Custom Operator</strong> 로 사용할 수 있다면 메소드로 만드는 것보다 가독성이 좋을 것입니다.</p>
+<p>예를 들어 카드를 비교할 때 isHigherPointThan(cardCompared: Card) 이라고 카드 내에 다른 카드와 비교하는 메소드를 선언하는 것보다 &gt;, &lt; 와 같은 비교 연산자를 사용하는 것이 더 좋을 것 같습니다.</p>
+<h1 id="Custom-Operator-사용-방법은"><a href="#Custom-Operator-사용-방법은" class="headerlink" title="Custom Operator 사용 방법은?"></a>Custom Operator 사용 방법은?</h1><script src="//gist.github.com/734b5967fbf984abe5afdc77e4accef1.js"></script>
+
+<p>** 이란 곱하기 연산을 수행하는 Custom Operator 를 만들어봤습니다.</p>
+<p>infix operator ** : MultiplicationPrecedence</p>
+<p>Int 와 Int 사이에 중위 연산자로 예제 소스의 첫번째 줄에서 operator 앞에 infix 를 붙여줍니다.</p>
+<p>Multi 연산자의 순서와 동일하기 때문에 MultiplicationPrecedence 를 : 뒤에 붙여줍니다.</p>
+<p>이제 3 ** 4 는 정의해준 대로 3 곱하기 4 를 실행한 12 가 됩니다.</p>
+<h1 id="Generic-이란"><a href="#Generic-이란" class="headerlink" title="Generic 이란?"></a>Generic 이란?</h1><p>위와 같이 Int 를 곱해주는 Custom Operator 가 만들어진 후에 Float 도 곱해주어야 한다면 타입 별로 Custom Operator 를 정의해주어야 할까요?</p>
+<p>이럴 때 사용할 수 있는 것이 <strong>Generic</strong> 입니다.</p>
+<script src="//gist.github.com/833f1c88766555c95f37e1d29c5ee2d6.js"></script>
+
+<p>곱해줄 수 있는 타입들에 대해서 모두 동일하게 Custom Operator 가 동작하길 바란다면 위와 같이 작성할 수 있습니다.</p>
+<p>&lt;T&gt; 를 함수 이름 뒤에 붙이고 매개변수 또는 리턴 타입에 T 를 작성하게 되면은 해당되는 T 는 모두 동일한 타입이어야 합니다.</p>
+<p>이 때 where 을 사용하면 위에서 선언한 Multipleiable 프로토콜을 따르는 타입만 받을 수 있습니다.</p>
+<script src="//gist.github.com/1ce0d884027a60435b98f08d587a6280.js"></script>
+
+<script src="//gist.github.com/4a7874680821af8079bb6d09796fedda.js"></script>
+
+<p>위에 두가지는 똑같이 동작합니다.</p>
+<p>이런 식으로 제널릭을 사용할 수 있습니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>Generic 과 Custom Operators 에 대해서 알아봤습니다.</p>
+<p>아직 사용한 적은 없지만 사용할 수 있는 기회가 온다면 놓치지 않고 사용하도록 준비해야겠습니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><p><a href="https://kka7.tistory.com/73" rel="external nofollow noopener noreferrer" target="_blank">https://kka7.tistory.com/73</a> [때로는 까칠하게..]</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

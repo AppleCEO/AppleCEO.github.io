@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="복잡도(Complexity)">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>복잡도(Complexity) - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>복잡도(Complexity)</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-01-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/complexity/">#complexity</a> <a href="/tags/time/">#time</a> <a href="/tags/space/">#space</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 복잡도에 대해서 알아보겠습니다.</p>
+<h2 id="복잡도란-무엇인가"><a href="#복잡도란-무엇인가" class="headerlink" title="복잡도란 무엇인가"></a>복잡도란 무엇인가</h2><p>복잡도는 확장성과 관련이 깊다.</p>
+<p>확장이 가능하냐는 질문은 소프트웨어 개발을 할 때 반복되는 질문 중 하나이다.</p>
+<p>만약 10분 안에 처리되야하는 소프트웨어가 100분이 걸리게 된다면 이것은 확장성에 위배된다고 할 수 있다.</p>
+<p>하지만 데이터의 양에 따라 10분이라는 시간은 상대적일 것이다.</p>
+<p>이럴 때 우리는 복잡도를 활용한다.</p>
+<p>복잡도에는 시간 복잡도(Time complexity)와 공간 복잡도(Space complexity)가 있다.</p>
+<h2 id="시간-복잡도란-무엇인가"><a href="#시간-복잡도란-무엇인가" class="headerlink" title="시간 복잡도란 무엇인가"></a>시간 복잡도란 무엇인가</h2><p>시간 복잡도는 입력되는 데이터의 양이 증가함에 따라 알고리즘이 실행되는데 필요한 시간을 나타낸 것이다.</p>
+<p>시간 복잡도의 종류에는 Constant time, Linear time, Quadratic time, Logarithmic time, Quasilinear time 등이 있다.</p>
+<h3 id="Constant-time-이란-무엇인가"><a href="#Constant-time-이란-무엇인가" class="headerlink" title="Constant time 이란 무엇인가"></a>Constant time 이란 무엇인가</h3><p>Constant 은 번역하면 일정한 이라는 형용사이다.</p>
+<p>입력되는 사이즈와 상관없이 일정한 시간을 가지는 시간 복잡도이다.</p>
+<p>빅오표기법으로 O(1) 이다.</p>
+<p>예제 소스는 아래와 같다.</p>
+<script src="//gist.github.com/955649dbc1f2441d344a8917dc81eaee.js"></script>
+
+<p>데이터의 증가에 따라 시간의 증가를 나타내는 표는 아래와 같다.</p>
+<p><img src="/images/ConstantTime.png" alt></p>
+<h3 id="Linear-time-이란-무엇인가"><a href="#Linear-time-이란-무엇인가" class="headerlink" title="Linear time 이란 무엇인가"></a>Linear time 이란 무엇인가</h3><p>Linear 은 번역하면 선형이라는 뜻이다.</p>
+<p>가장 일반적인 것으로 데이터의 양이 증가함에 따라 시간도 균등하게 증가하는 시간 복잡도이다.</p>
+<p>빅오표기법으로 O(N) 이다.</p>
+<p>예제 소스는 아래와 같다.</p>
+<script src="//gist.github.com/3941e9a4a3bbb5fc6fa942503097660e.js"></script>
+
+<p>데이터의 증가에 따라 시간의 증가를 나타내는 표는 아래와 같다.</p>
+<p><img src="/images/LinearTime.png" alt></p>
+<h3 id="Quadratic-time-이란-무엇인가"><a href="#Quadratic-time-이란-무엇인가" class="headerlink" title="Quadratic time 이란 무엇인가"></a>Quadratic time 이란 무엇인가</h3><p>Quadratic 은 번역하면 이차라는 뜻이다.</p>
+<p>이차라는 말에서 예상할 수 있듯이 데이터의 양이 증가함에 따라 제곱 꼴로 증가해가는 시간 복잡도이다.</p>
+<p>빅오표기법으로 O(N제곱) 이다.</p>
+<p> 예제 소스는 아래와 같다.</p>
+ <script src="//gist.github.com/4cfc658cc0c191ddf73bfbd47c47378c.js"></script>
+
+
+<h3 id="Logarithmic-time-이란-무엇인가"><a href="#Logarithmic-time-이란-무엇인가" class="headerlink" title="Logarithmic time 이란 무엇인가"></a>Logarithmic time 이란 무엇인가</h3><p>Logarithmic 은 번역하면 대수라는 뜻이다.</p>
+<p>Logarithmic 에서 앞에 세글자만 보면 log 이다.</p>
+<p>그렇다. Logarithmic 은 로그와 관련이 있다.</p>
+<p>빅오표기법으로 O(logN) 이다.  </p>
+<p>예제 소스는 아래와 같다.</p>
+<script src="//gist.github.com/be5b81b1895644b128b508d782563001.js"></script>
+
+<h3 id="Quasilinear-time-이란-무엇인가"><a href="#Quasilinear-time-이란-무엇인가" class="headerlink" title="Quasilinear time 이란 무엇인가"></a>Quasilinear time 이란 무엇인가</h3><p>준선형 시간이다.</p>
+<p>빅오표기법으로 O(NlogN) 이다.</p>
+<h2 id="공간-복잡도-Space-comlexity-란-무엇인가"><a href="#공간-복잡도-Space-comlexity-란-무엇인가" class="headerlink" title="공간 복잡도(Space comlexity) 란 무엇인가"></a>공간 복잡도(Space comlexity) 란 무엇인가</h2><p>시간과 마찬가지로 공간 또한 확장의 주요 요소이다.</p>
+<p>공간 복잡도는 소프트웨어가 메모리를 얼마나 차지하는지에 대한 지표이다.</p>
+<script src="//gist.github.com/7098543858c982547e68ca5a9b324a93.js"></script>
+
+<p>위의 예제소스의 공간 복잡도는 O(N) 이다.</p>
+<p>같은 기능을 하지만 더 긴 아래 예제소스의 공간 복잡도는 O(1) 이다.</p>
+<script src="//gist.github.com/1517a217a564d4f36da6fb4da8a76a10.js"></script>
+
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><ul>
+<li>시간 복잡도는 입력 크기가 증가함에 따라 알고리즘을 실행하는 데 필요한 시간을 측정한 것이다.</li>
+<li>공간 복잡도는 알고리즘을 실행하는 데 필요한 메모리를 측정한 것이다.</li>
+<li>Big O 표기법은 일반적인 형태의 시간 및 공간 복잡성을 나타내는 데 사용한다.</li>
+<li>시간과 공간의 복잡성은 높은 수준의 확장성의 척도이다. 알고리즘 자체의 실제 속도는 측적하지 않아도 된다.</li>
+<li>작은 데이터 세트의 경우 시간복잡도와 일반적으로 관련이 없다. 준선형 알고리즘음이 선형 알고리즘 보다 느릴 수 있다.</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

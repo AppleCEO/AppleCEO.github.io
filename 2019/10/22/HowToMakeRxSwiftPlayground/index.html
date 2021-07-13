@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="RxSwift Playground 만드는 방법">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>RxSwift Playground 만드는 방법 - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>RxSwift Playground 만드는 방법</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-10-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/RxSwift/">#RxSwift</a> <a href="/tags/Playground/">#Playground</a> <a href="/tags/플레이그라운드/">#플레이그라운드</a> <a href="/tags/만드는-방법/">#만드는 방법</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/RxSwift/">RxSwift</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 RxSwift 소스를 마음대로 돌려볼 수 있는 Playground 를 만드는 방법을 알아보겠습니다.</p>
+<h1 id="RxSwift-Playground-만드는-방법"><a href="#RxSwift-Playground-만드는-방법" class="headerlink" title="RxSwift Playground 만드는 방법"></a>RxSwift Playground 만드는 방법</h1><ol>
+<li>xcode 에서 Single View App을 생성합니다.</li>
+</ol>
+<p><img src="/images/HowToMakeRxSwiftPlayground1.png" alt></p>
+<p><img src="/images/HowToMakeRxSwiftPlayground3.png" alt></p>
+<ol start="2">
+<li>Playground 를 추가합니다.</li>
+</ol>
+<p><img src="/images/HowToMakeRxSwiftPlayground5.png" alt></p>
+<p><img src="/images/HowToMakeRxSwiftPlayground6.png" alt></p>
+<p>아래와 같이 Playground 가 추가되어 정상적으로 동작합니다.</p>
+<p><img src="/images/HowToMakeRxSwiftPlayground7.png" alt></p>
+<ol start="3">
+<li><p>xcode 를 닫습니다.</p>
+</li>
+<li><p>터미널을 이용해 위에서 만든 프로젝트의 경로로 이동합니다.</p>
+</li>
+</ol>
+<p><img src="/images/HowToMakeRxSwiftPlayground8.png" alt></p>
+<ol start="5">
+<li><p>터미널에서 pod init 을 실행합니다.</p>
+</li>
+<li><p>터미널에서 vi Podfile 로 Podfile 을 엽니다.</p>
+</li>
+</ol>
+<p><img src="/images/HowToMakeRxSwiftPlayground9.png" alt><br>열면 위와 같을 것입니다.</p>
+<ol start="7">
+<li>터미널에서 열린 파일 가장 밑에 줄 end 위에 아래 코드를 추가하고 저장합니다.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;RxSwift&apos;, &apos;~&gt; 4.0&apos;</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><p>터미널에서 pod install 을 실행합니다.</p>
+</li>
+<li><p>정상적으로 설치됬다면 RxSwiftPlayground.xcworkspace 파일이 생성되었을 것입니다. 실행합니다.</p>
+</li>
+<li><p>Playground 에 RxSwift 를 import 하고 예제 코드를 돌려보시면 됩니다.</p>
+</li>
+</ol>
+<h1 id="오류가-나올-때-해결-방법"><a href="#오류가-나올-때-해결-방법" class="headerlink" title="오류가 나올 때 해결 방법"></a>오류가 나올 때 해결 방법</h1><p><img src="/images/HowToMakeRxSwiftPlayground11.png" alt></p>
+<p><img src="/images/HowToMakeRxSwiftPlayground12.png" alt></p>
+<p>위와 같은 오류가 발생하시는 분들이 많을 것입니다.</p>
+<p>저 또한 매번 이런 오류가 발생했는데요.</p>
+<p>해결 방법을 알려드리겠습니다.</p>
+<ol>
+<li>import RxSwift 를 지웁니다.</li>
+<li>아래 부분에서 실행버튼을 눌러 오류를 발생시킵니다.</li>
+<li>다시 improt RxSwift 를 작성합니다.</li>
+<li>메뉴바에서 Product-Build 를 클릭하여 다시 빌드합니다.</li>
+<li>아래 부분에서 실행버튼을 클릭해보면 정상적으로 옵저버블이 생성되는 것을 볼 수 있습니다.</li>
+</ol>
+<p><img src="/images/RxSwiftErrorSolution.gif" alt></p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>RxSwift Playground 를 만드는 방법에 대해서 알아봤습니다.</p>
+<p>RxSwift 를 공부하고 실습할 때 이용하면 좋습니다.</p>
+<p>따라해보고 안되는 부분 있으면 피드백 주세요.</p>
+<p>읽어주셔서 감사합니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="iOS UIView 드래그하기">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>iOS UIView 드래그하기 - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>iOS UIView 드래그하기</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-08-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/스위프트/">#스위프트</a> <a href="/tags/iOS/">#iOS</a> <a href="/tags/UIView/">#UIView</a> <a href="/tags/UIGestureRecognizer/">#UIGestureRecognizer</a> <a href="/tags/UIPanGesutreRecognizer/">#UIPanGesutreRecognizer</a> <a href="/tags/drag/">#drag</a> <a href="/tags/드래그/">#드래그</a> <a href="/tags/드래그하기/">#드래그하기</a> <a href="/tags/dragging/">#dragging</a> <a href="/tags/드래깅/">#드래깅</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/iOS/">iOS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 iOS 에서 UIView 를 드래그하는 방법을 알아보겠습니다.</p>
+<p>iOS 에서는 터치에 대한 제스처를 어떤 식으로 처리하고 있을까요?</p>
+<p>iOS 에서 제스처를 처리하기 위해서는 UIGestureRecignizer 를 사용해야합니다.</p>
+<p>drag 을 하기 위해서는 UIPanGestureRecignizer 을 사용해야 합니다.</p>
+<p>공식문서를 보시면 UIPanGestureRecignizer 은 UIGestureRecignizer 의 subclass 입니다.</p>
+<p>예제를 따라해가며 UIView 를 드래그하는 실습을 해보겠습니다.</p>
+<h1 id="Step1"><a href="#Step1" class="headerlink" title="Step1"></a>Step1</h1><p><img src="/images/pan1.png" alt></p>
+<p>위에 사진과 같이 UIView 를 화면에 생성합니다.</p>
+<p>UIImageView 도 UIView 를 상속받기 때문에 가능합니다.</p>
+<p>주황색 상자에 있는 User Interaction Enabled 를 체크합니다.</p>
+<h1 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h1><script src="//gist.github.com/083b10204521fff16b8d95c10a58d7cd.js"></script>
+
+<p>위와 같이 ViewController.swift 를 작성해줍니다.</p>
+<p>@IBOutlet weak var imageView: UIImageView! 는 스토리보드에서 만든 UIImageView 와 연동해주어야 합니다.</p>
+<h1 id="Step3"><a href="#Step3" class="headerlink" title="Step3"></a>Step3</h1><p><img src="/images/pan2.gif" alt></p>
+<p>시뮬레이터를 실행시키고 테스트해보시면 뷰가 드래그되고 마우스를 따라오는 것을 알 수 있습니다.</p>
+<h1 id="소스-분석"><a href="#소스-분석" class="headerlink" title="소스 분석"></a>소스 분석</h1><p>draggingView 메소드를 먼저 살펴봅시다.</p>
+<p>첫번째 줄 : sender.location(in: view) 에서 손가락의 위치를 point 에 저장합니다.</p>
+<p>두번째 줄 : sender.view 는 손가락이 클릭하고 있는 view 를 draggedView 에 저장합니다.</p>
+<p>세번째 줄 : draggedView 의 중심을 손가락 위치인 point 에 따라 움직입니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>간단하게 UIView 를 드래그에 따라 움직이도록 소스를 작성해봤습니다.</p>
+<p>비슷한 예제를 찾지 못해서 헤멨습니다.</p>
+<p>도움이 됬으면 좋겠습니다.</p>
+<p>아래 제가 참고한 유튜브를 보시면 동영상으로 예제를 따라해보실 수 있습니다.</p>
+<p>참고 : <a href="https://www.youtube.com/watch?v=1U4-6CESv-s" rel="external nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=1U4-6CESv-s</a></p>
+<p>예제 프로젝트 : <a href="https://github.com/kiljh-me/Pan" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/kiljh-me/Pan</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

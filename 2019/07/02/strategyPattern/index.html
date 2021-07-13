@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Strategy Pattern">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Strategy Pattern - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Strategy Pattern</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-07-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/디자인-패턴/">#디자인 패턴</a> <a href="/tags/strategy-pattern/">#strategy pattern</a> <a href="/tags/design-pattern/">#design pattern</a> <a href="/tags/스트래티지-패턴/">#스트래티지 패턴</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Design-Pattern/">Design Pattern</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 스트래티지 패턴에 대해서 알아보겠습니다.</p>
+<h1 id="스트래티지-패턴이란"><a href="#스트래티지-패턴이란" class="headerlink" title="스트래티지 패턴이란?"></a>스트래티지 패턴이란?</h1><p><strong>자주 변경되는 부분을 인터페이스화하는 것입니다.</strong></p>
+<h1 id="스트래티지-패턴이-필요한-이유"><a href="#스트래티지-패턴이-필요한-이유" class="headerlink" title="스트래티지 패턴이 필요한 이유?"></a>스트래티지 패턴이 필요한 이유?</h1><p>예를 들어 Duck 이라는 클래스가 있습니다.</p>
+<p>러버덕과 실제 오리가 Duck 클래스를 상속받습니다.</p>
+<p>Duck 에 fly 라는 메서드를 추가하면 어떻게 될까요?</p>
+<p>러버덕도 날 수 있습니다!!</p>
+<p>현실은 러버덕은 날지 못합니다.</p>
+<p>fly 라는 메서드를 오버라이드해서 아무 동작하지 않도록 수정해줘야 할 것입니다.</p>
+<p>그렇다면 프로토콜로 채택해주면 어떨까요?</p>
+<p>Duck 이라는 프로토콜이 있습니다.</p>
+<script src="//gist.github.com/aea6acf2206590b09db5fcf35968df85.js"></script>
+
+<p>러버덕 인형과 실제 오리는 모두 Duck 을 채택합니다.</p>
+<p>이럴 때 러버덕 인형과 실제 오리 모두 각 fly 와 quack(오리 울음소리) 메서드를 구현해주어야 할 것입니다.</p>
+<p>소스의 중복이 발생합니다.</p>
+<p>또한 똑같은 동작을 하는 메서드들이 동일한 소스인지 확인해줘야 할 것입니다.</p>
+<p>이럴 때 사용할 수 있는 것이 <strong>스트래티지 패턴</strong>입니다.</p>
+<h1 id="스트래티지-패턴-적용-방법"><a href="#스트래티지-패턴-적용-방법" class="headerlink" title="스트래티지 패턴 적용 방법"></a>스트래티지 패턴 적용 방법</h1><p>그렇다면 스트래티지 패턴은 어떻게 적용할 수 있을까요?</p>
+<p>아래 예제를 먼저 보시겠습니다.</p>
+<script src="//gist.github.com/b1f7af508916e816236c13fb2b836635.js"></script>
+
+<p>FlyBehavior 프로토콜과 QuackBehavior 프로토콜이 작성되었습니다.</p>
+<p>이러한 프로토콜은 각 기능 fly 와 quack 메서드만이 선언되어 있습니다.</p>
+<p>FlyWithWings 구조체와 FlyNoWay 구조체는 FlyBehavior 프로토콜을 채택했고 fly 라는 메서드가 각자의 동작대로 작성되어있습니다.</p>
+<p>Quack 구조체와 Squeak 구조체와 MuteQuack 구조체는 QuackBehavior 프로토콜을 채택했고 quack 이라는 메서드가 각자의 동작대로 작성되어있습니다.</p>
+<p>Duck 이라는 프로토콜은 오리가 가져야할 특성들을 정의합니다.</p>
+<p>스트래티지 패턴 적용 전의 예제소스는 날 수 있고 울을 수 있기 때문에 fly 와 quack 이라는 메서드만 있었습니다.</p>
+<p>이제 flyBehavior 와 quackBehavior 이라는 프로토콜 변수를 프로퍼티로 가집니다.</p>
+<p>flyBehavior 에는 FlyBehavior 을 채택한 FlyWithWings 와 FlyNoWay 가 상황에 따라 들어갈 수 있을 것입니다.</p>
+<p>quackBehavior 의 경우도 마찬가지입니다.</p>
+<p>이렇게 구현함으로써 fly 와 quack 은 원하는 대로 동작을 작성해서 넣어줄 수 있을 것입니다.</p>
+<p>하지만 이게 끝이 아닙니다.</p>
+<p>이렇게 동적으로 작성해놓고 flyBehavior 와 quackBehavior 을 바꿀 수 없다면 의미가 없을 것입니다.</p>
+<p>아래 예제 소스를 보시죠.</p>
+<script src="//gist.github.com/326568138d62650fc1961b754efd2767.js"></script>
+
+<p>이제 setFlyBehavior 와 setQuackBehavior 메서드를 통해 MallarDuck 객체를 다시 선언하지 않고도 fly 와 quack 동작을 바꿀 수 있게 되었습니다.</p>
+<p>이런 식으로 자주 변동되는 부분들을 프로토콜 변수로 선언하여 변경할 수 있도록 하는 것이 스트래티지 패턴입니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>오늘은 스트래티지 패턴에 대해서 알아봤습니다.</p>
+<p>자주 변동되는 소스가 있다면 스트래티지 패턴을 통해 소스 수정을 줄일 수 있을 것입니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

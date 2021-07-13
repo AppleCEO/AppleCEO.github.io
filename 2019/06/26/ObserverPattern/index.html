@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Observer Pattern">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Observer Pattern - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Observer Pattern</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-06-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Pattern/">#Pattern</a> <a href="/tags/패턴/">#패턴</a> <a href="/tags/Observer-Pattern/">#Observer Pattern</a> <a href="/tags/옵저버-패턴/">#옵저버 패턴</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Design-Pattern/">Design Pattern</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 옵저버 패턴에 대해서 알아보겠습니다.</p>
+<h1 id="옵저버-패턴이란"><a href="#옵저버-패턴이란" class="headerlink" title="옵저버 패턴이란?"></a>옵저버 패턴이란?</h1><p><img src="/images/observerPattern.png" alt></p>
+<p>위에 이미지를 보시면 주제(Subject) 객체와 옵저버(Observer) 객체가 있습니다.</p>
+<p>주제의 데이터가 달라지면 옵저버한테 그 소식이 전해집니다.</p>
+<h1 id="옵저버-패턴을-사용하기-전의-상황은"><a href="#옵저버-패턴을-사용하기-전의-상황은" class="headerlink" title="옵저버 패턴을 사용하기 전의 상황은.."></a>옵저버 패턴을 사용하기 전의 상황은..</h1><p>보통 다른 객체에 필요한 데이터가 있다면 그 데이터를 가지고 있는 객체에 직접 접근해서 가져와서 사용합니다.</p>
+<p>해당 객체는 다른 객체에서 가져갈 프로퍼티의 이름을 공개해야하고 private 으로 선언할 수 없습니다.</p>
+<script src="//gist.github.com/2b5c5ea99d889d37e00c5074c1cdf092.js"></script>
+
+<p>point 의 x 좌표와 y 좌표가 drawPoint 함수를 실행하는데 필요하기 때문에 값을 가져오기 위해 private(set) 으로 선언됬습니다.</p>
+<p>또한 x, y 라는 프로퍼티 이름을 알고 있어야 직접 접근해서 가져갈 수 있습니다.</p>
+<p>만약 점의 위치가 바뀌어서 x, y 프로퍼티가 달라진다면 어떻게 해야할까요?</p>
+<p>점을 그리는 drawPoint 함수가 다시 실행되서 점의 위치를 바꿔줘야 할 것입니다.</p>
+<p>수시로 점의 위치가 바뀔 수 있다면 어떻게 해야할까요?</p>
+<p>drawPoint 함수를 1초마다 호출해야 할까요?</p>
+<p>이런 상황에서 필요한게 옵저버 패턴입니다.</p>
+<h1 id="옵저버-패턴을-사용하면"><a href="#옵저버-패턴을-사용하면" class="headerlink" title="옵저버 패턴을 사용하면.."></a>옵저버 패턴을 사용하면..</h1><p>위에 보여드렸던 이미지를 다시 보여드리겠습니다.</p>
+<p><img src="/images/observerPattern.png" alt></p>
+<p>조금 더 이해가 가시나요?</p>
+<p>subject 객체에 프로퍼티가 변경되면 옵저버 객체들에게 알려줍니다.</p>
+<p>그렇게 되면 어떤 장점이 있을까요?</p>
+<ul>
+<li>subject 객체에 들어와서 상태를 가져가게 드러내 보일 필요가 없다.</li>
+<li>observer 객체가 언제 값이 바뀌는지 대기하거나 수시로 조회할 필요가 없다.</li>
+</ul>
+<h1 id="스위프트에서-옵저버-패턴의-예제"><a href="#스위프트에서-옵저버-패턴의-예제" class="headerlink" title="스위프트에서 옵저버 패턴의 예제"></a>스위프트에서 옵저버 패턴의 예제</h1><script src="//gist.github.com/49092c20f4551959db2a21f7dd80e7ed.js"></script>
+
+<p>옵저버 패턴의 예제입니다.</p>
+<p>graph 객체와 dominic 객체는 옵저버 객체이고 MyPoint 를 구독합니다.</p>
+<p>MyPoint 는 좌표가 바뀔 때마다 옵저버들에게 알려줍니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이상 옵저버 패턴에 대해서 알아봤습니다.</p>
+<p>항상 값을 바뀌는지 기다리고 체크해야되는 상황이나 내가 어떤 데이터를 가지고 있는지 공개하지 않으면서 다른 객체에게 정보를 알려줄 때는 옵저버 패턴을 사용할 수 있습니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><p><a href="https://linsaeng.tistory.com/6" rel="external nofollow noopener noreferrer" target="_blank">https://linsaeng.tistory.com/6</a><br><a href="https://kimsunzun.tistory.com/entry/Observer감시자패턴" rel="external nofollow noopener noreferrer" target="_blank">https://kimsunzun.tistory.com/entry/Observer감시자패턴</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Automatic Reference Counting">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Automatic Reference Counting - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Automatic Reference Counting</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-06-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Swift/">#Swift</a> <a href="/tags/ARC/">#ARC</a> <a href="/tags/Automatic-Reference-Counting/">#Automatic Reference Counting</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Swift/">Swift</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 스위프트의 특징 중에 하나인 Automatic Reference Counting(이하 ARC) 대해서 알아보겠습니다.</p>
+<h1 id="해석"><a href="#해석" class="headerlink" title="해석"></a>해석</h1><p>reference 는 해석하면 참조입니다.</p>
+<p>클래스 인스턴스를 변수, 상수, 프로퍼티 등에 저장하거나 메소드나 함수에 매개변수로 사용하면 참조를 한다라고 합니다.</p>
+<p>Counting 은 해석하면 숫자를 세다라고 할 수 있죠.</p>
+<p>Reference(참조)의 숫자를 세는 것이 Reference Counting 입니다.</p>
+<p>그렇다면 ARC 는 어떻게 해석할 수 있을까요?</p>
+<p>Automatic 은 자동이라는 뜻이죠.</p>
+<p>Reference Counting 을 자동으로 해주는 것입니다.</p>
+<h1 id="ARC-의-동작"><a href="#ARC-의-동작" class="headerlink" title="ARC 의 동작"></a>ARC 의 동작</h1><p>그렇다면 스위프트는 참조를 어떻게 카운팅할까요?</p>
+<p>ARC 는 강한 참조만을 카운팅합니다.</p>
+<p>강한 참조라는 용어가 익숙하지 않으실텐데요.</p>
+<p>저희가 의식하지 않고 자주 사용하고 있었습니다.</p>
+<p>변수나 상수에 클래스 인스턴스를 초기화해서 할당하는 것이 강한 참조입니다.</p>
+<p>그렇다면 ARC 는 어떻게 동작할까요?</p>
+<ul>
+<li><p>위에서 예시를 드렸다시피 프로퍼티, 상수 또는 변수에 클래스 인스턴스를 할당하는 것을 강한 참조라고 합니다.</p>
+</li>
+<li><p>인스턴스를 함수나 메서드에 인자로 전달하면 해당 블록이 실행되는 동안 참조 카운트가 증가하고 함수나 메서드가 종료되면 참조 카운트가 감소합니다.</p>
+</li>
+<li><p>함수나 메서드, 클로저 등 코드 블럭 내에서 생성한 인스턴스는 당연히 해당 코드 블럭이 끝나면 참조 카운트가 감소합니다.</p>
+</li>
+<li><p>강한 참조가 없다면 deinit 메서드가 실행된 후 해당 인스턴스는 자동으로 메모리에서 할당 해제됩니다.</p>
+</li>
+<li><p>강한 참조가 남아있다면 해당 인스턴스를 할당 해제하지 못합니다.</p>
+</li>
+</ul>
+<h1 id="강한-참조-순환-문제"><a href="#강한-참조-순환-문제" class="headerlink" title="강한 참조 순환 문제"></a>강한 참조 순환 문제</h1><p>이렇게 강한 참조로만 구성하면 문제가 없을까요?</p>
+<p>강한 참조 순환 문제가 발생할 수 있습니다.</p>
+<p>강한 참조 순환 문제는 두 개의 클래스가 서로를 프로퍼티로 강한 참조할 때 </p>
+<p>각 두개의 인스턴스가 메모리에서 할당되지 않고 계속 남아있는 문제입니다.</p>
+<h1 id="강한-참조-순환-문제-해결-방법"><a href="#강한-참조-순환-문제-해결-방법" class="headerlink" title="강한 참조 순환 문제 해결 방법"></a>강한 참조 순환 문제 해결 방법</h1><p>강한 참조 순환 문제를 해결하는 방법은 아래의 두가지가 있습니다.</p>
+<ul>
+<li><p>약한 참조</p>
+</li>
+<li><p>미소유 참조</p>
+</li>
+</ul>
+<p>하나씩 자세히 설명해보도록 하겠습니다.</p>
+<h3 id="약한-참조"><a href="#약한-참조" class="headerlink" title="약한 참조"></a>약한 참조</h3><p>약한 참조는 프로퍼티나 변수 앞에 weak 을 붙여줘서 사용할 수 있습니다.</p>
+<p>강한 참조가 순환되서 발생하던 문제는 한 쪽을 약한 참조로 바꿔주면 해결됩니다.</p>
+<p>약한 참조를 사용할 때 사용할 때 주의할 점 두가지!</p>
+<ul>
+<li><p>약한 참조는 항상 변수로 선언해야 한다. 상수로 선언하면 안 된다.</p>
+</li>
+<li><p>약한 참조는 항상 옵셔널로 선언해야 한다.</p>
+</li>
+</ul>
+<h3 id="미소유-참조"><a href="#미소유-참조" class="headerlink" title="미소유 참조"></a>미소유 참조</h3><p>미소유 참조는 프로퍼티나 변수, 상수 앞에 onowned 를 붙여줘서 사용할 수 있습니다.</p>
+<p>강한 참조가 순환되서 발생하던 문제는 한 쪽을 미소유로 바꿔주면 해결됩니다. </p>
+<p>미소유 참조를 사용할 때 사용할 때 주의할 점 두가지!</p>
+<ul>
+<li><p>참조하는 인스턴스가 메모리에서 해제되더라도 자동으로 nil 을 할당해주지 않음</p>
+</li>
+<li><p>메모리에서 해제된 인스턴스에 접근하려 하면 잘못된 메모리 접근으로 런타임 오류가 발생해서 프로세스가 강제로 종료됨</p>
+</li>
+</ul>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>ARC 는 강한 참조를 자동으로 카운트한다!</p>
+<p>강한 참조만 사용하면 클래스 인스턴스간 강한 참조 순환이 발생할 수 있다.</p>
+<p>아래 두가지 방법으로 클래스 인스턴스간 강한 참조 순환은 해결할 수 있다.</p>
+<ul>
+<li><p>약한 참조</p>
+</li>
+<li><p>미소유 참조</p>
+</li>
+</ul>
+<p>자세한 내용은 아래 발표 자료를 확인 부탁드립니다.</p>
+<p><a href="https://www.slideshare.net/joonjhokil/arc-149195450" rel="external nofollow noopener noreferrer" target="_blank">https://www.slideshare.net/joonjhokil/arc-149195450</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

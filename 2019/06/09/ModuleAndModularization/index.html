@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="모듈과 모듈화">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>모듈과 모듈화 - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>모듈과 모듈화</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-06-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Programming/">#Programming</a> <a href="/tags/Module/">#Module</a> <a href="/tags/Modularization/">#Modularization</a> <a href="/tags/terminology/">#terminology</a> <a href="/tags/모듈/">#모듈</a> <a href="/tags/모듈화/">#모듈화</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Terminology/">Terminology</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 모듈에 대해서 알아보겠습니다.</p>
+<p>모듈은 프로그래밍에서 자주 쓰이는 용어인데요.</p>
+<p>저 또한 정확히 뜻을 파악하고 있지는 못하고 있었습니다.</p>
+<p>일반적으로 모듈의 뜻과 스위프트에서 사용되는 예제 등을 찾아서 정리해보고자 합니다.</p>
+<h1 id="모듈이란"><a href="#모듈이란" class="headerlink" title="모듈이란?"></a>모듈이란?</h1><p>정보통신기술용어해설 사이트에 모듈은 아래와 같이 설명되어 있습니다.</p>
+<ul>
+<li><p>보다 작고 이해할 수 있는 단위로 나뉘어진 것</p>
+</li>
+<li><p>그 자체로 하나의 완전한 기능을 수행할 수 있는 독립된 실체</p>
+</li>
+<li><p>본체에서 분리되어 작은 부분으로 유기적으로 구성되어 있다가 필요할 때 본체에 합류하여 그 기능을 수행할 수 있는 것</p>
+</li>
+</ul>
+<p>모듈은 위에 설명과 같이 한가지 일을 수행하는 코드의 모음이라고 할 수 있습니다.</p>
+<h1 id="모듈화란"><a href="#모듈화란" class="headerlink" title="모듈화란?"></a>모듈화란?</h1><p>모듈 얘기가 나오면 모듈화를 빠뜨릴 수 없습니다.</p>
+<p>모듈화는 거대한 문제를 작은 조각의 문제로 나누어 다루기 쉽도록 하는 과정입니다.</p>
+<p>예를 들어 큰 문제를 해결하는 긴 소스가 있다면 한가지 일을 하는 소스들(모듈)끼리 나누는 것을 모듈화라고<br>합니다.</p>
+<h1 id="모듈의-특징"><a href="#모듈의-특징" class="headerlink" title="모듈의 특징"></a>모듈의 특징</h1><ul>
+<li><p>Unity (한가지 일만 수행)</p>
+</li>
+<li><p>Smallness (간단명료)</p>
+</li>
+<li><p>Simplicity (단순성)</p>
+</li>
+<li><p>Independency (독립성)</p>
+</li>
+</ul>
+<p>모듈의 특징은 위 4가지와 같습니다.</p>
+<p>모듈은 한가지 일만 수행해야 합니다.</p>
+<p>한가지 일만 수행하기 때문에 역할이 간단하고 명료해야합니다.</p>
+<p>또한 다른 프로그램에서도 사용할 수 있도록 모듈은 단순해야 합니다.</p>
+<p>여러 프로그램에서 붙여서 쓸 수 있도록 독립성을 유지해야 합니다.</p>
+<h1 id="모듈화-장점"><a href="#모듈화-장점" class="headerlink" title="모듈화 장점"></a>모듈화 장점</h1><ul>
+<li><p>수정 용이</p>
+</li>
+<li><p>재사용성 용이</p>
+</li>
+<li><p>유지관리 쉬움</p>
+</li>
+</ul>
+<p>모듈화를 하면 수정에 용이합니다.</p>
+<p>수행하는 일에 따라서 모듈이 나뉘어져 있기 때문에 어느 부분을 수정해야 할지 찾기 쉽기 때문입니다.</p>
+<p>모듈은 위에서 설명했다시피 재사용하기 좋습니다.</p>
+<p>통일성있게 표준화해놓기 때문에 다른 사람이 만든 모듈들을 유지보수하기도 좋습니다.</p>
+<h1 id="스위프트에서-모듈화"><a href="#스위프트에서-모듈화" class="headerlink" title="스위프트에서 모듈화"></a>스위프트에서 모듈화</h1><p>스위프트에서 모듈은 여러 기능(함수)들을 하나로 모은 것이라고 할 수 있습니다.</p>
+<script src="//gist.github.com/d2cd7568255da5a1bac0590cb7cdd323.js"></script>
+
+<p>예를 들어 위에 소스는 입력을 담당하는 모듈입니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>모듈과 모듈화에 대해서 정리해봤습니다.</p>
+<p>느낌만 알고 있었는데 이렇게 정리하고 보니 저 또한 많이 공부가 되고 이해에 도움이 된 것 같습니다.</p>
+<p>모듈로 잘 정리를 해놓으면 다른 사람의 소스를 보기에도 좋기 자신 또한 이해하기 좋을 것입니다.</p>
+<p>또한 다른 프로그램을 제작할 때 비슷한 기능 또는 같은 기능이 필요하다면 앞에서 만들어 놓은 모듈을 가져다 쓰면 될 것입니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+<p>도움이 되셨다면 댓글도 부탁드립니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><p>모듈 [정보통신기술용어해설]<br><a href="http://www.ktword.co.kr/abbr_view.php?m_temp1=2226" rel="external nofollow noopener noreferrer" target="_blank">http://www.ktword.co.kr/abbr_view.php?m_temp1=2226</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

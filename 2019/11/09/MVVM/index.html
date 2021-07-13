@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="MVVM">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>MVVM - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>MVVM</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-11-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Architecture/">#Architecture</a> <a href="/tags/MVVM/">#MVVM</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Architecture/">Architecture</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 MVVM 에 대해서 알아보겠습니다.</p>
+<h1 id="아키텍처"><a href="#아키텍처" class="headerlink" title="아키텍처"></a>아키텍처</h1><p>iOS 에서 많이 사용되는 아키텍처에는 MVC, MVP, MVVM 이 있습니다.</p>
+<p>아키텍처를 생각하지 않고 프로그램을 작성한다고 프로그램이 돌아가지 않는 것은 아닙니다. </p>
+<p>하지만 이런 프로그램은 가독성은 떨어지며 유지 보수에 굉장히 많은 비용이 듭니다. </p>
+<p>또한 테스팅 단계에서는 테스팅 자체가 거의 불가능하거나 효과를 볼 수 없는 난관에 봉착할 수 있습니다.</p>
+<p>저는 개발을 할 때 MVC 를 주로 사용해 왔는데요.</p>
+<p>MVC 를 사용하다보면 View 와 ViewController, Model 이 뒤죽박죽 되는 경우가 많습니다.</p>
+<p>ViewController 가 너무 많은 소스를 가져가는 경우가 많아서 iOS 에서는 MVC 의 별명이 Massive ViewController 입니다.</p>
+<p>이러한 배경으로 MVVM 에 관심을 가지게 되었고 어느 정도 이해한 내용을 정리하고 공유하고자 합니다.</p>
+<h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><p>MVVM 은 Model 과 View 사이에 ViewModel 이 위치하는 아키텍처입니다.</p>
+<p>ViewModel 은 한마디로 View 를 위한 Model 이라고 할 수 있습니다.</p>
+<p>저희는 보통 모델을 있는 그대로 사용하지 않습니다.</p>
+<p>어떤 로직에 따라 가공을 하기도 하고 뷰에 보여지기 위한 처리가 필요합니다.</p>
+<p>이러한 부분을 ViewModel 이 갖고 있어서 View 와 ViewController (이하 View 에 포함)에는 로직과 데이터가 없고 뷰에 대한 처리에만 집중합니다.</p>
+<p>MVVM 는 아래와 같은 특징을 가지고 있습니다.</p>
+<ul>
+<li>View 는 최대한 멍청한(dumb) 상태를 유지해야한다.</li>
+<li>View 는 View Model 과 바인딩 되어있다.</li>
+<li>ViewModel 은 뷰가 어떻게 보여지든지 상관하지 않는다.</li>
+<li>ViewModel 은 모델과 통신하여 값을 갖고 있고 로직만을 실행 한다. </li>
+</ul>
+<h1 id="Binding"><a href="#Binding" class="headerlink" title="Binding"></a>Binding</h1><p>위에서 바인딩이라는 이야기가 나왔는데요.</p>
+<p>그렇다면 바인딩은 무엇일까요?</p>
+<p>View의 UI 요소들과 ViewModel의 인터페이스를 연결시키는 작업을 “바인딩(Binding)” 이라고 합니다.</p>
+<p>뷰 모델의 프로퍼티를 변경하면 이것이 바인딩된 뷰에 반영되는 형태입니다.</p>
+<p>iOS 에서 바인딩 방법은 아래 4가지가 대표적입니다.</p>
+<ul>
+<li>KVO (Key-Value Observing) 패턴</li>
+<li><strong>RxSwift나 ReactiveCocoa같은 FRP(Functional Reactive Programming) 라이브러를 활용</strong></li>
+<li>Combine</li>
+<li>Property Observer</li>
+</ul>
+<p>저는 RxSwift 를 공부하고 있기 때문에 2번째 방법은 RxSwift 를 활용해서 바인딩을 하고자 합니다.</p>
+<p>RxSwift 를 이용해 바인딩하여 MVVM 아키텍처를 구성하는 것을 RxMVVM 이라고도 합니다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이론적으로는 위와 같이 정리가 되었으나 저 또한 예제를 작성해보고 여러번 활용해서 익숙해져야 하겠습니다.</p>
+<p>같이 예제를 공유하고 함께 성장했으면 좋겠습니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="iOS Development">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="도미닉">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SOLID 원칙">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="iOS Development">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dominic Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://appleceo.github.ioimg/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>SOLID 원칙 - Dominic Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" rel="external nofollow noopener noreferrer" target="_blank">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>SOLID 원칙</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-05-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Swift/">#Swift</a> <a href="/tags/SOLID/">#SOLID</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Swift/">Swift</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 <strong>SOLID</strong> 에 대해 정리해보겠습니다.</p>
+<p><strong>SOLID</strong> 는 5가지 원칙을 가지고 있습니다.</p>
+<p>하나씩 예시를 들어가며 설명해드리겠습니다.</p>
+<h3 id="1-SRP-Single-Responsibility-Principle"><a href="#1-SRP-Single-Responsibility-Principle" class="headerlink" title="1. SRP (Single Responsibility Principle)"></a>1. <strong>SRP</strong> (Single Responsibility Principle)</h3><p>첫번째는 <strong>단일 책임 원칙</strong>입니다.</p>
+<p>작성한 클래스는 하나의 기능과 책임을 가져야만 한다는 원칙입니다.</p>
+<p>아래와 같이 기타 구조체를 생성했다면 <strong>SRP</strong> 원칙에 위반되는 것입니다.</p>
+<p><img src="/images/SRP1.png" alt></p>
+<p>왜냐하면 price 부터 maker, type, model, backWood, topWood, stringNum 은 기타의 모델과 상태에 따라 달라질 수 있기 때문입니다.</p>
+<p>수정이 일어날 때마다 Guitar 클래스를 변경해주어야하므로 안정적이지 않습니다.</p>
+<p>아래와 같이 <strong>SRP</strong> 원칙을 적용할 수 있습니다.</p>
+<p><img src="/images/SRP2.png" alt></p>
+<p>기타의 변동 가능한 부분이 따로 GuitarSpec 이라는 구조체에 저장이 되었습니다. 변경이 발생하면 GuitarSpec 만 변경하면 됩니다.</p>
+<p>보기에도 좋고 변경이 가능한 부분을 한곳에서 관리할 수 있습니다.</p>
+<h3 id="2-OCP-Open-Close-Principle"><a href="#2-OCP-Open-Close-Principle" class="headerlink" title="2. OCP(Open Close Principle)"></a>2. <strong>OCP</strong>(Open Close Principle)</h3><p>두번째는 <strong>개방 폐쇄의 원칙</strong>입니다.</p>
+<p>소프트웨어의 구성요소는 확장에는 열려있고 변경에는 닫혀있어야한다는 원리입니다.</p>
+<p>확장은 쉽게 할 수 있고 변경은 최소화할 수 있어야 한다는 뜻이겠습니다.</p>
+<p>만약 위에 Guitar 와 GuitarSpec 구조체에 이어서 Violin 과 여러 현악기가 추가되어야 한다면 매번 악기 이름의 구조체와 악기 스팩을 갖는 구조체를 추가해주어야 할까요?</p>
+<p>이러한 상황이라면 <strong>OCP</strong> 원칙을 고려해볼 수 있습니다.</p>
+<p><img src="/images/OCP1.png" alt></p>
+<p>위와 같이 현악기 클래스를 선언했습니다.</p>
+<p><img src="/images/OCP2.png" alt></p>
+<p>이제 기타, 바이올린 등 어떤 현악기를 추가할 때든 StringInstrument 와 StringInstrumentSpec 을 상속받아서 간단히 추가할 수 있습니다.</p>
+<p>코드의 수정을 최소화하여 결합도는 줄이고 응집도는 높이는 효과를 볼 수 있습니다.</p>
+<h3 id="3-LSP-The-Liskov-Substitution-Principle"><a href="#3-LSP-The-Liskov-Substitution-Principle" class="headerlink" title="3. LSP(The Liskov Substitution Principle)"></a>3. <strong>LSP</strong>(The Liskov Substitution Principle)</h3><p>세번째는 <strong>리스코브 치환의 원칙</strong>입니다.</p>
+<p>“서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.”라고 할 수 있습니다.</p>
+<p>서브 타입은 기반 타입이 약속한 규약(public 인터페이스, 물론 메소드가 던지는 예외까지 포함됩니다.)을 지켜야 합니다.</p>
+<p><img src="/images/LSP1.png" alt></p>
+<p> 현악기 클래스에 play 라는 메서드를 추가해주었습니다.</p>
+<p><img src="/images/LSP2.png" alt></p>
+<p>또한 기타와 바이올린에 play 라는 메서드를 오버라이딩 해주었습니다.</p>
+<p><img src="/images/LSP3.png" alt></p>
+<p>결과를 보면 현악기 클래스 변수에 서브 타입인 바이올린과 기타가 자유롭게 들어갈 수 있고</p>
+<p>기반 타입인 “안알려진 현악기” 또한 자유롭게 들어갈 수 있습니다.</p>
+<p>또한 상위 클래스에서 선언한 play 메서드 또한 하위 클래스에서 호출할 수 있습니다.</p>
+<p>이렇게 서브 타입이 기반 타입으로 자유롭게교체될 수 있는 것이 <strong>LSP</strong> 원리입니다.</p>
+<h3 id="4-ISP-Interface-Segregation-Principle"><a href="#4-ISP-Interface-Segregation-Principle" class="headerlink" title="4. ISP(Interface Segregation Principle)"></a>4. <strong>ISP</strong>(Interface Segregation Principle)</h3><p>네번째는 <strong>인터페이스 분리의 원칙</strong>입니다.</p>
+<p>한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리입니다.</p>
+<p>인터페이스를 나눌 수 있으면 나누고 필요없는 인터페이스는 제거해야합니다.</p>
+<p><img src="/images/ISP1.png" alt></p>
+<p>“칠 수 있는” 이라는 프로토콜을 선언했습니다.</p>
+<p>현악기는 칠 수 있는 프로토콜을 채택했고 손으로 연주하는 메서드와 도구를 이용해서 연주하는 메서드를 선언해줬습니다.</p>
+<p>구현은 제대로 되었지만 바이올린은 도구를 이용해서만 연주할 수 있는데 손으로도 칠 수 있는 등 완전하지 않게 동작합니다.</p>
+<p><img src="/images/ISP2.png" alt></p>
+<p>이제 <strong>ISP</strong> 원칙에 따르도록 수정해보겠습니다.</p>
+<p>두개의 프로토콜로 나눠주었습니다. </p>
+<p><img src="/images/ISP3.png" alt></p>
+<h3 id="5-DIP-Dependency-Inversion-Principle"><a href="#5-DIP-Dependency-Inversion-Principle" class="headerlink" title="5. DIP(Dependency Inversion Principle)"></a>5. <strong>DIP</strong>(Dependency Inversion Principle)</h3><p>다섯번째는 <strong>의존성 역전의 원칙</strong>입니다.</p>
+<p>하위 클래스는 당연히 상위 클래스에 의존해야합니다.</p>
+<p>하지만 하위 클래스의 모듈의 변경이나 기능에 상위 클래스가 의존성을 갖게 되는 현상을 의존성 역전이라고 합니다.</p>
+<p>예를 들어 조금 전의 예제 소스는 기타만 손으로 칠 수 있는 상황이었는데</p>
+<p>현악기가 Playable 프로토콜을 채택함에 따라 현악기를 상속받는 모든 악기는 playWithHands 메서드를 사용할 수 있었습니다.</p>
+<p><strong>DIP</strong> 원칙에 따라 현악기에는 도구로 칠 수 있다는 프로토콜만 채택했습니다.</p>
+<p><img src="/images/DIP1.png" alt></p>
+<p>아래와 같이 기타는 손으로도 칠 수 있기 때문에 “손으로 칠 수 있다”는 프로토콜도 채택하였습니다.</p>
+<p><img src="/images/DIP2.png" alt></p>
+<p>이제 현악기 타입의 클래스 변수에서 playWithHands 는 오류가 발생합니다.</p>
+<p><img src="/images/DIP3.png" alt></p>
+<p>기타 타입으로 선언해야만 playWithHands 를 호출할 수 있기 때문에 조금 더 안정적이며 명확해졌습니다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 도미닉<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/" rel="external nofollow noopener noreferrer">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/" rel="external nofollow noopener noreferrer">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank" rel="external nofollow noopener noreferrer">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

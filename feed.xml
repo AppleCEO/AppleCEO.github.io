@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Dominic Blog</title>
+  
+  <subtitle>Study &amp; Develop iOS</subtitle>
+  <link href="/feed.xml" rel="self"/>
+  
+  <link href="https://appleceo.github.io/"/>
+  <updated>2021-07-13T12:50:14.531Z</updated>
+  <id>https://appleceo.github.io/</id>
+  
+  <author>
+    <name>도미닉</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021년 두번째 분기 회고</title>
+    <link href="https://appleceo.github.io/2021/07/13/2021SecondquarterReview/"/>
+    <id>https://appleceo.github.io/2021/07/13/2021SecondquarterReview/</id>
+    <published>2021-07-13T06:15:20.000Z</published>
+    <updated>2021-07-13T12:50:14.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>올해 두번째 분기의 회고를 작성하고자 합니다.</p><p>저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.</p><p>이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="세차왕-앱-카카오페이-네이버페이-구성"><a href="#세차왕-앱-카카오페이-네이버페이-구성" class="headerlink" title="세차왕 앱 카카오페이, 네이버페이 구성"></a>세차왕 앱 카카오페이, 네이버페이 구성</h3><p>kcp, 페이코 결제 뿐이 없었다.</p><p>카카오페이와 네이버페이를 구성했고 꽤 많은 고객 분들이 사용하고 계신다.</p><h3 id="요청사항-구성-변경"><a href="#요청사항-구성-변경" class="headerlink" title="요청사항 구성 변경"></a>요청사항 구성 변경</h3><p>고객 분의 요청사항이 간단히 두개였는데 조금 더 세부화해서 테이블을 따로 만들어 구성하였다.<br>생각보다 많은 분들이 요청사항은 옵션인데도 구체적으로 요청을 해주시면서 더 맞는 서비스를 받을 수 있으셨다.</p><h3 id="결제-버튼-이동"><a href="#결제-버튼-이동" class="headerlink" title="결제 버튼 이동"></a>결제 버튼 이동</h3><p>KCP, 페이코, 카카오페이, 네이버페이 결제 버튼의 위치를 오른쪽 아래로 통일하였다.<br>기존의 코드가 많이 사용되면서 버튼의 색상과 위치가 제멋대로였는데 통일하고 위치를 오른쪽 아래로 이동해서 손으로 누르기 편하게 변경하였다.</p><h3 id="개발-서버-이전"><a href="#개발-서버-이전" class="headerlink" title="개발 서버 이전"></a>개발 서버 이전</h3><p>기존 회사에 노트북에 간단히 개발 서버가 구성되어있었다.<br>회사 건물에 네트워크를 점검하거나 문제가 생기면 개발 서버에 접속이 불가한 상황도 발생하였다.<br>노트북이다보니 건드리거나 베터리가 꺼지면 안되었다.<br>EC2에 인스턴스를 만들어 php, apache 를 설치하였고 php slim 도 구성하여 개발 서버를 이전하였다.<br>노트북을 사용할 수 있어서 좋고 안정적으로 개발 서버를 운영할 수 있게 되었다.<br><a href="https://velog.io/@sechawang/AWS-ec2%EC%97%90-apache-php-%EC%84%A4%EC%B9%98%ED%95%B4%EC%84%9C-%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%B6%95-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">https://velog.io/@sechawang/AWS-ec2%EC%97%90-apache-php-%EC%84%A4%EC%B9%98%ED%95%B4%EC%84%9C-%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%B6%95-%EB%B0%A9%EB%B2%95</a><br><a href="https://velog.io/@sechawang/php-slim-%EC%85%8B%ED%8C%85-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">https://velog.io/@sechawang/php-slim-%EC%85%8B%ED%8C%85-%EB%B0%A9%EB%B2%95</a></p><h2 id="푸시-개발"><a href="#푸시-개발" class="headerlink" title="푸시 개발"></a>푸시 개발</h2><p>예약 확정, 세차 시작, 세차 완료 등의 시점에 앱 푸시를 보내서 고객 분들이 세차가 언제 시작되고 마치는지 알 수 있게 되었다.<br>배달의 민족에서 배달이 도착했을 때 푸시가 오는 것처럼 고객 분들이 “내 차가 세차되고 있구나”, “내 차의 세차가 완료되서 차를 사용할 수 있겠구나” 라고 생각하실 것을 생각하니 뿌듯하다.<br>노드와 php 에 공식 문서를 사용해서 구성을 하였다.<br><a href="https://velog.io/@sechawang/node-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-fcm-token%EC%9C%BC%EB%A1%9C-%ED%91%B8%EC%8B%9C-%EC%A0%84%EC%86%A1-%EB%B0%A9%EB%B2%95" rel="external nofollow noopener noreferrer" target="_blank">https://velog.io/@sechawang/node-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-fcm-token%EC%9C%BC%EB%A1%9C-%ED%91%B8%EC%8B%9C-%EC%A0%84%EC%86%A1-%EB%B0%A9%EB%B2%95</a></p><h2 id="서버-및-테이블-정리"><a href="#서버-및-테이블-정리" class="headerlink" title="서버 및 테이블 정리"></a>서버 및 테이블 정리</h2><p>AWS 에 안쓰이는 EC2 인스턴스들이 쓰이는 것들과 섞여있었다.</p><p>10개 이상이 되었는데 사용하는 것들만 추리고 설명을 달았다.</p><p>6개의 인스턴스만 남기고 지웠다.</p><p>이 6개도 통합하고 이전되면 더 줄일 수 있을 것이다.</p><p>테이블도 안쓰이는 것이 1/3 이상이었다.</p><p>어떤 용도로 쓰이고 코드에서 어떻게 쓰이는지 파악하고 정리하였다.</p><p>다음 분기 중에 안쓰이는 것들은 백업하고 정리할 것이다.</p><p>ERD도 그려서 테이블의 역할이 명확하게 정리하고 개발팀에 공유가 되도록 할 것이다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 하나의 큰 기능 추가보다는 여러 부분에서 개선하고 발전시킬 수 있었던 분기였습니다.</p><p>다음 분기는 이렇게 파악한 내용들을 정리하고 내실을 다지는 분기로 삼고 싶습니다.</p><p>같이 일하던 개발자 분이 퇴사를 하여서 신입 개발자 분과 둘이서 앞으로 서비스를 유지보수해야 할 것 같습니다.</p><p>서비스를 많이 파악하고 계셨던 분이라 퇴사하는 시점에 많이 물어보고 서버와 테이블에 대해서 인수인계를 받았습니다.</p><p>앞으로 이것들을 정리하고 안정적으로 발전되도록 책임감이 많이 느껴집니다.</p><p>노드를 많이 공부해야 할 것 같고 백엔드 노드, iOS 로 세차왕 고객앱을 만드는 것이 다음 분기에 큰 프로젝트입니다.</p><p>신입 분도 많이 챙겨서 함께 성장하고 회사에 기여할 수 있도록 만들고 싶습니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;올해 두번째 분기의 회고를 작성하고자 합니다.&lt;/p&gt;
+&lt;p&gt;저번 분기에는 눈 앞에 있는 일들을 해결하는데 급급했습니다.&lt;/p&gt;
+&lt;p&gt;이번 분기는 전체적인 시스템을 파악하는 분기였던 것 같습니다.&lt;/p&gt;
+&lt;h
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021년 첫번째 분기 회고</title>
+    <link href="https://appleceo.github.io/2021/03/22/2021FirstquarterReview/"/>
+    <id>https://appleceo.github.io/2021/03/22/2021FirstquarterReview/</id>
+    <published>2021-03-22T05:41:20.000Z</published>
+    <updated>2021-07-13T06:24:05.381Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오랜만에 깃허브 블로그에 글을 작성합니다.</p><p>티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,</p><p>그리고 appleceo라는 서브도메인을 사용하기 위해 이 블로그에 다시 글을 작성하고자 합니다.</p><p>올해 3개월동안 있었던 일들을 회고합니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DB-이전"><a href="#DB-이전" class="headerlink" title="DB 이전"></a>DB 이전</h3><p>기존에 ec2에 mysql이 설치되어 있었다.<br>ec2 인스턴스에 문제가 생기거나 mysql 자체에 문제가 생기면 DB가 다운되고 다시 시작이 되지 않아 장시간 장애가 발생한 적도 있었다.<br>DB 이중화에 대해 알아보던 중 친구가 AWS Aurora 에 대해서 말해주었다.<br>알아보니 RDS 를 활용해서 이중화를 하는 것이 가장 간단하고 확실한 것 같았다.<br>공식문서와 블로그 글들을 보며 AWS RDS 로 이중화를 구성하였다.<br><a href="https://www.slideshare.net/joonjhokil/ss-239387807" rel="external nofollow noopener noreferrer" target="_blank">https://www.slideshare.net/joonjhokil/ss-239387807</a></p><h3 id="장고-서버-구축"><a href="#장고-서버-구축" class="headerlink" title="장고 서버 구축"></a>장고 서버 구축</h3><p>회사에 장고로 만든 페이지들을 AWS에 올리지 못하고 있었다.</p><p>주니어 급이 개발을 하여서 서버 환경 구축에 미숙했기 때문이다.</p><p>python django gunicorn nginx 을 이용해서 서버를 구축했고 주니어 분이 개발해놓은 코드들을 올려서 안정적으로 서버에서 돌아가도록 구축하였다.</p><p>참고한 자료들 :<br><a href="http://dev.epiloum.net/1440" rel="external nofollow noopener noreferrer" target="_blank">http://dev.epiloum.net/1440</a><br><a href="https://conory.com/blog/42847" rel="external nofollow noopener noreferrer" target="_blank">https://conory.com/blog/42847</a><br><a href="https://seowoosung.github.io/architecture/2020/05/11/nginx.html" rel="external nofollow noopener noreferrer" target="_blank">https://seowoosung.github.io/architecture/2020/05/11/nginx.html</a></p><h3 id="쿠폰-기능-고도화"><a href="#쿠폰-기능-고도화" class="headerlink" title="쿠폰 기능 고도화"></a>쿠폰 기능 고도화</h3><p>기존에 쿠폰 기능이 있긴 하였으나 제한 조건을 걸지도 못하였다.</p><p>금액, 지역, 상품 제한을 걸 수 있도록 추가하여 쿠폰 기능을 고도화하였다.</p><h3 id="세차왕-iOS-앱-개선"><a href="#세차왕-iOS-앱-개선" class="headerlink" title="세차왕 iOS 앱 개선"></a>세차왕 iOS 앱 개선</h3><ul><li><p>온보딩 페이지 추가</p></li><li><p>주문 화면에 카카오지도가 조그맣게 보이던 것을 구글 지도로 꽉 채워서 보이도록 수정</p><ul><li>주문에 대한 리뷰 등록 시 앱 리뷰도 쓰도록 유도하는 기능 추가</li><li>외부 페이지는 팝업으로 띄우도록 수정</li></ul></li></ul><h3 id="어드민-고도화"><a href="#어드민-고도화" class="headerlink" title="어드민 고도화"></a>어드민 고도화</h3><ul><li>차량 검색 기능 추가</li><li>회원 검색 기능 추가</li></ul><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이번 분기는 회사에 적응도 많이된 시점이라 많은 일을 한 것 같습니다.</p><p>추가로 대학교 동기를 회사에 추천해서 입사시키게 되었습니다.</p><p>많은 일을 같이할 수 있을 것 같아서 기대됩니다.</p><p>개발팀장으로서 좋은 개발 문화를 가꿔나갈 수 있도록 기여하고 싶습니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오랜만에 깃허브 블로그에 글을 작성합니다.&lt;/p&gt;
+&lt;p&gt;티스토리, 미디움 등 블로그를 전전하다가 개발 관련된 모든 내용은 깃허브에 모아놓는게 좋을 것 같아서,&lt;/p&gt;
+&lt;p&gt;그리고 appleceo라는 서브도메
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UIView 테두리 만드는 방법</title>
+    <link href="https://appleceo.github.io/2020/04/01/border/"/>
+    <id>https://appleceo.github.io/2020/04/01/border/</id>
+    <published>2020-04-01T05:36:34.000Z</published>
+    <updated>2021-07-13T05:30:19.387Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 UIView 의 테두리를 보여주는 방법을 알아보겠습니다.</p><p>UIView 를 상속받는 UIImageView, UIButton 등도 아래의 방법으로 테두리를 보여줄 수 있습니다.</p><h2 id="테두리-만드는-방법"><a href="#테두리-만드는-방법" class="headerlink" title="테두리 만드는 방법"></a>테두리 만드는 방법</h2><p>UIView 에는 CALayer 객체인 layer 프로퍼티가 있습니다.</p><p>layer 에는 borderWidth 와 borderColor 값이 있습니다.</p><p>이 값들을 변경해서 테두리를 보여줄 수 있습니다.</p><script src="//gist.github.com/e3068ded121f673a36d51039688b3f7c.js"></script><p>테두리를 두껍게 하고 싶다면 borderWidth 의 값을 원하는 만큼 설정하시면 됩니다.<br>테두리의 색을 바꾸고 싶다면 borderColor 의 값을 원하는 색으로 설정하면 됩니다.</p><h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>간단히 뷰의 테두리를 만드는 방법을 알아봤습니다.</p><p>질문있다면 남겨주세요.</p><p>감사합니다.</p><p>출처 : <a href="https://stackoverflow.com/questions/8162411/how-to-create-border-in-uibutton/30159869" rel="external nofollow noopener noreferrer" target="_blank">https://stackoverflow.com/questions/8162411/how-to-create-border-in-uibutton/30159869</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 UIView 의 테두리를 보여주는 방법을 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;UIView 를 상속받는 UIImageView, UIButton 등도 아래의 방법으로 테두리를 보여줄 수 있습니다.&lt;/p&gt;
+&lt;h2
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://appleceo.github.io/categories/iOS/"/>
+    
+    
+      <category term="테두리" scheme="https://appleceo.github.io/tags/%ED%85%8C%EB%91%90%EB%A6%AC/"/>
+    
+      <category term="border" scheme="https://appleceo.github.io/tags/border/"/>
+    
+      <category term="UIView" scheme="https://appleceo.github.io/tags/UIView/"/>
+    
+      <category term="UILabel" scheme="https://appleceo.github.io/tags/UILabel/"/>
+    
+      <category term="UIButton" scheme="https://appleceo.github.io/tags/UIButton/"/>
+    
+      <category term="layer" scheme="https://appleceo.github.io/tags/layer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode ModuleNotFoundError: 파이썬 오류</title>
+    <link href="https://appleceo.github.io/2020/03/19/ModuleNotFoundError/"/>
+    <id>https://appleceo.github.io/2020/03/19/ModuleNotFoundError/</id>
+    <published>2020-03-19T02:27:53.000Z</published>
+    <updated>2021-07-13T05:30:19.384Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요 도미닉입니다.</p><p>오늘 겪게 된 오류와 해결 방법을 공유하고자 합니다.</p><p>배경을 설명드리자면 오래된 iOS 프로젝트를 xcode 로 열었습니다.</p><p>빌드 버튼을 눌렀는데 xcode 가 파이썬 파일을 실행하는데 파이썬 쪽에서 오류를 발견했습니다.</p><h1 id="오류"><a href="#오류" class="headerlink" title="오류"></a>오류</h1><p>ModuleNotFoundError: gspread<br>ModuleNotFoundError: oauth2client</p><p><img src="/images/gspreadError.png" alt></p><p>위와 같은 오류가 발생했습니다.</p><p>xcode 의 어디선가 파이썬 코드를 실행시키고 있는데 이 파이썬에서 모듈을 못찾는다는 에러였습니다.</p><p>파이썬2 와 파이썬3 를 깔아보고 환경변수를 설정해보았습니다.</p><p>못찾는 모듈을 파이썬 2에도 설치해보고 파이썬 3에도 설치해봤지만 해결되지 않았습니다.</p><h1 id="해결방법"><a href="#해결방법" class="headerlink" title="해결방법"></a>해결방법</h1><p>주변에 도움을 받아 파이썬이 어디서 실행되는지 찾을 수 있었습니다.</p><p>프로젝트 - Build Phases - Localization Run Script 에서 파이썬3 를 실행하고 있었습니다.</p><p><img src="/images/ModuleNotFound.png" alt></p><p>위와 같이 Run script only when installing 항목을 체크하니 오류가 발생하지 않았습니다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>저도 운이 좋아서 해결할 수 있는 문제였습니다.</p><p>혹시 비슷한 상황이 발생한다면 위와 같이 해보시길 바랍니다.</p><p>감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘 겪게 된 오류와 해결 방법을 공유하고자 합니다.&lt;/p&gt;
+&lt;p&gt;배경을 설명드리자면 오래된 iOS 프로젝트를 xcode 로 열었습니다.&lt;/p&gt;
+&lt;p&gt;빌드 버튼을 눌렀는데 xcode 가 파이썬 파일을 실행하는
+      
+    
+    </summary>
+    
+      <category term="solve" scheme="https://appleceo.github.io/categories/solve/"/>
+    
+    
+      <category term="solve" scheme="https://appleceo.github.io/tags/solve/"/>
+    
+      <category term="xcode" scheme="https://appleceo.github.io/tags/xcode/"/>
+    
+      <category term="python" scheme="https://appleceo.github.io/tags/python/"/>
+    
+      <category term="module" scheme="https://appleceo.github.io/tags/module/"/>
+    
+      <category term="error" scheme="https://appleceo.github.io/tags/error/"/>
+    
+      <category term="gspread" scheme="https://appleceo.github.io/tags/gspread/"/>
+    
+      <category term="oauth2client" scheme="https://appleceo.github.io/tags/oauth2client/"/>
+    
+      <category term="ModuleNotFoundError: gspread" scheme="https://appleceo.github.io/tags/ModuleNotFoundError-gspread/"/>
+    
+      <category term="ModuleNotFoundError: oauth2client" scheme="https://appleceo.github.io/tags/ModuleNotFoundError-oauth2client/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>스택(stack)</title>
+    <link href="https://appleceo.github.io/2020/02/09/stack/"/>
+    <id>https://appleceo.github.io/2020/02/09/stack/</id>
+    <published>2020-02-09T07:25:33.000Z</published>
+    <updated>2021-07-13T05:30:19.395Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 스택에 대해서 알아보겠습니다.</p><p>스택에 대해서 들어본 분들도 많으실 겁니다.</p><p>확실히 알고 넘어가죠!</p><h1 id="Stack-이란-무엇인가"><a href="#Stack-이란-무엇인가" class="headerlink" title="Stack 이란 무엇인가?"></a>Stack 이란 무엇인가?</h1><p>쌓는 것을 스택이라고 한다.</p><p>일상에서 우리는 무언가를 쌓고 또 쓰러뜨린다.</p><p>뷔페에 갔을 때 접시가 가지런히 쌓여있는 것도 Stack 이다.</p><p>책을 쌓아놓는 것도 Stack 이고 프린터 입구에 종이 여러 장이 쌓여있는 것도 Stack 이다.</p><h1 id="Stack-은-어떻게-동작하는가"><a href="#Stack-은-어떻게-동작하는가" class="headerlink" title="Stack 은 어떻게 동작하는가?"></a>Stack 은 어떻게 동작하는가?</h1><p>뷔페에서 접시가 쌓여있을 때 가장 아래부터 접시를 가져가는 사람은 아마 없을 것이다.</p><p>일반적으로 Stack 은 First In Last Out 이다.</p><p>먼저 쌓은 것(예를 들면 가장 아래에 있는 접시)이 가장 나중에 사용된다.</p><p>가장 위에 뭔가를 쌓는 것을 push, 가장 위에 있는 것을 가져가는 것을 pop 이라고 한다.</p><p>iOS 에서 addSubview 메소드를 통해 뷰 위에 뷰를 쌓는 것도 스택이다.</p><h1 id="Swift-로-Stack-구현하는-방법은-무엇인가"><a href="#Swift-로-Stack-구현하는-방법은-무엇인가" class="headerlink" title="Swift 로 Stack 구현하는 방법은 무엇인가?"></a>Swift 로 Stack 구현하는 방법은 무엇인가?</h1><script src="//gist.github.com/926b8d5cc34b380ad0bd56c078526dd0.js"></script><p>배열을 이용해 간단하게 Stack 을 구현해보았다.</p><p>이런 식으로 push, pop 을 동작하게 만들면 그것을 어떻게 만들던 Stack 이라고 할 수 있다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>스택에 대해서 알아봤습니다.</p><p>뭔가를 쌓고 가장 위에 있는 것부터 사용하는 것은 일상적인 행동입니다.</p><p>이러한 행동에서 영감을 얻어 자료를 쌓고 가장 위에부터 빼서 사용하도록 컴퓨터 상에 구성한 것이 Stack 입니다.</p><p>어렵지 않고 편하게 사용할 수 있도록 연습해야겠습니다.</p><p>감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 스택에 대해서 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;스택에 대해서 들어본 분들도 많으실 겁니다.&lt;/p&gt;
+&lt;p&gt;확실히 알고 넘어가죠!&lt;/p&gt;
+&lt;h1 id=&quot;Stack-이란-무엇인가&quot;&gt;&lt;a href=&quot;#Stack
+      
+    
+    </summary>
+    
+      <category term="DataStructure" scheme="https://appleceo.github.io/categories/DataStructure/"/>
+    
+    
+      <category term="stack" scheme="https://appleceo.github.io/tags/stack/"/>
+    
+      <category term="swift" scheme="https://appleceo.github.io/tags/swift/"/>
+    
+      <category term="data structure" scheme="https://appleceo.github.io/tags/data-structure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UIView 모서리 둥글게 만드는 방법</title>
+    <link href="https://appleceo.github.io/2020/01/03/cornerRadius/"/>
+    <id>https://appleceo.github.io/2020/01/03/cornerRadius/</id>
+    <published>2020-01-03T11:52:34.000Z</published>
+    <updated>2021-07-13T05:30:19.388Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 UIView 의 모서리를 깍아서 둥글게 만드는 방법을 알아보겠습니다.</p><p>UIView 를 상속받는 UIImageView, UIButton 등도 아래의 방법으로 모서리를 둥글게 할 수 있습니다.</p><h2 id="모서리-둥글게-만드는-방법"><a href="#모서리-둥글게-만드는-방법" class="headerlink" title="모서리 둥글게 만드는 방법"></a>모서리 둥글게 만드는 방법</h2><p>UIView 에는 CALayer 객체인 layer 프로퍼티가 있습니다.</p><p>layer 에는 cornerRadius 와 masksToBounds 값이 있습니다.</p><p>이 값들을 변경해서 모서리를 둥글게 만들 수 있습니다.</p><script src="//gist.github.com/15b5750e58fa09d33ee87e4f6c725e47.js"></script><p>모양을 원으로 싶다면 UIView 의 길이의 반만큼 cornerRadius 를 설정하시면 됩니다.</p><h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>간단히 뷰의 모서리를 둥글게 만드는 방법을 알아봤습니다.</p><p>질문있다면 남겨주세요.</p><p>감사합니다.</p><p>출처 : <a href="http://blog.naver.com/PostView.nhn?blogId=hjleesm&amp;logNo=221298790719&amp;redirect=Dlog&amp;widgetTypeCall=true&amp;directAccess=false" rel="external nofollow noopener noreferrer" target="_blank">http://blog.naver.com/PostView.nhn?blogId=hjleesm&amp;logNo=221298790719&amp;redirect=Dlog&amp;widgetTypeCall=true&amp;directAccess=false</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 UIView 의 모서리를 깍아서 둥글게 만드는 방법을 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;UIView 를 상속받는 UIImageView, UIButton 등도 아래의 방법으로 모서리를 둥글게 할 수 있습니다
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://appleceo.github.io/categories/iOS/"/>
+    
+    
+      <category term="UIView" scheme="https://appleceo.github.io/tags/UIView/"/>
+    
+      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
+    
+      <category term="cornerRadius" scheme="https://appleceo.github.io/tags/cornerRadius/"/>
+    
+      <category term="masksToBounds" scheme="https://appleceo.github.io/tags/masksToBounds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linksquard 개인정보 취급방침</title>
+    <link href="https://appleceo.github.io/2020/01/02/%EC%B7%A8%EA%B8%89%EB%B0%A9%EC%B9%A8/"/>
+    <id>https://appleceo.github.io/2020/01/02/취급방침/</id>
+    <published>2020-01-02T07:36:32.000Z</published>
+    <updated>2021-07-13T05:30:19.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="개인정보-취급방침"><a href="#개인정보-취급방침" class="headerlink" title="개인정보 취급방침"></a>개인정보 취급방침</h1><ol><li>개인정보의 처리 목적</li></ol><p>Linksquard 은(는) 개인정보를 처리하고 있지 않으며, 딱히 수집할 일도 없습니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;개인정보-취급방침&quot;&gt;&lt;a href=&quot;#개인정보-취급방침&quot; class=&quot;headerlink&quot; title=&quot;개인정보 취급방침&quot;&gt;&lt;/a&gt;개인정보 취급방침&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;개인정보의 처리 목적&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linksquard
+      
+    
+    </summary>
+    
+      <category term="Documents" scheme="https://appleceo.github.io/categories/Documents/"/>
+    
+    
+      <category term="개인정보" scheme="https://appleceo.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4/"/>
+    
+      <category term="취급방침" scheme="https://appleceo.github.io/tags/%EC%B7%A8%EA%B8%89%EB%B0%A9%EC%B9%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>복잡도(Complexity)</title>
+    <link href="https://appleceo.github.io/2020/01/02/Complexity/"/>
+    <id>https://appleceo.github.io/2020/01/02/Complexity/</id>
+    <published>2020-01-02T03:23:38.000Z</published>
+    <updated>2021-07-13T05:30:19.379Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 복잡도에 대해서 알아보겠습니다.</p><h2 id="복잡도란-무엇인가"><a href="#복잡도란-무엇인가" class="headerlink" title="복잡도란 무엇인가"></a>복잡도란 무엇인가</h2><p>복잡도는 확장성과 관련이 깊다.</p><p>확장이 가능하냐는 질문은 소프트웨어 개발을 할 때 반복되는 질문 중 하나이다.</p><p>만약 10분 안에 처리되야하는 소프트웨어가 100분이 걸리게 된다면 이것은 확장성에 위배된다고 할 수 있다.</p><p>하지만 데이터의 양에 따라 10분이라는 시간은 상대적일 것이다.</p><p>이럴 때 우리는 복잡도를 활용한다.</p><p>복잡도에는 시간 복잡도(Time complexity)와 공간 복잡도(Space complexity)가 있다.</p><h2 id="시간-복잡도란-무엇인가"><a href="#시간-복잡도란-무엇인가" class="headerlink" title="시간 복잡도란 무엇인가"></a>시간 복잡도란 무엇인가</h2><p>시간 복잡도는 입력되는 데이터의 양이 증가함에 따라 알고리즘이 실행되는데 필요한 시간을 나타낸 것이다.</p><p>시간 복잡도의 종류에는 Constant time, Linear time, Quadratic time, Logarithmic time, Quasilinear time 등이 있다.</p><h3 id="Constant-time-이란-무엇인가"><a href="#Constant-time-이란-무엇인가" class="headerlink" title="Constant time 이란 무엇인가"></a>Constant time 이란 무엇인가</h3><p>Constant 은 번역하면 일정한 이라는 형용사이다.</p><p>입력되는 사이즈와 상관없이 일정한 시간을 가지는 시간 복잡도이다.</p><p>빅오표기법으로 O(1) 이다.</p><p>예제 소스는 아래와 같다.</p><script src="//gist.github.com/955649dbc1f2441d344a8917dc81eaee.js"></script><p>데이터의 증가에 따라 시간의 증가를 나타내는 표는 아래와 같다.</p><p><img src="/images/ConstantTime.png" alt></p><h3 id="Linear-time-이란-무엇인가"><a href="#Linear-time-이란-무엇인가" class="headerlink" title="Linear time 이란 무엇인가"></a>Linear time 이란 무엇인가</h3><p>Linear 은 번역하면 선형이라는 뜻이다.</p><p>가장 일반적인 것으로 데이터의 양이 증가함에 따라 시간도 균등하게 증가하는 시간 복잡도이다.</p><p>빅오표기법으로 O(N) 이다.</p><p>예제 소스는 아래와 같다.</p><script src="//gist.github.com/3941e9a4a3bbb5fc6fa942503097660e.js"></script><p>데이터의 증가에 따라 시간의 증가를 나타내는 표는 아래와 같다.</p><p><img src="/images/LinearTime.png" alt></p><h3 id="Quadratic-time-이란-무엇인가"><a href="#Quadratic-time-이란-무엇인가" class="headerlink" title="Quadratic time 이란 무엇인가"></a>Quadratic time 이란 무엇인가</h3><p>Quadratic 은 번역하면 이차라는 뜻이다.</p><p>이차라는 말에서 예상할 수 있듯이 데이터의 양이 증가함에 따라 제곱 꼴로 증가해가는 시간 복잡도이다.</p><p>빅오표기법으로 O(N제곱) 이다.</p><p> 예제 소스는 아래와 같다.</p> <script src="//gist.github.com/4cfc658cc0c191ddf73bfbd47c47378c.js"></script><h3 id="Logarithmic-time-이란-무엇인가"><a href="#Logarithmic-time-이란-무엇인가" class="headerlink" title="Logarithmic time 이란 무엇인가"></a>Logarithmic time 이란 무엇인가</h3><p>Logarithmic 은 번역하면 대수라는 뜻이다.</p><p>Logarithmic 에서 앞에 세글자만 보면 log 이다.</p><p>그렇다. Logarithmic 은 로그와 관련이 있다.</p><p>빅오표기법으로 O(logN) 이다.  </p><p>예제 소스는 아래와 같다.</p><script src="//gist.github.com/be5b81b1895644b128b508d782563001.js"></script><h3 id="Quasilinear-time-이란-무엇인가"><a href="#Quasilinear-time-이란-무엇인가" class="headerlink" title="Quasilinear time 이란 무엇인가"></a>Quasilinear time 이란 무엇인가</h3><p>준선형 시간이다.</p><p>빅오표기법으로 O(NlogN) 이다.</p><h2 id="공간-복잡도-Space-comlexity-란-무엇인가"><a href="#공간-복잡도-Space-comlexity-란-무엇인가" class="headerlink" title="공간 복잡도(Space comlexity) 란 무엇인가"></a>공간 복잡도(Space comlexity) 란 무엇인가</h2><p>시간과 마찬가지로 공간 또한 확장의 주요 요소이다.</p><p>공간 복잡도는 소프트웨어가 메모리를 얼마나 차지하는지에 대한 지표이다.</p><script src="//gist.github.com/7098543858c982547e68ca5a9b324a93.js"></script><p>위의 예제소스의 공간 복잡도는 O(N) 이다.</p><p>같은 기능을 하지만 더 긴 아래 예제소스의 공간 복잡도는 O(1) 이다.</p><script src="//gist.github.com/1517a217a564d4f36da6fb4da8a76a10.js"></script><h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><ul><li>시간 복잡도는 입력 크기가 증가함에 따라 알고리즘을 실행하는 데 필요한 시간을 측정한 것이다.</li><li>공간 복잡도는 알고리즘을 실행하는 데 필요한 메모리를 측정한 것이다.</li><li>Big O 표기법은 일반적인 형태의 시간 및 공간 복잡성을 나타내는 데 사용한다.</li><li>시간과 공간의 복잡성은 높은 수준의 확장성의 척도이다. 알고리즘 자체의 실제 속도는 측적하지 않아도 된다.</li><li>작은 데이터 세트의 경우 시간복잡도와 일반적으로 관련이 없다. 준선형 알고리즘음이 선형 알고리즘 보다 느릴 수 있다.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 복잡도에 대해서 알아보겠습니다.&lt;/p&gt;
+&lt;h2 id=&quot;복잡도란-무엇인가&quot;&gt;&lt;a href=&quot;#복잡도란-무엇인가&quot; class=&quot;headerlink&quot; title=&quot;복잡도란 무엇인가&quot;&gt;&lt;/a&gt;복잡도란 무엇인
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="https://appleceo.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="complexity" scheme="https://appleceo.github.io/tags/complexity/"/>
+    
+      <category term="time" scheme="https://appleceo.github.io/tags/time/"/>
+    
+      <category term="space" scheme="https://appleceo.github.io/tags/space/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>카카오맵 API 1) 다음 지도 API 를 카카오맵 API 로 변경하는 방법</title>
+    <link href="https://appleceo.github.io/2019/12/31/kakaoMapApi1/"/>
+    <id>https://appleceo.github.io/2019/12/31/kakaoMapApi1/</id>
+    <published>2019-12-30T15:27:45.000Z</published>
+    <updated>2021-07-13T05:30:19.391Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>다음 지도 API의 사용 기간이 만료되간다는 글을 남겼는데요.</p><p>소스에서 실제로 변경하는 작업을 설명하도록 하겠습니다.</p><p>운영하시는 소스에 지도 API가 다음지도인지 걱정하시는 분들이 많으실텐데요.</p><script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=<?=$daum_api_key ?>"></script><p>위와 같은 소스가 기존에 다음지도 API를 사용해서 지도를 보여주는 소스입니다.</p><p>.daum.으로 검색해서 나오는 것이 있으면 다음지도 API가 아직 소스에 있구나라고 생각하시면 됩니다.</p><p>이러한 소스를 </p><script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<?=$daum_api_key ?>"></script> <p>위와 같은 kakao가 들어간 url로 바꾸어주셔야되는데요.</p><p>별도로 kakao 지도 API 홈페이지에 들어가서 api 키를 받으셔서 작업하셔야 되므로 기획자님들이 함부로 바꾸었다가는 기존에 지도도 안보일 가능성이 있습니다.</p><p>참고 사항으로만 알고 계시면 될 것 같습니다.</p><p>주소를 검색하는 부분의 소스도 아래의 다음지도 API 소스에서</p><p>$url = “<a href="https://apis.daum.net/local/geo/addr2coord?apikey=&quot;.$daum_api_key.&quot;&amp;output=json&amp;page_size=10&amp;q=&quot;.urlencode($address)" rel="external nofollow noopener noreferrer" target="_blank">https://apis.daum.net/local/geo/addr2coord?apikey=&quot;.$daum_api_key.&quot;&amp;output=json&amp;page_size=10&amp;q=&quot;.urlencode($address)</a>;$file_get_contents_url = file_get_contents($url);<br>$json_decode = json_decode($file_get_contents_url);</p><p>return $json_decode;</p><p>카카오맵 API 소스로 변경이 필요할 것입니다.</p><p>아래는 카카오맵 API로 주소를 검색하는 소스입니다.</p><p>$headers = array(“Authorization: KakaoAK “.$daum_api_key);<br>$opts = array(<br> CURLOPT_URL =&gt; “<a href="https://dapi.kakao.com/v2/local/search/address.json?query=&quot;.urlencode($address)" rel="external nofollow noopener noreferrer" target="_blank">https://dapi.kakao.com/v2/local/search/address.json?query=&quot;.urlencode($address)</a>, CURLOPT_RETURNTRANSFER =&gt; true,<br> CURLOPT_HTTPGET =&gt; true,<br> CURLOPT_SSL_VERIFYPEER =&gt; false,<br> CURLOPT_SSL_VERIFYHOST =&gt; 0,<br> CURLOPT_SSLVERSION =&gt; true,<br> CURLOPT_HEADER =&gt; false,<br> CURLOPT_HTTPHEADER =&gt; $headers<br>);</p><p>$curl_session = curl_init();<br>curl_setopt_array($curl_session, $opts);<br>$return_data = curl_exec($curl_session);<br>curl_close($curl_session);</p><p>$json_decode = json_decode($return_data, true);</p><p>return $json_decode;</p><p>확인해보시고 개발자님들과 상의해서 올해말까지 작업 진행하셔야 할 것입니다.</p><p>감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;다음 지도 API의 사용 기간이 만료되간다는 글을 남겼는데요.&lt;/p&gt;
+&lt;p&gt;소스에서 실제로 변경하는 작업을 설명하도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;운영하시는 소스에 지도 API가 다음지도인지 걱정하시는 분들이 
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://appleceo.github.io/categories/PHP/"/>
+    
+    
+      <category term="daum" scheme="https://appleceo.github.io/tags/daum/"/>
+    
+      <category term="kakao" scheme="https://appleceo.github.io/tags/kakao/"/>
+    
+      <category term="map" scheme="https://appleceo.github.io/tags/map/"/>
+    
+      <category term="api" scheme="https://appleceo.github.io/tags/api/"/>
+    
+      <category term="php" scheme="https://appleceo.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>스토리보드에서 네비게이션 뷰 scene 의 타이틀 설정하기</title>
+    <link href="https://appleceo.github.io/2019/12/28/storyboardSceneRename/"/>
+    <id>https://appleceo.github.io/2019/12/28/storyboardSceneRename/</id>
+    <published>2019-12-28T04:38:29.000Z</published>
+    <updated>2021-07-13T05:30:19.396Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>스토리보드를 사용하다보면 뷰 컨트롤러가 늘어나서 복잡해질 수 있습니다.</p><p>그럴 때 Scene 의 이름을 지정해줄 수 있으면 혼동을 줄일 수 있습니다.</p><h2 id="scene-의-이름-설정하기"><a href="#scene-의-이름-설정하기" class="headerlink" title="scene 의 이름 설정하기"></a>scene 의 이름 설정하기</h2><ol><li>Navigation Item 을 추가해서 텍스트 수정하기</li></ol><p><img src="/images/storyboardSceneRename1.gif" alt></p><ol start="2"><li>뷰컨트롤러를 선택하고 어튜리뷰트 인스펙터 - Title 수정하기 </li></ol><p><img src="/images/storyboardSceneRename2.gif" alt></p><h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>위의 두가지 방법으로 네비게이션 컨트롤러와 연결된 뷰들의 타이틀을 설정할 수 있었습니다.</p><p>감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;스토리보드를 사용하다보면 뷰 컨트롤러가 늘어나서 복잡해질 수 있습니다.&lt;/p&gt;
+&lt;p&gt;그럴 때 Scene 의 이름을 지정해줄 수 있으면 혼동을 줄일 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;scene-의-이름-설정
+      
+    
+    </summary>
+    
+    
+      <category term="scene" scheme="https://appleceo.github.io/tags/scene/"/>
+    
+      <category term="화면" scheme="https://appleceo.github.io/tags/%ED%99%94%EB%A9%B4/"/>
+    
+      <category term="이름" scheme="https://appleceo.github.io/tags/%EC%9D%B4%EB%A6%84/"/>
+    
+      <category term="변경" scheme="https://appleceo.github.io/tags/%EB%B3%80%EA%B2%BD/"/>
+    
+      <category term="스토리보드&quot;" scheme="https://appleceo.github.io/tags/%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B3%B4%EB%93%9C/"/>
+    
+      <category term="storyboard" scheme="https://appleceo.github.io/tags/storyboard/"/>
+    
+      <category term="title" scheme="https://appleceo.github.io/tags/title/"/>
+    
+      <category term="label" scheme="https://appleceo.github.io/tags/label/"/>
+    
+      <category term="navigation item" scheme="https://appleceo.github.io/tags/navigation-item/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode 스토리보드 테두리 보이도록 설정하기</title>
+    <link href="https://appleceo.github.io/2019/12/28/boundsRectangles/"/>
+    <id>https://appleceo.github.io/2019/12/28/boundsRectangles/</id>
+    <published>2019-12-27T16:54:30.000Z</published>
+    <updated>2021-07-13T05:30:19.387Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 Xcode 에서 스토리보드에 테두리를 보이도록 설정하는 방법을 공유하겠습니다.</p><p>Label 을 사용할 때 이 레이블이 어디에서 끝나는지 알기 어렵습니다.</p><p>오토레이아웃이 제대로 적용이 됬는지 확인하려면 직접 긴 텍스트를 입력해야 했습니다.</p><p>꼼꼼한 재은씨 실전편을 보다가 Xcode 에서 테두리를 보이게 설정하는 방법이 있다는 것을 알았습니다.</p><h2 id="Xcode-스토리보드-테두리-보이도록-설정하기"><a href="#Xcode-스토리보드-테두리-보이도록-설정하기" class="headerlink" title="Xcode 스토리보드 테두리 보이도록 설정하기"></a>Xcode 스토리보드 테두리 보이도록 설정하기</h2><p><img src="/images/boundsRectanglesSetting.gif" alt></p><p>Xcode 실행 후 상단에 메뉴에서 Editor - Canvas - Bounds Rectangles 선택하시면 됩니다.</p><p>위에 이미지에서 보실 수 있듯이 비어있던 Label 의 테두리에 윤곽선이 드러나면서 오토레이아웃이 제대로 적용이 된 것을 알 수 있습니다.</p><p>글 읽어주셔서 감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 Xcode 에서 스토리보드에 테두리를 보이도록 설정하는 방법을 공유하겠습니다.&lt;/p&gt;
+&lt;p&gt;Label 을 사용할 때 이 레이블이 어디에서 끝나는지 알기 어렵습니다.&lt;/p&gt;
+&lt;p&gt;오토레이아웃이 제대로 
+      
+    
+    </summary>
+    
+      <category term="Xcode" scheme="https://appleceo.github.io/categories/Xcode/"/>
+    
+    
+      <category term="테두리" scheme="https://appleceo.github.io/tags/%ED%85%8C%EB%91%90%EB%A6%AC/"/>
+    
+      <category term="Xcode" scheme="https://appleceo.github.io/tags/Xcode/"/>
+    
+      <category term="Storyboard" scheme="https://appleceo.github.io/tags/Storyboard/"/>
+    
+      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
+    
+      <category term="rectangles" scheme="https://appleceo.github.io/tags/rectangles/"/>
+    
+      <category term="스토리보드" scheme="https://appleceo.github.io/tags/%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B3%B4%EB%93%9C/"/>
+    
+      <category term="설정" scheme="https://appleceo.github.io/tags/%EC%84%A4%EC%A0%95/"/>
+    
+      <category term="setting" scheme="https://appleceo.github.io/tags/setting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS 테이블뷰 구분선 안보이도록 설정하는 방법</title>
+    <link href="https://appleceo.github.io/2019/12/26/tableViewSeparatorRemove/"/>
+    <id>https://appleceo.github.io/2019/12/26/tableViewSeparatorRemove/</id>
+    <published>2019-12-25T16:19:15.000Z</published>
+    <updated>2021-07-13T05:30:19.397Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>테이블뷰를 만들다가 보면 셀 사이에 구분선이 생깁니다.</p><p>이 구분선을 지우고 싶은 경우가 있는데요.</p><p>구분선을 지우는 방법에 대해서 알려드리겠습니다.</p><ol><li>chatTableView.separatorColor = UIColor.white</li></ol><p>배경 색이 흰색이라면 구분선의 색이 흰색이 되면 안보이게 되겠죠.<br>위에 코드처럼 tableView 의 separatorColor 를 배경색과 같은 색(보통 흰색)으로 바꿔주면 구분선이 보이지 않습니다.</p><ol start="2"><li>chatTableView.separatorStyle = .none</li></ol><p>구분선의 스타일을 없도록 구성해줄 수도 있습니다.<br>위에 코드처럼 tableView 의 separatorStyle 을 .none 으로 바꿔주면 구분선이 보이지 않습니다.</p><p>간단하게 두가지 방법 알아봤습니다.</p><p>감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;테이블뷰를 만들다가 보면 셀 사이에 구분선이 생깁니다.&lt;/p&gt;
+&lt;p&gt;이 구분선을 지우고 싶은 경우가 있는데요.&lt;/p&gt;
+&lt;p&gt;구분선을 지우는 방법에 대해서 알려드리겠습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;chatTa
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2019년 11월 네번째 주 회고</title>
+    <link href="https://appleceo.github.io/2019/11/30/201911-LastWeek/"/>
+    <id>https://appleceo.github.io/2019/11/30/201911-LastWeek/</id>
+    <published>2019-11-30T14:43:20.000Z</published>
+    <updated>2021-07-13T05:30:19.377Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="여러군데-회사-지원"><a href="#여러군데-회사-지원" class="headerlink" title="여러군데 회사 지원"></a>여러군데 회사 지원</h3><p>원티드에서 18군데 회사에 지원하였다.</p><h3 id="온라인-RxSwift-스터디-참여"><a href="#온라인-RxSwift-스터디-참여" class="headerlink" title="온라인 RxSwift 스터디 참여"></a>온라인 RxSwift 스터디 참여</h3><p>야신님께서 클린 아키텍처 관련 발표를 해주셨다.</p><h1 id="독후감-RxSwift-Reactive-Programming-with-Swift-by-Martin-Todorov"><a href="#독후감-RxSwift-Reactive-Programming-with-Swift-by-Martin-Todorov" class="headerlink" title="독후감 -  RxSwift - Reactive Programming with Swift by Martin Todorov"></a>독후감 -  RxSwift - Reactive Programming with Swift by Martin Todorov</h1><p>RxSwift 를 공부하면서 봤던 책을 다시 한번 전체를 읽어보았다.</p><p><a href="https://github.com/fimuxd/RxSwift" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/fimuxd/RxSwift</a></p><p>번역되어 있고 잘 정리되있는 위 레포지토리에서 읽었다.</p><p>다시 한번 읽으니 조금 더 이해가 많이 된 것 같다.</p><p>조금 더 공부하고 정리해서 블로그에 공유해야겠다.</p><h1 id="다음주-계획"><a href="#다음주-계획" class="headerlink" title="다음주 계획"></a>다음주 계획</h1><p>월 - 면접<br>이력서 쓰기<br>알고리즘 공부</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;여러군
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019년 11월 세번째 주 회고</title>
+    <link href="https://appleceo.github.io/2019/11/25/201911-ThirdWeek/"/>
+    <id>https://appleceo.github.io/2019/11/25/201911-ThirdWeek/</id>
+    <published>2019-11-24T15:08:20.000Z</published>
+    <updated>2021-07-13T05:30:19.377Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="resume-작성"><a href="#resume-작성" class="headerlink" title="resume 작성"></a>resume 작성</h3><p>포트폴리오로 제출한 resume 저장소의 readme를 작성하였다.</p><p><a href="https://github.com/AppleCEO/resume" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/resume</a></p><h3 id="DDD-전체-모임-참석"><a href="#DDD-전체-모임-참석" class="headerlink" title="DDD 전체 모임 참석"></a>DDD 전체 모임 참석</h3><p>DDD 동아리 전체 모임에 참석하였다.</p><p>2팀 씩 같이 앉아서 각 팀의 아이디어나 진행상황을 공유하는 모임이었다.</p><p>우리와 짝을 이룬 팀에서는 이야기하기를 꺼려하셔서 아쉬웠다.</p><h3 id="알고리즘-문제풀이"><a href="#알고리즘-문제풀이" class="headerlink" title="알고리즘 문제풀이"></a>알고리즘 문제풀이</h3><p>Swift 알고리즘 오픈채팅방에 참여하였다.</p><p>어려운 문제, 쉬운 문제 하루에 하나씩 내주면 푸는 방이다.</p><p>쉬운 문제의 출제를 맡게 되었다.</p><p>매일 문제를 풀고 그 중에 괜찮은 문제를 공유하도록 해야겠다.</p><p>문제를 출제함으로서 나도 매일 공부할 수 있고 구성원들에게 도움이 될 수 있어서 좋았다.</p><h3 id="이력서-제출"><a href="#이력서-제출" class="headerlink" title="이력서 제출"></a>이력서 제출</h3><p>두 군데 회사의 채용 공고를 보고 입사 지원했다.</p><p>4월부터 공부를 오래 했다고 생각한다.</p><p>업무의 압박에서 벗어나 성장할 수 있는 좋은 시간이었다.</p><p>이제 괜찮은 회사에 들어가서 오랫동안 일을 할 준비가 됬다.</p><p>0차 탈락을 하지 않으려면 지원을 해야한다.</p><p>여러 회사를 찾아보고 지원을 지속적으로 해야겠다.</p><h1 id="독후감-비커밍-스티브-잡스"><a href="#독후감-비커밍-스티브-잡스" class="headerlink" title="독후감 - 비커밍 스티브 잡스"></a>독후감 - 비커밍 스티브 잡스</h1><p>책이 굉장히 두꺼워서 이번주에 다른 공부는 많이 못하고 독서를 많이 했다.</p><p>존경하는 스티브 잡스에 대해 사소한 부분까지 작성되어 있어서 좋았다.</p><p>글쓴이는 기자인데 스티브 잡스와 밀접한 사이였다.</p><p>스티브 잡스는 자신의 회사와 제품을 홍보하는데 글쓴이를 활용했고 글쓴이 또한 최신의 정보와 애플의 상세한 부분까지 취재를 할 수 있는 윈윈 관계였다.</p><p>글쓴이 자신이 취재한 내용들을 자신의 관점에서 상세하게 정리해놓았다.</p><p>영화나 아이 작슨의 책은 스티브 잡스를 굉장히 냉정하고 거진 성격 파탄자처럼 그려놓는다.</p><p>스티브 잡스는 창업 초기에 그러한 성격 상 문제를 드러내기도 했으나 다시 애플에 복귀한 뒤로는 소리를 지르거나 말도 안되는 일정에 맞춰서 개발을 추진하는 CEO 가 더는 아니었다.</p><p>팀쿡은 아이작슨이 쓴 스티브 잡스 책을 싫어한다고 한다.</p><p>그것은 떠도는 가쉽들을 모아놓은 모음집에 불과하다고 말한다.</p><p>비커밍 스티브 잡스를 통해 스티브 잡스가 뛰어난 CEO 가 되는 성장 과정을 볼 수 있어서 좋았다.</p><p>내 꿈은 애플 CEO 이다.</p><h1 id="다음주-계획"><a href="#다음주-계획" class="headerlink" title="다음주 계획"></a>다음주 계획</h1><p>RxSwift 책 읽기<br>일요일 - 전주 여행?<br>이력서 쓰기<br>알고리즘 공부</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;res
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019년 11월 두번째 주 회고</title>
+    <link href="https://appleceo.github.io/2019/11/18/201911-SecondWeek/"/>
+    <id>https://appleceo.github.io/2019/11/18/201911-SecondWeek/</id>
+    <published>2019-11-18T07:35:20.000Z</published>
+    <updated>2021-07-13T05:30:19.377Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="객체지향-온라인-스터디-참석"><a href="#객체지향-온라인-스터디-참석" class="headerlink" title="객체지향 온라인 스터디 참석"></a>객체지향 온라인 스터디 참석</h3><p>오브젝트 5강을 온라인 스터디 참여하는 분들과 같이 듣고 의견을 공유했다.</p><h3 id="Let’swift-2019-참석"><a href="#Let’swift-2019-참석" class="headerlink" title="Let’swift 2019 참석"></a>Let’swift 2019 참석</h3><p>처음으로 렛츠스위프트에 참석했다.</p><p>JK 와 야곰을 오랜만에 뵈서 반가웠다.</p><p>후기 : <a href="https://appleceo.github.io/2019/11/17/letswift2019/">https://appleceo.github.io/2019/11/17/letswift2019/</a></p><h3 id="Let-us-go-2019-fall-참석"><a href="#Let-us-go-2019-fall-참석" class="headerlink" title="Let us go 2019 fall 참석"></a>Let us go 2019 fall 참석</h3><p>토요일에 렛어스고를 두번째로 참석했다.</p><p>많은 분들과 친해질 수 있었다.</p><p>후기 : <a href="https://appleceo.github.io/2019/11/17/letusgo2019Fall/">https://appleceo.github.io/2019/11/17/letusgo2019Fall/</a></p><h3 id="RxSwift-오프라인-모임-참석"><a href="#RxSwift-오프라인-모임-참석" class="headerlink" title="RxSwift 오프라인 모임 참석"></a>RxSwift 오프라인 모임 참석</h3><p>마지막 장인 24장을 공부했다.</p><p>나왔던 거의 모든 개념이 나오면서 프로젝트를 완성해가는 장이었다.</p><p>조장희님께서 발표해주셨다.</p><p>소스를 보면서 다시 한번 공부해봐야겠다.</p><h1 id="독후감-빅-너드-랜치의-스위프트-프로그래밍"><a href="#독후감-빅-너드-랜치의-스위프트-프로그래밍" class="headerlink" title="독후감 - 빅 너드 랜치의 스위프트 프로그래밍"></a>독후감 - 빅 너드 랜치의 스위프트 프로그래밍</h1><p>두꺼운 스위프트 책이라서 1주일 안에 보기에 힘들었다.</p><p>프로그램을 작성하는 예제들은 최대한 넘어가고 훑어보듯이 읽어보았다.</p><p>각 장의 예제들은 시간 날 때마다 Xcode 에 입력해봐야겠다.</p><p>어려운 개념들을 쉽게 설명해서 풀어놓은 책이었다.</p><p>모르거나 헷갈렸던 개념들을 다시 잡을 수 있었다.</p><h1 id="다음주-계획"><a href="#다음주-계획" class="headerlink" title="다음주 계획"></a>다음주 계획</h1><p>비커밍 스티브잡스 책 읽기<br>월요일 - 객체지향 온라인 스터디 참석(코드스피츠 오브젝트 6강)<br>수요일 - RxSwift 온라인 스터디 참석<br>토요일 - DDD 전체 모임 참석</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;객체지
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>let us go 2019 Fall review</title>
+    <link href="https://appleceo.github.io/2019/11/17/letusgo2019Fall/"/>
+    <id>https://appleceo.github.io/2019/11/17/letusgo2019Fall/</id>
+    <published>2019-11-17T13:49:19.000Z</published>
+    <updated>2021-07-13T05:30:19.392Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 어제는 let us: go 2019 fall 세미나에 참석했습니다.</p><p>두번째로 참석한 렛어스고 세미나였습니다.</p><p>행사 장소가 너무나 멋졌고 뒤풀이에서 많은 분들과 만나서 이야기 나눌 수 있어서 좋았습니다.</p><p>행사 후기를 적어보고자 합니다.</p><h2 id="첫번째-세션"><a href="#첫번째-세션" class="headerlink" title="첫번째 세션"></a>첫번째 세션</h2><ul><li>주니어 개발자 해외 취업기[독일, 비전공자]</li><li>도길참새</li></ul><p>도길참새님께서 독일에서 오셔서 발표해주셨습니다.</p><p>베를린에서 코리안 바베큐가 유행이라면서 분위기를 말랑말랑하게 하면서 발표를 시작해주셨습니다.</p><p>현재 베를린에 거주하고 있다고 하십니다.</p><p>독일에 가신 이유는 한국에서 나가고 싶어서 였다고 합니다.</p><p>준비를 하려고 하니 진행이 안되서 무작정 비행기표를 끊었다고 하셨습니다.</p><p>남편 분이 한국에서 개발자 10년을 하시고 독일에 가신거라고 합니다.</p><p>남편 분은 2주 만에 잡 오퍼를 받았다고 하십니다.</p><p>베를린은 집을 구하기가 힘든데 2주만에 집도 구했다고 합니다.</p><p>도길참새님은 우리나라에서 기획 경력이 있으셔서 기획으로 지원을 했는데 잘 안됬다고 하십니다.</p><p>그러던 와중에 남편 분이 하는 개발이 재밌어 보였다고 하십니다.</p><p>책을 보고 공부하는 것보다 프로젝트를 만들어보면서 실력이 빨리 늘으셨다고 합니다.</p><p>처음에는 합격될 것 같은 곳만 넣었다고 하십니다.</p><p>하지만 합격을 결정하는 것은 상대방임을 깨닫고 나서 아무데나 막 넣기 시작하셨다고 합니다.</p><p>시니어를 뽑는데도 지원하셨다고 합니다.</p><p>어디든 되고 봐야 한다고 하셨고 인턴 모집 안해도 막 넣어보았다고 합니다.</p><p>쫄지말고 넣고 면접보라고 하셨습니다.</p><p>테크니컬 인터뷰 - UI 디자이너 - 헤드까지 4시간 가량 이어지는 면접에서 테크니컬 인터뷰가 망했다고 하십니다.</p><p>집에 돌아가지 않고 인터뷰 경험, 영어 경험을 쌓자고 하면서 편하고 재미있게 있는 그대로 이야기하셨다고 합니다.</p><p>아는 것은 안다고 하고 모르는 것은 모른다고 하셨다고 합니다. </p><p>면접은 굉장한 정보의 비대칭에서 시작한다고 하셨습니다.</p><p>독일 생활에 굉장히 만족하고 있다고 하십니다.</p><p>예약을 해야지 뭐든지 할 수 있고 예약 대기가 오래 걸린다고 합니다.</p><p>종이로 모든 일이 처리된다고 합니다.</p><p>인종차별도 조금 있다고 합니다.</p><p>자유롭고 여유로워서 다양한 취향들을 존중해주는 분위기라고 합니다.</p><p>법이나 규범이 사람을 향해 있다는 느낌을 받았다고 하십니다.</p><p>독일에 나가고 싶다는 생각이 들 정도로 재밌고 좋은 발표였습니다.</p><h2 id="두번째-세션"><a href="#두번째-세션" class="headerlink" title="두번째 세션"></a>두번째 세션</h2><ul><li>커스텀 오퍼레이터</li><li>곰튀김</li></ul><p>커스텀 오퍼레이터에 대해서 곰튀김님께 발표해주셨습니다.</p><p>커스텀 오퍼레이터에 대해서는 이미 알고 있었습니다.</p><p>view 에 연산을 하는 것이 신선했습니다.</p><p>2번째 문제를 맞춰서 야곰의 스위프트5 책을 받을 수 있었습니다!</p><p>다시 한번 커스텀 오퍼레이터에 대해 상기할 수 있었고 새로운 내용을 알게 되어서 기뻤습니다.</p><h2 id="세번째-세션"><a href="#세번째-세션" class="headerlink" title="세번째 세션"></a>세번째 세션</h2><ul><li>fastlane init Swift</li><li>윤병훈</li></ul><p>보맵에 윤병훈님께서 발표해주셨습니다.</p><p>Fastlane 에 대해서 대략 알고 있었지만 어떻게 사용할 수 있고 어떤 역할을 하는지 명확하게 알지는 못했습니다.</p><p>Fastlane 에 대한 간단한 소개부터 사용 방법들을 알려주셔서 좋았습니다.</p><p>아래 내용은 발표를 들으며 정리한 내용입니다.</p><p>대부분의 CI 시스템에서 사용 가능함<br>Match</p><ul><li>팀 인증서 및 프로파일 관리 및 동기화</li></ul><p>Private 레포에 인증서를 올려서 관리한다고 함</p><p>Scan : 테스트 자동화 도구<br>HTML, JSON Report 지원<br>Slack 메시지로 테스트 결과 보낼 수 있음</p><p>Gym<br> : Build<br> : package</p><p>Snapshot</p><ul><li>해상도 별 스크린샷</li><li>지역화 스크린샷</li></ul><dl><dt>Crashlytics</dt><dd>베타 테스트</dd></dl><dl><dt>Pilot</dt><dd>testFlight에서 테스트하도록 업로드</dd></dl><p>Deliver</p><ul><li>Metadata Upload</li><li>App Package Upload</li><li>HTML Preview</li><li>precheck - 앱 제출 전 사전검사, 메타데이터, 앱내구매 확인</li></ul><p>Notifications</p><ul><li>Slack</li><li>Malign</li><li>Twitter</li></ul><h2 id="간식과-함께하는-네트워킹"><a href="#간식과-함께하는-네트워킹" class="headerlink" title="간식과 함께하는 네트워킹"></a>간식과 함께하는 네트워킹</h2><p>구인구직 쪽에 관심이 많아서 그 쪽에 가서 이야기를 나눴습니다.</p><p>마기님이 당근마켓의 채용에 대해서 간단히 설명해주셨습니다.</p><p>민소네님께서 카카오뱅크의 채용에 대해서 간단히 설명해주셨습니다.</p><p>쿠우님께서 하이퍼커넥트의 채용에 대해서 간단히 설명해주셨습니다.</p><p>클린트님께서 스타트업과 프리랜서에 대해서 이야기해주셨습니다.</p><p>다방에서 오신 분도 채용에 대해서 이야기하셨습니다.</p><p>마기님을 실제로 뵈어서 신기했고 재밌었습니다.</p><h2 id="네번째-세션"><a href="#네번째-세션" class="headerlink" title="네번째 세션"></a>네번째 세션</h2><ul><li>Static Framework와 Dynamic Framework 그리고 Encapsulation</li><li>민소네</li></ul><p>민소네님께서 스테틱 프레임워크, 다이나믹 프레임워크의 차이에 대해서 셜명해주셨습니다.</p><p>다이나믹 프레임워크에는 다이나믹 라이브러리가 있고 스테틱 프레임워크에는 스테틱 라이브러리가 있다고 합니다.</p><p>어떤 식으로 프레임워크를 구성하는 것이 좋은지에 대한 이야기였습니다.</p><p>아직 프레임워크를 파본 적이 없어서 많이 알아들을 수는 없었습니다.</p><p>tree 명령어 등으로 프레임워크에 대해서 알아볼 수 있는 방법을 알려주셨습니다.</p><p>라이브러리와 프레임워크를 파악해서 원하는 부분만 가져다 쓰는 식으로 사용해봐야겠습니다.</p><h2 id="다섯번째-세션"><a href="#다섯번째-세션" class="headerlink" title="다섯번째 세션"></a>다섯번째 세션</h2><ul><li>Swift 개발이 좋아요</li><li>클린트</li></ul><p>클린트님께서 발표해주셨습니다.</p><p>클린트님이 화요일에 있었던 렛츠스위프트에서 먼저 알아봐주시고 인사해주셔서 안면이 있었습니다.</p><p>스위프트를 좋아하는 이유에 대해서 말씀해주셨습니다.</p><p>스위프트를 할 때 돈을 잘 번다고 하십니다.</p><p>재미있고 부드러운 분위기에서 스위프트의 장점 단점 등을 이야기하는 시간이었습니다.</p><p>조금은 어설픈 듯 하지만 순수하신 모습에 분위기가 좋았습니다.</p><h2 id="여섯번째-세션"><a href="#여섯번째-세션" class="headerlink" title="여섯번째 세션"></a>여섯번째 세션</h2><ul><li>디버깅 시작해버깅</li><li>가은</li></ul><p>가은님께서 발표해주셨습니다.</p><p>디버깅에서 LLDB 의 대부분에 명령어를 소개해주셨습니다.</p><p>아래는 간단한 메모입니다.</p><p>(lldb) help breakpoint<br>Apropos “reference count” 특정 </p><p>Condition : 만족할 때만 Break<br>Ignore 특정 횟수만큼 무시<br>Action 수행 후 프로그램 계속 실행</p><p>쉐어 브레이크 포인트하면 깃에 공유 가능</p><p>모듈에 내가 만든 모듈을 넣어주면 해당하는 라이브러리에 있는 함수에만 걸린다.</p><p>Watchpoint 는 Breakpoint의 일종으로 언제 값이 바뀌는지 볼 수 있다.</p><p>Refcount<br>Ref 카운트 확인</p><p>Image list<br>모든 Module 의 정보 출력</p><p>image lookup</p><p>Image dump symtab Alamofire -s address</p><p>po [[UIWindow keyWindow] <em>autolayoutTrace]<br>Po [UIViewController</em> …</p><p>Command alias<br>별명을 정해서 짧게 실행할 수 있다.</p><p>/.lldbinit 에 자주 쓰는 별명을 넣어줄 수 있다.</p><p>Set<br>Backtrace를 심볼리틱?</p><p>Keychain</p><h2 id="일곱번째-세션"><a href="#일곱번째-세션" class="headerlink" title="일곱번째 세션"></a>일곱번째 세션</h2><ul><li>내 소스를 오픈하면 생기는 일</li><li>염염</li></ul><p>카카오에 염염님께서 발표해주셨습니다.</p><p>코코아팟에 라이브러리 업로드 방법부터 스위프트 프로젝트 매니저를 사용하는 방법까지 오픈소스에 대해 얘기해주셨습니다.</p><p>소스를 오픈함으로써 조금 더 찾아서 공부하게 되고 책임감있게 소스를 짜게 되셨다고 합니다.</p><p>깃허브에 팔로우를 하고 있었는데 실제로 뵙게 되어서 반가웠습니다.</p><p>오늘 저를 팔로우해주셨는데 기분이 좋았습니다.</p><p>라이브러리를 오픈하고 렛어스고에서 발표할 때까지 더 노력해야겠습니다. </p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>두번째로 참석한 렛어스고라서 그런지 조금 더 편했고 많은 분들과 인사를 나눴던 것 같습니다.</p><p>뒤풀이에가서 또 여러분을 만날 수 있어서 좋았습니다.</p><p>앞으로 이런 행사가 있다면 뒤풀이에 가는 것이 좋겠습니다.</p><p>쿠우님, 키윈도우님과 스테프 분들 고생하셨습니다.</p><p>읽어주셔서 감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 어제는 let us: go 2019 fall 세미나에 참석했습니다.&lt;/p&gt;
+&lt;p&gt;두번째로 참석한 렛어스고 세미나였습니다.&lt;/p&gt;
+&lt;p&gt;행사 장소가 너무나 멋졌고 뒤풀이에서 많은 분들과 만나서 이야기 나눌 수 있어서 좋았습니다.&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="Seminar" scheme="https://appleceo.github.io/categories/Seminar/"/>
+    
+    
+      <category term="Swift" scheme="https://appleceo.github.io/tags/Swift/"/>
+    
+      <category term="iOS" scheme="https://appleceo.github.io/tags/iOS/"/>
+    
+      <category term="Seminar" scheme="https://appleceo.github.io/tags/Seminar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>let&#39;swift 2019 review</title>
+    <link href="https://appleceo.github.io/2019/11/17/letswift2019/"/>
+    <id>https://appleceo.github.io/2019/11/17/letswift2019/</id>
+    <published>2019-11-17T11:49:31.000Z</published>
+    <updated>2021-07-13T05:30:19.391Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주 화요일에 렛츠스위프트에 처음으로 참여해봤습니다.</p><p>그에 대한 리뷰를 작성해보겠습니다.</p><h1 id="Let’swift"><a href="#Let’swift" class="headerlink" title="Let’swift"></a>Let’swift</h1><h2 id="첫번째-발표"><a href="#첫번째-발표" class="headerlink" title="첫번째 발표"></a>첫번째 발표</h2><p>레이니스트에 박보영님께서 발표해주셨습니다.</p><p>RxSwift 에서 Combine 으로 바꾸는 내용들에 대해서 간략하게 설명해주셨습니다.</p><p>RxSwift 와 Combine 둘 다 관심가는 주제라서 재미있게 들었습니다.</p><h2 id="두번째-발표"><a href="#두번째-발표" class="headerlink" title="두번째 발표"></a>두번째 발표</h2><p>라인비즈플러스에 백성욱님께서 발표해주셨습니다.</p><p>그래픽 쪽으로 공부를 많이 하신 분이였습니다.</p><p>그래픽과 에니메이션에 대해서 심도깊은 이야기를 해주셨습니다.</p><p>아래는 말씀해주신 내용들입니다.</p><ul><li><p>UIBezierPath</p></li><li><p>그라데이션을 주려면 CAGradiention Layer 를 사용해야한다.</p></li><li><p>Location 은 첫번재 칼라의 위치이다.</p></li></ul><h2 id="세번째-발표"><a href="#세번째-발표" class="headerlink" title="세번째 발표"></a>세번째 발표</h2><p>야놀자에 강승철님께서 발표해주셨습니다.</p><p>아래는 말씀해주신 내용들입니다.</p><ul><li><p>CADisplayLink</p></li><li><p>Looper </p></li><li><p>보고 있는데 버튼이 움직이면 기분 나쁨</p></li><li><p>로그를 찍을 때 section 3 부터 찍힘(DI팀이 좋아한다) -&gt; 안보이는 영역에 있었을 때 문제</p></li><li><p>Render 에서 전체가 다 fetch 된 다음에 다 보여주게 할 수 있다. (한번에 여러개가 보여지면 랙이 발생함, section1이 보여질 수 있음에도 불구하고 기다려야한다)</p></li></ul><h2 id="워크샵-첫번째-시간"><a href="#워크샵-첫번째-시간" class="headerlink" title="워크샵 첫번째 시간"></a>워크샵 첫번째 시간</h2><p>점심 시간 이후에 워크샵 발표를 들었습니다.</p><p>라인비즈플러스에 최완복님께서 발표해주셨습니다.</p><p>아래는 말씀해주신 내용을 메모한 것입니다.</p><p>좋은 코드란 </p><ul><li>Readability 가 좋다</li><li>Solid 원칙을 잘 지켰다.</li></ul><p>함자(Functor) :<br>값(Value)을 담은 Context로 되어있고, map function 을 지원하는 것</p><p>map은 내용만 변경할 수 있었다.<br>flatMap 은 컨테이너도 변경할 수 있다.</p><p>모나드<br>값(Value)을 담은 Context로 되어있고, flatMap function 을 지원하는 것</p><p>로빈 포플스톤의 일급 객체에 대한 정의</p><h2 id="워크샵-두번째-시간"><a href="#워크샵-두번째-시간" class="headerlink" title="워크샵 두번째 시간"></a>워크샵 두번째 시간</h2><p>코드스쿼드에 JK 께서 발표해주셨습니다.</p><p>아래는 말씀해주신 내용을 메모한 것입니다.</p><p>의도를 명확하게 하라<br>같은 메소드 내에 추상화 수준을 맞춰라</p><p>SOLID<br>SRP - Actor 들이 사용하는 것을 기준으로 책임을 나눠라<br>OCP - 확장에는 열려있고 변경에는 닫혀있는..<br>LSP - 상속 관계를 만든다 확장을 해야할 것 같을 때는 프로토콜을 만들고 그 프로토콜을 채택한 여러 것들을 추가한다.<br>ISP - 인터페이스 분리 원칙<br>DIP - 의존성 역전의 원칙, 의존성을 setter 로 넣어주는 방법도 있다.</p><p>GRASP 패턴</p><p>코드 리뷰<br>Private 을 먼저 구성(get, set 만드는 것은 지양) - 그래야 연관된 작업은 이 객체 안에서 처리하게 됨 (안그러면 어디서 데이터를 바꾸는지 다 찾아야함)</p><p>하드 코딩 제거(“|”, 0, 1 등)<br>프로토콜의 이름은 형용사(able 등)<br>출력할 때 제일 정확한 데이터 포멧을 넘겨주는게 좋음(사다리는 Bool)</p><p>다형성이 분기처리를 하도록 짜라<br>If <del>~</del><br>   Retune<br>Return</p><p>이런 방식이 아니라 두개의 객체를 만들어서 다형성으로 짜라</p><p>구조적 프로그래밍<br>Goto 구문 없이 반복문으로 제어 흐름에 대한 직접적인 전환</p><ul><li>발표 피피티 참고</li></ul><p>Creator 패턴</p><ul><li>발표자료 참고</li></ul><p>메소드를 호출한다고 하지 않고 operation 을 통해 메소드 호출<br>그 객체가 가지고 있는 메소드를 호출한다고 하지 않고 메시지를 보낸다고 한다.</p><p>점으로 두번 이상 눌러서 들어가지마라</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>렛츠스위프트에 처음으로 참여해봤습니다.</p><p>1년에 한 번 열리는 큰 행사라서 그런지 스케일이 꽤나 컸습니다.</p><p>자극도 받고 좋은 시간 보냈습니다.</p><p>이런 큰 컨퍼런스를 열어주신 JK 와 스텝 분들께 감사드립니다.</p><p>읽어주셔서 감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주 화요일에 렛츠스위프트에 처음으로 참여해봤습니다.&lt;/p&gt;
+&lt;p&gt;그에 대한 리뷰를 작성해보겠습니다.&lt;/p&gt;
+&lt;h1 id=&quot;Let’swift&quot;&gt;&lt;a href=&quot;#Let’swift&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="Seminar" scheme="https://appleceo.github.io/categories/Seminar/"/>
+    
+    
+      <category term="Swift" scheme="https://appleceo.github.io/tags/Swift/"/>
+    
+      <category term="iOS" scheme="https://appleceo.github.io/tags/iOS/"/>
+    
+      <category term="Seminar" scheme="https://appleceo.github.io/tags/Seminar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MVVM</title>
+    <link href="https://appleceo.github.io/2019/11/09/MVVM/"/>
+    <id>https://appleceo.github.io/2019/11/09/MVVM/</id>
+    <published>2019-11-09T12:48:31.000Z</published>
+    <updated>2021-07-13T05:30:19.383Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 MVVM 에 대해서 알아보겠습니다.</p><h1 id="아키텍처"><a href="#아키텍처" class="headerlink" title="아키텍처"></a>아키텍처</h1><p>iOS 에서 많이 사용되는 아키텍처에는 MVC, MVP, MVVM 이 있습니다.</p><p>아키텍처를 생각하지 않고 프로그램을 작성한다고 프로그램이 돌아가지 않는 것은 아닙니다. </p><p>하지만 이런 프로그램은 가독성은 떨어지며 유지 보수에 굉장히 많은 비용이 듭니다. </p><p>또한 테스팅 단계에서는 테스팅 자체가 거의 불가능하거나 효과를 볼 수 없는 난관에 봉착할 수 있습니다.</p><p>저는 개발을 할 때 MVC 를 주로 사용해 왔는데요.</p><p>MVC 를 사용하다보면 View 와 ViewController, Model 이 뒤죽박죽 되는 경우가 많습니다.</p><p>ViewController 가 너무 많은 소스를 가져가는 경우가 많아서 iOS 에서는 MVC 의 별명이 Massive ViewController 입니다.</p><p>이러한 배경으로 MVVM 에 관심을 가지게 되었고 어느 정도 이해한 내용을 정리하고 공유하고자 합니다.</p><h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><p>MVVM 은 Model 과 View 사이에 ViewModel 이 위치하는 아키텍처입니다.</p><p>ViewModel 은 한마디로 View 를 위한 Model 이라고 할 수 있습니다.</p><p>저희는 보통 모델을 있는 그대로 사용하지 않습니다.</p><p>어떤 로직에 따라 가공을 하기도 하고 뷰에 보여지기 위한 처리가 필요합니다.</p><p>이러한 부분을 ViewModel 이 갖고 있어서 View 와 ViewController (이하 View 에 포함)에는 로직과 데이터가 없고 뷰에 대한 처리에만 집중합니다.</p><p>MVVM 는 아래와 같은 특징을 가지고 있습니다.</p><ul><li>View 는 최대한 멍청한(dumb) 상태를 유지해야한다.</li><li>View 는 View Model 과 바인딩 되어있다.</li><li>ViewModel 은 뷰가 어떻게 보여지든지 상관하지 않는다.</li><li>ViewModel 은 모델과 통신하여 값을 갖고 있고 로직만을 실행 한다. </li></ul><h1 id="Binding"><a href="#Binding" class="headerlink" title="Binding"></a>Binding</h1><p>위에서 바인딩이라는 이야기가 나왔는데요.</p><p>그렇다면 바인딩은 무엇일까요?</p><p>View의 UI 요소들과 ViewModel의 인터페이스를 연결시키는 작업을 “바인딩(Binding)” 이라고 합니다.</p><p>뷰 모델의 프로퍼티를 변경하면 이것이 바인딩된 뷰에 반영되는 형태입니다.</p><p>iOS 에서 바인딩 방법은 아래 4가지가 대표적입니다.</p><ul><li>KVO (Key-Value Observing) 패턴</li><li><strong>RxSwift나 ReactiveCocoa같은 FRP(Functional Reactive Programming) 라이브러를 활용</strong></li><li>Combine</li><li>Property Observer</li></ul><p>저는 RxSwift 를 공부하고 있기 때문에 2번째 방법은 RxSwift 를 활용해서 바인딩을 하고자 합니다.</p><p>RxSwift 를 이용해 바인딩하여 MVVM 아키텍처를 구성하는 것을 RxMVVM 이라고도 합니다.</p><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이론적으로는 위와 같이 정리가 되었으나 저 또한 예제를 작성해보고 여러번 활용해서 익숙해져야 하겠습니다.</p><p>같이 예제를 공유하고 함께 성장했으면 좋겠습니다.</p><p>글 읽어주셔서 감사합니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 MVVM 에 대해서 알아보겠습니다.&lt;/p&gt;
+&lt;h1 id=&quot;아키텍처&quot;&gt;&lt;a href=&quot;#아키텍처&quot; class=&quot;headerlink&quot; title=&quot;아키텍처&quot;&gt;&lt;/a&gt;아키텍처&lt;/h1&gt;&lt;p&gt;iOS 에서 많이
+      
+    
+    </summary>
+    
+      <category term="Architecture" scheme="https://appleceo.github.io/categories/Architecture/"/>
+    
+    
+      <category term="Architecture" scheme="https://appleceo.github.io/tags/Architecture/"/>
+    
+      <category term="MVVM" scheme="https://appleceo.github.io/tags/MVVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019년 11월 첫번째 주 회고</title>
+    <link href="https://appleceo.github.io/2019/11/08/201911-FirstWeek/"/>
+    <id>https://appleceo.github.io/2019/11/08/201911-FirstWeek/</id>
+    <published>2019-11-08T11:58:20.000Z</published>
+    <updated>2021-07-13T05:30:19.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="DDD-세션-모임-발표-준비"><a href="#DDD-세션-모임-발표-준비" class="headerlink" title="DDD 세션 모임 발표 준비"></a>DDD 세션 모임 발표 준비</h3><p>정기욱님이 카카오 프렌즈 캐릭터를 모델로 만들어주셨다.</p><p>그 모델로 캐릭터를 판명하는 아이폰 카메라로 찍는 예제와 ImagePicker 로 사진을 등록하는 예제를 작성했다.</p><p>아이폰 카메라 예제 : <a href="https://www.youtube.com/watch?v=Eq4z4brcWHQ&amp;t=1s" rel="external nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=Eq4z4brcWHQ&amp;t=1s</a></p><p>ImagePicker 예제 :<br><a href="https://www.youtube.com/watch?v=-Q5YEr56cKs" rel="external nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=-Q5YEr56cKs</a></p><h3 id="MVVM-발표"><a href="#MVVM-발표" class="headerlink" title="MVVM 발표"></a>MVVM 발표</h3><p>수요일 RxSwift 온라인 스터디에서 MVVM 을 발표하게 되었다.</p><p><a href="https://www.slideshare.net/joonjhokil/rx-mvvm" rel="external nofollow noopener noreferrer" target="_blank">https://www.slideshare.net/joonjhokil/rx-mvvm</a><br><a href="https://github.com/AppleCEO/MVVMKyu" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/MVVMKyu</a></p><p>위에 자료로 발표를 하였다.</p><p>목요일에 오프라인 RxSwift 에서도 발표를 하였다.</p><h3 id="DDD-직군-세션-발표"><a href="#DDD-직군-세션-발표" class="headerlink" title="DDD 직군 세션 발표"></a>DDD 직군 세션 발표</h3><p>미리 회고를 작성하고 있어서 내일 토요일에 정기욱님과 만나서 &lt;CoreML-Vision 라이브 코딩&gt; 이라는 주제로 진행할 세션 발표를 할 예정이다.</p><h3 id="객체지향-온라인-스터디-참석"><a href="#객체지향-온라인-스터디-참석" class="headerlink" title="객체지향 온라인 스터디 참석"></a>객체지향 온라인 스터디 참석</h3><p>월요일에 객체지향 온라인 스터디에 참석하였다.</p><h1 id="독후감-왜-일하는가"><a href="#독후감-왜-일하는가" class="headerlink" title="독후감 - 왜 일하는가"></a>독후감 - 왜 일하는가</h1><p>김봉진 우아한 형제들 대표님의 추천 도서인 &lt;왜 일하는가&gt; 라는 책을 드디어 읽어보았다.</p><p>우아한 형제들에 가고 싶고 김봉진 대표님을 존경해서 추천도서들을 구매했었다.</p><p>사고 난 뒤에 조금 읽다가 전형적인 꼰대의 책이라는 생각에 책을 접었었다.</p><p>대우를 못받아도 무조건 열심히 일하고 애사심으로 일하라는 내용이 주 내용이다.</p><p>그런 마음으로 여러 회사들을 다녀봤지만 영세한 기업에 들어가서 이용만 당하고 퇴사한 경험이 많이 있다.</p><p>이런 경험으로 다시금 회사를 위해서 열심히 일할 수 있을지 의문이 들 정도로 요즘 의욕이 없었고 회사를 구하기도 주저하였다.</p><p>하지만 이 책을 다시 읽어보니 다시금 의욕이 생기는 것 같다.</p><p>성급하게 책을 덮었던 그 때와 달리 공부도 많이하고 휴식도 많이한 현재 다시 마음을 잡고 책을 읽어보니 책의 저자가 굉장히 존경스러웠다.</p><p>책의 저자는 지방대에 나와서 어찌 중견 기업에 들어갔다.</p><p>그 기업은 유명했지만 점점 수익이 줄고 월급도 제대로 못주는 영세 기업이었다.</p><p>월급을 못받았지만 저자는 열심히 일하고 연구해서 신기술을 개발해서 회사를 일으켜세운다.</p><p>저자는 그 회사에서 나와서 교세라 라는 기업을 만든다.</p><p>혼신의 힘을 다해서 세계적인 기업을 만들어낸다.</p><p>나의 경우는  전체 직원이 5명~10명 정도인 회사에서 열심히 일 한 경험이 있다.</p><p>이번에는 어느 정도 규모가 있는 회사에 가고 싶다.</p><p>내가 희생해서 회사를 일으켜 세우면 그거에 대해 고맙다는 말 한마디라도 들을 수 있는 곳에 취업하고 싶다.</p><p>슬슬 다시 일을 하고 싶다</p><h1 id="다음주-계획"><a href="#다음주-계획" class="headerlink" title="다음주 계획"></a>다음주 계획</h1><p>월요일 - 객체지향 온라인 스터디 참석(코드스피츠 오브젝트 5강)<br>화요일 - Let’swift 세미나 참석<br>수요일 - RxSwift 온라인 스터디 참석<br>목요일 - RxSwift 오프라인 모임 참석(책 24장)<br>토요일 - Let us go 세미나 참석</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;DDD
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019년 10월 마지막 주 회고</title>
+    <link href="https://appleceo.github.io/2019/11/08/201910-LastWeek/"/>
+    <id>https://appleceo.github.io/2019/11/08/201910-LastWeek/</id>
+    <published>2019-11-08T11:31:20.000Z</published>
+    <updated>2021-07-13T05:30:19.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="오토레이아웃-강의-구매"><a href="#오토레이아웃-강의-구매" class="headerlink" title="오토레이아웃 강의 구매"></a>오토레이아웃 강의 구매</h3><p>DDD 동아리 활동을 같이하는 정기욱 님께서 추천해주신 오토레이아웃 강의를 구매하였다.</p><p><a href="https://www.inflearn.com/course/autolayout" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/autolayout</a></p><p>위에 강좌이다.</p><p>몇 강 안들었지만 기본적인 부분부터 자세히 설명이 되어있다.</p><p>꾸준히 듣고 아래 레포지토리에 업데이트 할 것이다.</p><p><a href="https://github.com/AppleCEO/autolayout" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/autolayout</a></p><h3 id="위키피디아-서퍼-앱스토어-신청"><a href="#위키피디아-서퍼-앱스토어-신청" class="headerlink" title="위키피디아 서퍼 앱스토어 신청"></a>위키피디아 서퍼 앱스토어 신청</h3><p>어플을 앱스토어에 올리도록 처음으로 신청해봤다.</p><p>처음하는 절차라 오래 걸렸지만 정상적으로 신청을 마쳤다.</p><p>기능이 적다는 피드백을 받았다.</p><h3 id="DDD-직군-세션-발표-준비"><a href="#DDD-직군-세션-발표-준비" class="headerlink" title="DDD 직군 세션 발표 준비"></a>DDD 직군 세션 발표 준비</h3><p>금요일에 정기욱님과 만나서 &lt;CoreML-Vision 라이브 코딩&gt; 이라는 주제로 진행할 세션 발표를 준비했다.</p><p>아직 coreML 을 사용해보지 않아서 기욱님이 작성하신 예제를 같이 살펴보았다.</p><p><a href="https://youtu.be/p6GA8ODlnX0" rel="external nofollow noopener noreferrer" target="_blank">https://youtu.be/p6GA8ODlnX0</a></p><p>위에 유튜브 영상을 따라서 작성하신 예제였다.</p><p>나도 레포지토리를 파서 예제를 따라 작성해보았다.</p><p><a href="https://github.com/AppleCEO/SmartCameraLTBA" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/SmartCameraLTBA</a></p><h3 id="객체지향-온라인-스터디-참석"><a href="#객체지향-온라인-스터디-참석" class="headerlink" title="객체지향 온라인 스터디 참석"></a>객체지향 온라인 스터디 참석</h3><p>월요일에 처음으로 객체지향 온라인 스터디에 참석하였다.</p><p><a href="https://www.youtube.com/watch?v=Qa3dRrSbeQI&amp;t=4302s" rel="external nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=Qa3dRrSbeQI&amp;t=4302s</a></p><p>코드스피츠라는 유튜브 채널에서 올려준 오브젝트 책의 리뷰를 보는 스터이디다.</p><p>매주 월요일에 미리 한 강씩 보고와서 스터디에서 같이 보면서 알게 된 내용을 공유하는 스터디이다.</p><p><a href="https://open.kakao.com/o/gvjVVbDb" rel="external nofollow noopener noreferrer" target="_blank">https://open.kakao.com/o/gvjVVbDb</a></p><p>위에 오픈 카카오톡 채팅에서 스터디가 진행된다.</p><p>오브젝트 책이나 객체 지향에 대해서 혼자 공부하기 힘들고 뜬구름 잡는 느낌이 들었다.</p><p>이번에 스터디에서 같이 예제도 서로 공유하고 쉽게 설명 나누면서 너무 좋은 모임이었다.</p><p>매주 열심히 참여해야겠다.</p><h1 id="독후감-읽기-좋은-코드가-좋은-코드다"><a href="#독후감-읽기-좋은-코드가-좋은-코드다" class="headerlink" title="독후감 - 읽기 좋은 코드가 좋은 코드다"></a>독후감 - 읽기 좋은 코드가 좋은 코드다</h1><p>흥푸의 추천 도서 1 인 &lt;읽기 좋은 코드가 좋은 코드다&gt; 책을 드디어 읽어보았다.</p><p>이 책은 여러 예제를 가지고 좋은 코드로 개선하는 방법을 알려준다.</p><p>생각나는 내용은 아래와 같다.</p><ul><li>영어 문장으로 읽히는 코드가 좋은 코드이다.</li><li>조건문을 사용할 때 부정을 사용하기 보다 긍정인 상황을 사용하자.</li><li>코드로 알 수 있는 내용은 주석에서 지우자</li><li>코드를 왜 이렇게 작성했는지 이유를 주석에 작성하자</li><li>get 메소드는 간단히 데이터를 리턴하는 메소드에만 사용하자(오래 걸리는 연산을 사용할 때는 사용하지 말자)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
+&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;오토레
+      
+    
+    </summary>
+    
+      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
+    
+    
+      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
+    
+      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+  </entry>
+  
+</feed>
