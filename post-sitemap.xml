@@ -32,7 +32,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/10/25/xcode11BuildLesstheniOS13/</loc>
+        <loc>https://appleceo.github.io/2019/06/14/unitTest/</loc>
         <lastmod>2021-07-13T05:30:19.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +40,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/14/unitTest/</loc>
+        <loc>https://appleceo.github.io/2019/10/25/xcode11BuildLesstheniOS13/</loc>
         <lastmod>2021-07-13T05:30:19.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -136,14 +136,6 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/regex/</loc>
-        <lastmod>2021-07-13T05:30:19.394Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://appleceo.github.io/2019/06/25/readLine/</loc>
         <lastmod>2021-07-13T05:30:19.394Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -152,8 +144,8 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/08/13/pan/</loc>
-        <lastmod>2021-07-13T05:30:19.393Z</lastmod>
+        <loc>https://appleceo.github.io/2019/06/09/regex/</loc>
+        <lastmod>2021-07-13T05:30:19.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -161,6 +153,14 @@
 
     <url>
         <loc>https://appleceo.github.io/2019/04/29/oveloadingAndOverriding/</loc>
+        <lastmod>2021-07-13T05:30:19.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://appleceo.github.io/2019/08/13/pan/</loc>
         <lastmod>2021-07-13T05:30:19.393Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -176,6 +176,14 @@
     </url>
 
     <url>
+        <loc>https://appleceo.github.io/2019/08/05/letusgo2019Summer/</loc>
+        <lastmod>2021-07-13T05:30:19.392Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://appleceo.github.io/2019/08/19/networkProgramming/</loc>
         <lastmod>2021-07-13T05:30:19.392Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -184,8 +192,8 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/08/05/letusgo2019Summer/</loc>
-        <lastmod>2021-07-13T05:30:19.392Z</lastmod>
+        <loc>https://appleceo.github.io/2019/11/17/letswift2019/</loc>
+        <lastmod>2021-07-13T05:30:19.391Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -201,14 +209,6 @@
 
     <url>
         <loc>https://appleceo.github.io/2019/08/29/keyboardDown/</loc>
-        <lastmod>2021-07-13T05:30:19.391Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://appleceo.github.io/2019/11/17/letswift2019/</loc>
         <lastmod>2021-07-13T05:30:19.391Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -240,6 +240,14 @@
     </url>
 
     <url>
+        <loc>https://appleceo.github.io/2019/06/09/enum/</loc>
+        <lastmod>2021-07-13T05:30:19.389Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://appleceo.github.io/2019/07/21/functorMonad/</loc>
         <lastmod>2021-07-13T05:30:19.389Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -256,15 +264,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/enum/</loc>
-        <lastmod>2021-07-13T05:30:19.389Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://appleceo.github.io/2020/01/03/cornerRadius/</loc>
+        <loc>https://appleceo.github.io/2019/06/09/closureAndHigherOrderFunction/</loc>
         <lastmod>2021-07-13T05:30:19.388Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +272,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/closureAndHigherOrderFunction/</loc>
+        <loc>https://appleceo.github.io/2020/01/03/cornerRadius/</loc>
         <lastmod>2021-07-13T05:30:19.388Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -296,14 +296,6 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2020/04/01/border/</loc>
-        <lastmod>2021-07-13T05:30:19.387Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://appleceo.github.io/2019/10/01/boostCourseCareerDayReview/</loc>
         <lastmod>2021-07-13T05:30:19.387Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -320,15 +312,15 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/05/16/SOLID/</loc>
-        <lastmod>2021-07-13T05:30:19.386Z</lastmod>
+        <loc>https://appleceo.github.io/2020/04/01/border/</loc>
+        <lastmod>2021-07-13T05:30:19.387Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/08/28/WKUserScript/</loc>
+        <loc>https://appleceo.github.io/2019/05/16/SOLID/</loc>
         <lastmod>2021-07-13T05:30:19.386Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -344,8 +336,8 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/21/PairProgramming/</loc>
-        <lastmod>2021-07-13T05:30:19.385Z</lastmod>
+        <loc>https://appleceo.github.io/2019/08/28/WKUserScript/</loc>
+        <lastmod>2021-07-13T05:30:19.386Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -353,6 +345,14 @@
 
     <url>
         <loc>https://appleceo.github.io/2019/06/26/ObserverPattern/</loc>
+        <lastmod>2021-07-13T05:30:19.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://appleceo.github.io/2019/06/21/PairProgramming/</loc>
         <lastmod>2021-07-13T05:30:19.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -384,7 +384,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2020/03/19/ModuleNotFoundError/</loc>
+        <loc>https://appleceo.github.io/2019/06/09/ModuleAndModularization/</loc>
         <lastmod>2021-07-13T05:30:19.384Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -392,7 +392,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/ModuleAndModularization/</loc>
+        <loc>https://appleceo.github.io/2020/03/19/ModuleNotFoundError/</loc>
         <lastmod>2021-07-13T05:30:19.384Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -408,7 +408,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/10/18/Localization/</loc>
+        <loc>https://appleceo.github.io/2019/10/23/InitializerInExtension/</loc>
         <lastmod>2021-07-13T05:30:19.383Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -416,7 +416,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/10/23/InitializerInExtension/</loc>
+        <loc>https://appleceo.github.io/2019/10/18/Localization/</loc>
         <lastmod>2021-07-13T05:30:19.383Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -432,7 +432,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/Guidelines2/</loc>
+        <loc>https://appleceo.github.io/2019/06/09/HumanInterfaceGuidelineThinkAndExample/</loc>
         <lastmod>2021-07-13T05:30:19.382Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -448,16 +448,8 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/09/HumanInterfaceGuidelineThinkAndExample/</loc>
+        <loc>https://appleceo.github.io/2019/06/09/Guidelines2/</loc>
         <lastmod>2021-07-13T05:30:19.382Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://appleceo.github.io/2019/06/15/FunctionalProgramming/</loc>
-        <lastmod>2021-07-13T05:30:19.381Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -473,6 +465,14 @@
 
     <url>
         <loc>https://appleceo.github.io/2019/09/11/GetterAndSetter/</loc>
+        <lastmod>2021-07-13T05:30:19.381Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://appleceo.github.io/2019/06/15/FunctionalProgramming/</loc>
         <lastmod>2021-07-13T05:30:19.381Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -520,7 +520,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/09/10/DTOvsVO/</loc>
+        <loc>https://appleceo.github.io/2019/09/09/ComputedProperty/</loc>
         <lastmod>2021-07-13T05:30:19.379Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -528,7 +528,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/09/09/ComputedProperty/</loc>
+        <loc>https://appleceo.github.io/2019/09/10/DTOvsVO/</loc>
         <lastmod>2021-07-13T05:30:19.379Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -544,14 +544,6 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/06/12/AccessControl/</loc>
-        <lastmod>2021-07-13T05:30:19.378Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://appleceo.github.io/2019/09/15/CaseIterable/</loc>
         <lastmod>2021-07-13T05:30:19.378Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -560,7 +552,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/09/21/CollaborateWithGit/</loc>
+        <loc>https://appleceo.github.io/2019/07/25/AutoLayout/</loc>
         <lastmod>2021-07-13T05:30:19.378Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -568,7 +560,15 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/07/25/AutoLayout/</loc>
+        <loc>https://appleceo.github.io/2019/06/12/AccessControl/</loc>
+        <lastmod>2021-07-13T05:30:19.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://appleceo.github.io/2019/09/21/CollaborateWithGit/</loc>
         <lastmod>2021-07-13T05:30:19.378Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -632,7 +632,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/10/28/201910-FourthWeek/</loc>
+        <loc>https://appleceo.github.io/2019/10/06/201910-FirstWeek/</loc>
         <lastmod>2021-07-13T05:30:19.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -640,7 +640,7 @@
     </url>
 
     <url>
-        <loc>https://appleceo.github.io/2019/10/06/201910-FirstWeek/</loc>
+        <loc>https://appleceo.github.io/2019/10/28/201910-FourthWeek/</loc>
         <lastmod>2021-07-13T05:30:19.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
