@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://appleceo.github.io/"/>
-  <updated>2021-08-12T04:25:41.448Z</updated>
+  <updated>2021-08-12T04:27:36.071Z</updated>
   <id>https://appleceo.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>의존성 주입</title>
-    <link href="https://appleceo.github.io/2021/08/11/di/"/>
-    <id>https://appleceo.github.io/2021/08/11/di/</id>
-    <published>2021-08-11T01:58:17.000Z</published>
-    <updated>2021-08-12T04:25:41.448Z</updated>
+    <link href="https://appleceo.github.io/2021/08/12/di/"/>
+    <id>https://appleceo.github.io/2021/08/12/di/</id>
+    <published>2021-08-12T04:27:17.000Z</published>
+    <updated>2021-08-12T04:27:36.071Z</updated>
     
     <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>오늘은 의존성 주입에 대해서 알아보겠습니다.</p><p>우선 의존성이 무엇인지에 대해 정리해보겠습니다.</p><h1 id="의존성이란"><a href="#의존성이란" class="headerlink" title="의존성이란?"></a>의존성이란?</h1><script src="//gist.github.com/2fb2b945b5a40a40bcf5f15cc5527c5e.js"></script><p>위 코드와 같이 Programmer 구조체에서 startProgramming 함수가 호출되기 위해서는 Coffee 구조체가 필요합니다.</p><p>이 때 Programmer 구조체는 ‘Coffee 객체에 의존성을 가진다’라고 합니다.</p><p>위 예제에서 Coffee 구조체의 drink 메소드가 없어지거나 drink 메소드의 내용이 바뀌면 그에 따라 Programmer 의 startProgramming 메소드가 변경되어야 합니다.</p><p>이럴 때 코드의 재활용성이 떨어지고 결합도가 올라가게 됩니다.</p><p>아래에서 의존성 뒤에 붙는 주입이라는 단어에 대해서 알아보겠습니다.</p><h1 id="주입이란"><a href="#주입이란" class="headerlink" title="주입이란?"></a>주입이란?</h1><script src="//gist.github.com/2cb101dbd1b732092f1386c9b6f53071.js"></script><p>위에 코드를 보시면 Coffee 객체를 외부에서 생성해서 Programmer 객체가 생성될 때 넣어주고 있습니다.</p><p>객체를 외부에서 넣어주는 것을 주입이라고 합니다.</p><p>이렇게 주입만으로 의존성이 줄어들었다고 할 수 있을까요?</p><p>첫 예제 코드와 똑같이 Coffee 객체의 drink 메소드가 변경되거나 제거되면 Programmer 의 startProgramming 메소드는 영향을 받을 것입니다.</p><p>주입만으로는 아직 Programmer 객체의 Coffee 객체에 대한 의존성을 줄였다고 할 수 없습니다.</p><h1 id="의존성-주입이란"><a href="#의존성-주입이란" class="headerlink" title="의존성 주입이란?"></a>의존성 주입이란?</h1><p>의존성 주입은 의존성을 분리시켜 사용합니다</p><p>위에 우리가 작성했던 코드들은 상위 계층(Programmer)이 하위 계층(Coffee) 에 의존하게 되는 상황이었습니다.</p><p>의존성 역전의 원칙을 사용해서 상위 계층인 Programmer가 하위 계층인 Coffee 로부터 독립하도록 변경해보겠습니다.</p><script src="//gist.github.com/3f6983e42099f96362fa82680a755ca4.js"></script><p>기존에는 Coffee 객체에 drink 가 없다면 Programmer 객체에서 오류 메시지가 발견됬을 것입니다.</p><p>이제 Coffee 프로토콜을 채택한 Americano 에 drink 메소드가 없다면 Americano를 선언할 때 에러가 발생하게 됩니다.</p><p>제어의 주체가 Programmer 에 있는 것이 아니라 Protocol(Coffee) 에게 있습니다.</p><p>에러 발생 시 Coffee 프로토콜만 파악하면 되니 분석이 수월해집니다.</p><p>이렇게 의존성이 분리되어 분석이 쉬워지는 것 말고도 의존성을 주입했을 때 아래와 같은 장점들이 있습니다.</p><h1 id="의존성-주입의-장점"><a href="#의존성-주입의-장점" class="headerlink" title="의존성 주입의 장점"></a>의존성 주입의 장점</h1><ul><li>코드의 재사용성을 높여준다.</li><li>Unit Test가 용이해진다.</li><li>객체 간의 의존성(종속성)을 줄이거나 없앨 수 있다.</li><li>객체 간의 결합도가 낮아지면서 유연한 코드를 작성할 수 있다.</li><li>코드가 단순화된다.</li><li>코드를 읽기 쉬워진다.</li></ul><h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>의존성 주입은 모바일 개발에서 필수적인 요소인 것 같습니다.</p><p>저도 이번 기회에 확실히 정리하고 넘어갈 수 있었습니다.</p><p>글 읽어주셔서 감사합니다.</p><h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><p><a href="https://velog.io/@wlsdud2194/what-is-di" rel="external nofollow noopener noreferrer" target="_blank">https://velog.io/@wlsdud2194/what-is-di</a><br><a href="https://medium.com/@jang.wangsu/di-dependency-injection-%EC%9D%B4%EB%9E%80-1b12fdefec4f" rel="external nofollow noopener noreferrer" target="_blank">https://medium.com/@jang.wangsu/di-dependency-injection-%EC%9D%B4%EB%9E%80-1b12fdefec4f</a></p>]]></content>
     
