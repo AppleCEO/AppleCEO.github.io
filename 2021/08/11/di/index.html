@@ -226,18 +226,21 @@
 <p>아래에서 의존성 뒤에 붙는 주입이라는 단어에 대해서 알아보겠습니다.</p>
 <h1 id="주입이란"><a href="#주입이란" class="headerlink" title="주입이란?"></a>주입이란?</h1><script src="//gist.github.com/2cb101dbd1b732092f1386c9b6f53071.js"></script>
 
+<p>위에 코드를 보시면 Coffee 객체를 외부에서 생성해서 Programmer 객체가 생성될 때 넣어주고 있습니다.</p>
 <p>객체를 외부에서 넣어주는 것을 주입이라고 합니다.</p>
 <p>이렇게 주입만으로 의존성이 줄어들었다고 할 수 있을까요?</p>
 <p>첫 예제 코드와 똑같이 Coffee 객체의 drink 메소드가 변경되거나 제거되면 Programmer 의 startProgramming 메소드는 영향을 받을 것입니다.</p>
-<p>의존성, 주입만으로는 아직 Programmer 객체의 Coffee 객체에 대한 의존성을 줄였다고 할 수 없습니다.</p>
+<p>주입만으로는 아직 Programmer 객체의 Coffee 객체에 대한 의존성을 줄였다고 할 수 없습니다.</p>
 <h1 id="의존성-주입이란"><a href="#의존성-주입이란" class="headerlink" title="의존성 주입이란?"></a>의존성 주입이란?</h1><p>의존성 주입은 의존성을 분리시켜 사용합니다</p>
 <p>위에 우리가 작성했던 코드들은 상위 계층(Programmer)이 하위 계층(Coffee) 에 의존하게 되는 상황이었습니다.</p>
 <p>의존성 역전의 원칙을 사용해서 상위 계층인 Programmer가 하위 계층인 Coffee 로부터 독립하도록 변경해보겠습니다.</p>
 <script src="//gist.github.com/3f6983e42099f96362fa82680a755ca4.js"></script>
 
-<p>이제 Protocol 인 Coffee 에 drink 메소드가 없다면 에러가 발생하게 됩니다.</p>
-<p>제어의 주체가 Protocol(Coffee)에게 있습니다.</p>
-<p>Coffee 만 파악하면 되니 분석이 수월해집니다.</p>
+<p>기존에는 Coffee 객체에 drink 가 없다면 Programmer 객체에서 오류 메시지가 발견됬을 것입니다.</p>
+<p>이제 Coffee 프로토콜을 채택한 Americano 에 drink 메소드가 없다면 Americano를 선언할 때 에러가 발생하게 됩니다.</p>
+<p>제어의 주체가 Programmer 에 있는 것이 아니라 Protocol(Coffee) 에게 있습니다.</p>
+<p>에러 발생 시 Coffee 프로토콜만 파악하면 되니 분석이 수월해집니다.</p>
+<p>이렇게 의존성이 분리되어 분석이 쉬워지는 것 말고도 의존성을 주입했을 때 아래와 같은 장점들이 있습니다.</p>
 <h1 id="의존성-주입의-장점"><a href="#의존성-주입의-장점" class="headerlink" title="의존성 주입의 장점"></a>의존성 주입의 장점</h1><ul>
 <li>코드의 재사용성을 높여준다.</li>
 <li>Unit Test가 용이해진다.</li>
