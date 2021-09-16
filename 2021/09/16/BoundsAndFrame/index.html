@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="Development world">
+        <meta name="description" content="Development iOS">
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Dominic Blog">
+        <meta property="og:title" content="Bounds 와 Frame 의 차이점">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="Development world">
+        <meta property="og:description" content="Development iOS">
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>PHP - Dominic Blog</title>
+    <title>Bounds 와 Frame 의 차이점 - Dominic Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -159,49 +159,109 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>PHP</h1>
+                <div class="post-heading">
+                    <h1>Bounds 와 Frame 의 차이점</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-09-16
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Swift/">#Swift</a> <a href="/tags/Storyboard/">#Storyboard</a> <a href="/tags/Bounds/">#Bounds</a> <a href="/tags/Frame/">#Frame</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/iOS/">iOS</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/12/31/kakaoMapApi1/">
-        <h1 class="post-title archive">
-            카카오맵 API 1) 다음 지도 API 를 카카오맵 API 로 변경하는 방법
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-31
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>안녕하세요. 도미닉입니다.</p>
+<p>오늘은 Bounds 와 Frame 에 대해서 알아보겠습니다.</p>
+<p>우선 Frame 이 무엇인지에 대해 정리해보겠습니다.</p>
+<h1 id="frame-이란"><a href="#frame-이란" class="headerlink" title="frame 이란?"></a>frame 이란?</h1><p>The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.</p>
+<p>공식 문서에 위와 같이 설명합니다.</p>
+<p>frame 은 사각형이고 슈퍼 뷰의 좌표 체계 안에서 뷰의 위치와 사이즈를 설명한다고 합니다.</p>
+<p>위에 설명 만으로는 명확히 frame을 이해하기 힘듭니다.</p>
+<p>공식 문서에 아래 Discussion 도 번역해보겠습니다.</p>
+<h3 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h3><p>이 사각형은 상위 뷰의 좌표계에서 뷰의 크기와 위치를 정의합니다.<br>레이아웃 작업 중에 이 사각형을 사용하여 뷰의 크기와 위치를 설정합니다.<br>이 속성을 설정하면 center 프로퍼티에 지정된 위치가 변경되고 이에 따라 경계 사각형의 크기가 변경됩니다.<br>프레임 사각형의 좌표는 항상 포인트로 지정됩니다.</p>
+<h1 id="의존성-주입이란"><a href="#의존성-주입이란" class="headerlink" title="의존성 주입이란?"></a>의존성 주입이란?</h1><p>의존성 주입은 의존성을 분리시켜 사용합니다</p>
+<p>위에 우리가 작성했던 코드들은 상위 계층(Programmer)이 하위 계층(Coffee) 에 의존하게 되는 상황이었습니다.</p>
+<p>의존성 역전의 원칙을 사용해서 상위 계층인 Programmer가 하위 계층인 Coffee 로부터 독립하도록 변경해보겠습니다.</p>
+<script src="//gist.github.com/3f6983e42099f96362fa82680a755ca4.js"></script>
+
+<p>기존에는 Coffee 객체에 drink 가 없다면 Programmer 객체에서 오류 메시지가 발견됬을 것입니다.</p>
+<p>이제 Coffee 프로토콜을 채택한 Americano 에 drink 메소드가 없다면 Americano를 선언할 때 에러가 발생하게 됩니다.</p>
+<p>제어의 주체가 Programmer 에 있는 것이 아니라 Protocol(Coffee) 에게 있습니다.</p>
+<p>에러 발생 시 Coffee 프로토콜만 파악하면 되니 분석이 수월해집니다.</p>
+<p>이렇게 의존성이 분리되어 분석이 쉬워지는 것 말고도 의존성을 주입했을 때 아래와 같은 장점들이 있습니다.</p>
+<h1 id="의존성-주입의-장점"><a href="#의존성-주입의-장점" class="headerlink" title="의존성 주입의 장점"></a>의존성 주입의 장점</h1><ul>
+<li>코드의 재사용성을 높여준다.</li>
+<li>Unit Test가 용이해진다.</li>
+<li>객체 간의 의존성(종속성)을 줄이거나 없앨 수 있다.</li>
+<li>객체 간의 결합도가 낮아지면서 유연한 코드를 작성할 수 있다.</li>
+<li>코드가 단순화된다.</li>
+<li>코드를 읽기 쉬워진다.</li>
 </ul>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>의존성 주입은 모바일 개발에서 필수적인 요소인 것 같습니다.</p>
+<p>저도 이번 기회에 확실히 정리하고 넘어갈 수 있었습니다.</p>
+<p>글 읽어주셔서 감사합니다.</p>
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><p><a href="https://developer.apple.com/documentation/uikit/uiview/1622621-frame" rel="external nofollow noopener noreferrer" target="_blank">https://developer.apple.com/documentation/uikit/uiview/1622621-frame</a></p>
+<p><a href="https://zeddios.tistory.com/203" rel="external nofollow noopener noreferrer" target="_blank">https://zeddios.tistory.com/203</a><br><a href="https://zeddios.tistory.com/231" rel="external nofollow noopener noreferrer" target="_blank">https://zeddios.tistory.com/231</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr>
