@@ -240,7 +240,7 @@
 </li>
 <li><p>메소드레벨</p>
 <ul>
-<li>분기처리를 위한 if문, switch문이 많은 경우</li>
+<li>분기 처리를 위한 if문, switch문이 많은 경우</li>
 </ul>
 </li>
 </ul>
@@ -256,14 +256,14 @@
 <script src="//gist.github.com/febd4724c0881b4364d6592e12d76d2c.js"></script>
 
 <p>식당의 등급에 따라 헤더가 보여집니다.</p>
-<p>이러할 때 식당의 등급이 필요한 코드마다 분기처리를 위한 if문, switch문이 반복될 것 입니다.</p>
+<p>이러할 때 식당의 등급이 필요한 코드마다 분기 처리를 위한 if문, switch문이 반복될 것 입니다.</p>
 <p>이럴 때는 열거형을 활용할 수 있습니다.</p>
 <script src="//gist.github.com/71b77cfba9202f3dcee1dcb9ae717774.js"></script>
 
 <p>위와 같이 등급을 저장하는 열거형을 작성하면 각 케이스에 맞는 이름을 메소드로 받아올 수 있습니다.</p>
 <script src="//gist.github.com/9720adb56b2cf08c6d81a4732caeb1af.js"></script>
 
-<p>위와 같이 titleForHeaderInSection 메소드에서는 분기처리를 하지않고 등급의 이름을 헤더로 뿌려줄 수 있습니다.</p>
+<p>위와 같이 titleForHeaderInSection 메소드에서는 분기 처리를 하지않고 등급의 이름을 헤더로 뿌려줄 수 있습니다.</p>
 <h3 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h3><p>오늘은 SOLID 원칙 중 SRP에 대해 정리해봤습니다.</p>
 <p>위에 SRP가 안 지켜진 사례를 유념하고 이러한 상황이 발생할 때 상속이나 프로토콜, 열거형 등을 이용해 SRP가 잘 지켜지는 코드를 작성하면 좋을 것입니다.</p>
 <p>읽어주셔서 감사합니다.</p>
