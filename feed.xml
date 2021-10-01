@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://appleceo.github.io/"/>
-  <updated>2021-09-16T07:08:11.508Z</updated>
+  <updated>2021-10-01T08:47:45.376Z</updated>
   <id>https://appleceo.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SOLID 원칙 1) SRP</title>
+    <link href="https://appleceo.github.io/2021/09/30/SRP/"/>
+    <id>https://appleceo.github.io/2021/09/30/SRP/</id>
+    <published>2021-09-30T09:54:00.000Z</published>
+    <updated>2021-10-01T08:47:45.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>저번에 <strong>SOLID</strong> 에 대해 정리해보았습니다. <a href="https://appleceo.github.io/2019/05/16/SOLID/">SOLID 원칙</a></p><p>시간이 좀 지났고 자세히 더 알아보고 싶어서 각 원칙에 대해 심도 깊은 글을 작성하고자 합니다.</p><p><strong>SOLID</strong> 는 5가지 원칙을 가지고 있습니다.</p><p>이번에는 첫번째 S에 해당하는 SRP 에 대해 정리해보겠습니다.</p><h3 id="SRP-Single-Responsibility-Principle"><a href="#SRP-Single-Responsibility-Principle" class="headerlink" title="SRP (Single Responsibility Principle)"></a><strong>SRP</strong> (Single Responsibility Principle)</h3><p>한글로는 <strong>단일 책임 원칙</strong>입니다.</p><p>객체는 하나의 기능과 책임을 가져야만 한다는 원칙입니다.</p><p>코드로 풀어서 설명을 해보겠습니다.</p><p>아래와 같이 스마트폰 객체가 있습니다.</p><script src="//gist.github.com/842690a7519874be2ffffe3e1835a2d5.js"></script><p>스마트폰에는 기능이 거의 무한적으로 있으나 이 코드에서는 call과 showYoutube만 있는 것으로 하겠습니다.</p><p>이제 스마트폰에 갤럭시 폴드가 나와서 접혀있는 상태가 추가된다라고 하면 아래와 같이 스마트폰을 수정할 수 있을 것입니다.</p><script src="//gist.github.com/4c1c01d23088e4d0d64222147724a148.js"></script><p>하지만 위와 같이 작성하면 SmartPhone 중 갤럭시 폴드가 아닌 스마트폰들은 항상 isFold 값이 False 일 것입니다.</p><p>이러할 때 아래 SRP가 안 지켜진 사례를 참고하면 SRP 원칙에 위반됩니다.</p><h5 id="SRP가-안-지켜진-사례"><a href="#SRP가-안-지켜진-사례" class="headerlink" title="SRP가 안 지켜진 사례"></a>SRP가 안 지켜진 사례</h5><ul><li>변수레벨<ul><li>하나의 속성이 여러 의미를 갖는 경우</li><li>어떤 곳에서는 쓰고, 어떤 곳에선 안쓰는 속성이 있는 경우</li></ul></li><li>메소드레벨<ul><li>분기처리를 위한 if문이 많을 경우</li></ul></li></ul><p>위 사례 중 어떤 곳에선 안쓰는 속성이 있는 경우에 포함되기 때문에 SRP를 위반합니다.</p><p>이럴 때는 SmartPhone 객체를 상속받는 갤럭시 폴드 객체를 아래처럼 만들어서 SRP를 지킬 수 있습니다.</p><script src="//gist.github.com/afe4bd907092ab3d5a91f37468a5a1c0.js"></script><p>또한 앞으로 폴드 폰이 많이 생길 것을 예상하고 아래처럼 프로토콜을 활용할 수 있습니다.</p><script src="//gist.github.com/9a6fb0ea7c63dbcd95fa314891e913a7.js"></script><h3 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h3><p>오늘은 SOLID 원칙 중 SRP에 대해 정리해봤습니다.</p><p>위에 SRP가 안 지켜진 사례를 유념하고 이러한 상황이 발생할 때 상속이나 Protocol 등을 이용해 SRP가 잘 지켜지는 코드를 작성하면 좋을 것입니다.</p><p>읽어주셔서 감사합니다.</p><h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><p><a href="https://sjh836.tistory.com/159" rel="external nofollow noopener noreferrer" target="_blank">https://sjh836.tistory.com/159</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
+&lt;p&gt;저번에 &lt;strong&gt;SOLID&lt;/strong&gt; 에 대해 정리해보았습니다. &lt;a href=&quot;https://appleceo.github.io/2019/05/16/SOLID/&quot;&gt;SOLID 원칙&lt;/a&gt;&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="OOP" scheme="https://appleceo.github.io/categories/OOP/"/>
+    
+    
+      <category term="Swift" scheme="https://appleceo.github.io/tags/Swift/"/>
+    
+      <category term="SOLID" scheme="https://appleceo.github.io/tags/SOLID/"/>
+    
+      <category term="OOP" scheme="https://appleceo.github.io/tags/OOP/"/>
+    
+  </entry>
   
   <entry>
     <title>Bounds 와 Frame 의 차이점</title>
@@ -275,11 +306,11 @@
     
       <category term="UIView" scheme="https://appleceo.github.io/tags/UIView/"/>
     
+      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
+    
       <category term="cornerRadius" scheme="https://appleceo.github.io/tags/cornerRadius/"/>
     
       <category term="masksToBounds" scheme="https://appleceo.github.io/tags/masksToBounds/"/>
-    
-      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
     
   </entry>
   
@@ -384,9 +415,9 @@
     
       <category term="테두리" scheme="https://appleceo.github.io/tags/%ED%85%8C%EB%91%90%EB%A6%AC/"/>
     
-      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
-    
       <category term="Xcode" scheme="https://appleceo.github.io/tags/Xcode/"/>
+    
+      <category term="bounds" scheme="https://appleceo.github.io/tags/bounds/"/>
     
       <category term="rectangles" scheme="https://appleceo.github.io/tags/rectangles/"/>
     
@@ -619,35 +650,6 @@
         &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
 &lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
 &lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;DDD
-      
-    
-    </summary>
-    
-      <category term="Retrospect" scheme="https://appleceo.github.io/categories/Retrospect/"/>
-    
-    
-      <category term="회고" scheme="https://appleceo.github.io/tags/%ED%9A%8C%EA%B3%A0/"/>
-    
-      <category term="독후감" scheme="https://appleceo.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2019년 10월 마지막 주 회고</title>
-    <link href="https://appleceo.github.io/2019/11/08/201910-LastWeek/"/>
-    <id>https://appleceo.github.io/2019/11/08/201910-LastWeek/</id>
-    <published>2019-11-08T11:31:20.000Z</published>
-    <updated>2021-07-13T05:30:19.376Z</updated>
-    
-    <content type="html"><![CDATA[<p>안녕하세요. 도미닉입니다.</p><p>이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.</p><h1 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h1><h3 id="오토레이아웃-강의-구매"><a href="#오토레이아웃-강의-구매" class="headerlink" title="오토레이아웃 강의 구매"></a>오토레이아웃 강의 구매</h3><p>DDD 동아리 활동을 같이하는 정기욱 님께서 추천해주신 오토레이아웃 강의를 구매하였다.</p><p><a href="https://www.inflearn.com/course/autolayout" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/autolayout</a></p><p>위에 강좌이다.</p><p>몇 강 안들었지만 기본적인 부분부터 자세히 설명이 되어있다.</p><p>꾸준히 듣고 아래 레포지토리에 업데이트 할 것이다.</p><p><a href="https://github.com/AppleCEO/autolayout" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/autolayout</a></p><h3 id="위키피디아-서퍼-앱스토어-신청"><a href="#위키피디아-서퍼-앱스토어-신청" class="headerlink" title="위키피디아 서퍼 앱스토어 신청"></a>위키피디아 서퍼 앱스토어 신청</h3><p>어플을 앱스토어에 올리도록 처음으로 신청해봤다.</p><p>처음하는 절차라 오래 걸렸지만 정상적으로 신청을 마쳤다.</p><p>기능이 적다는 피드백을 받았다.</p><h3 id="DDD-직군-세션-발표-준비"><a href="#DDD-직군-세션-발표-준비" class="headerlink" title="DDD 직군 세션 발표 준비"></a>DDD 직군 세션 발표 준비</h3><p>금요일에 정기욱님과 만나서 &lt;CoreML-Vision 라이브 코딩&gt; 이라는 주제로 진행할 세션 발표를 준비했다.</p><p>아직 coreML 을 사용해보지 않아서 기욱님이 작성하신 예제를 같이 살펴보았다.</p><p><a href="https://youtu.be/p6GA8ODlnX0" rel="external nofollow noopener noreferrer" target="_blank">https://youtu.be/p6GA8ODlnX0</a></p><p>위에 유튜브 영상을 따라서 작성하신 예제였다.</p><p>나도 레포지토리를 파서 예제를 따라 작성해보았다.</p><p><a href="https://github.com/AppleCEO/SmartCameraLTBA" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/AppleCEO/SmartCameraLTBA</a></p><h3 id="객체지향-온라인-스터디-참석"><a href="#객체지향-온라인-스터디-참석" class="headerlink" title="객체지향 온라인 스터디 참석"></a>객체지향 온라인 스터디 참석</h3><p>월요일에 처음으로 객체지향 온라인 스터디에 참석하였다.</p><p><a href="https://www.youtube.com/watch?v=Qa3dRrSbeQI&amp;t=4302s" rel="external nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=Qa3dRrSbeQI&amp;t=4302s</a></p><p>코드스피츠라는 유튜브 채널에서 올려준 오브젝트 책의 리뷰를 보는 스터이디다.</p><p>매주 월요일에 미리 한 강씩 보고와서 스터디에서 같이 보면서 알게 된 내용을 공유하는 스터디이다.</p><p><a href="https://open.kakao.com/o/gvjVVbDb" rel="external nofollow noopener noreferrer" target="_blank">https://open.kakao.com/o/gvjVVbDb</a></p><p>위에 오픈 카카오톡 채팅에서 스터디가 진행된다.</p><p>오브젝트 책이나 객체 지향에 대해서 혼자 공부하기 힘들고 뜬구름 잡는 느낌이 들었다.</p><p>이번에 스터디에서 같이 예제도 서로 공유하고 쉽게 설명 나누면서 너무 좋은 모임이었다.</p><p>매주 열심히 참여해야겠다.</p><h1 id="독후감-읽기-좋은-코드가-좋은-코드다"><a href="#독후감-읽기-좋은-코드가-좋은-코드다" class="headerlink" title="독후감 - 읽기 좋은 코드가 좋은 코드다"></a>독후감 - 읽기 좋은 코드가 좋은 코드다</h1><p>흥푸의 추천 도서 1 인 &lt;읽기 좋은 코드가 좋은 코드다&gt; 책을 드디어 읽어보았다.</p><p>이 책은 여러 예제를 가지고 좋은 코드로 개선하는 방법을 알려준다.</p><p>생각나는 내용은 아래와 같다.</p><ul><li>영어 문장으로 읽히는 코드가 좋은 코드이다.</li><li>조건문을 사용할 때 부정을 사용하기 보다 긍정인 상황을 사용하자.</li><li>코드로 알 수 있는 내용은 주석에서 지우자</li><li>코드를 왜 이렇게 작성했는지 이유를 주석에 작성하자</li><li>get 메소드는 간단히 데이터를 리턴하는 메소드에만 사용하자(오래 걸리는 연산을 사용할 때는 사용하지 말자)</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;안녕하세요. 도미닉입니다.&lt;/p&gt;
-&lt;p&gt;이번주의 회고와 이주의 읽은 책 독후감을 작성해보았습니다.&lt;/p&gt;
-&lt;h1 id=&quot;회고&quot;&gt;&lt;a href=&quot;#회고&quot; class=&quot;headerlink&quot; title=&quot;회고&quot;&gt;&lt;/a&gt;회고&lt;/h1&gt;&lt;h3 id=&quot;오토레
       
     
     </summary>
